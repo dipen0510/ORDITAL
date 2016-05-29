@@ -16,5 +16,6 @@
 #import "SWRevealViewController.h"
 #import "MainViewController.h"
 #import "SVProgressHUD.h"
+#import <AWSS3/AWSS3.h>
 
 #endif

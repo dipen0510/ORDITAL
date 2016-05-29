@@ -39,7 +39,7 @@
     sectionContentArr = [[NSMutableArray alloc] initWithObjects:@"DATA SETTING",@"ACTIONS",@"MORE INFORMATION", nil];
 
     contentArr1 = [[NSMutableArray alloc] initWithObjects:@"Initial Configuration",@"Filters",@"Asset Coding", nil];
-    contentArr2 = [[NSMutableArray alloc] initWithObjects:@"Clear Cache",@"Network Settings",@"Login",@"Download Assets",@"Export Photos", nil];
+    contentArr2 = [[NSMutableArray alloc] initWithObjects:@"Clear Cache",@"Network Settings",@"Login",@"Download Assets",@"Export Photos",@"Export Database", nil];
     contentArr3 = [[NSMutableArray alloc] initWithObjects:@"Privacy Policy",@"Terms Of Use",@"Help",@"About Us",@"View Logs", nil];
     
     [[DataManager sharedManager] setLogsString:[[[DataManager sharedManager] logsString] stringByAppendingString:[NSString stringWithFormat:@"\nCurrent Screen - %@",[self.navigationController.viewControllers lastObject]]]];
@@ -230,6 +230,9 @@
         [self.revealViewController revealToggleAnimated:YES];
         [self didPressLink];
         
+    }
+    if (indexPath.section==1 && indexPath.row==5 && [self checkIfConneectionValid]) {
+        [self startUplaodingDBToAWS];
     }
     if (indexPath.section==2 && indexPath.row==0)
     {
@@ -548,5 +551,74 @@
     [SVProgressHUD showProgress:((float)(currentSavingIndex)/(float)imgArr.count) status:[NSString stringWithFormat:@"Saving Images in photo library."] maskType:SVProgressHUDMaskTypeGradient];
 }
 
+
+#pragma mark - Export DB
+
+- (void) startUplaodingDBToAWS {
+    
+    if ([[DataManager sharedManager] getBucket]) {
+        [SVProgressHUD showWithStatus:@"Exporting DB" maskType:SVProgressHUDMaskTypeGradient];
+        
+        NSString *docsDir;
+        NSArray *dirPaths;
+        
+        // Get the documents directory
+        dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        docsDir = dirPaths[0];
+        
+        // Build the path to the database file
+        NSString* databasePath = [[NSString alloc]
+                                  initWithString: [docsDir stringByAppendingPathComponent:
+                                                   @"assets2.db"]];
+        
+        
+        NSURL* fileUrl = [NSURL fileURLWithPath:databasePath];
+        
+        AWSS3TransferManager *transferManager = [AWSS3TransferManager defaultS3TransferManager];
+        
+        //upload the image
+        AWSS3TransferManagerUploadRequest *uploadRequest = [AWSS3TransferManagerUploadRequest new];
+        uploadRequest.body = fileUrl;
+        uploadRequest.bucket = [[DataManager sharedManager] getBucket];
+        uploadRequest.key = [self getExportDBName];
+        uploadRequest.contentType = @"application/octet-stream";
+        uploadRequest.ACL = AWSS3ObjectCannedACLPublicRead;
+        [[transferManager upload:uploadRequest] continueWithExecutor:[AWSExecutor mainThreadExecutor] withBlock:^id(AWSTask *task) {
+            
+            [SVProgressHUD dismiss];
+            
+            if(task.error) {
+                NSLog(@"Upload Failed");
+                [SVProgressHUD showErrorWithStatus:@"Export failed. Please try again"];
+            }
+            if (task.result) {
+                NSLog(@"%@ uploaded successfully",uploadRequest.key);
+                AWSS3TransferManagerUploadOutput *uploadOutput = task.result;
+                // The file uploaded successfully.
+                [SVProgressHUD showSuccessWithStatus:@"Database exported successfully"];
+            }
+            
+            [self.revealViewController revealToggleAnimated:YES];
+            
+            return nil;
+        }];
+    }
+    else {
+        
+        UIAlertView* alrt = [[UIAlertView alloc] initWithTitle:@"Export error" message:@"Please login first to start exporting" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alrt show];
+        
+    }
+    
+    
+}
+
+- (NSString *) getExportDBName {
+    
+    NSString* str = [NSString stringWithFormat:@"DB_%@.db",[NSDate date]];
+    
+    return str;
+    
+}
 
 @end
