@@ -29,7 +29,7 @@ const char *create_authToken_table =
 const char *create_plant_table =
 "CREATE TABLE IF NOT EXISTS SELECTEDPLANT (plantId TEXT PRIMARY KEY, plantName TEXT, operatingName TEXT)";
 const char *create_asset_table =
-"CREATE TABLE IF NOT EXISTS ASSETS (assetId TEXT PRIMARY KEY, assetName TEXT, plantName TEXT, description TEXT, tag TEXT, plantId TEXT, parent TEXT, type TEXT, isNewAsset TINYINT, parentId TEXT, createdDate TEXT, condition TEXT, operatorType TEXT, operatorClass TEXT, operatorClassId TEXT, category TEXT, categoryId TEXT, operatorSubclass TEXT, operatorSubclassId TEXT, unableToLocate TINYINT)";
+"CREATE TABLE IF NOT EXISTS ASSETS (assetId TEXT PRIMARY KEY, assetName TEXT, plantName TEXT, description TEXT, tag TEXT, plantId TEXT, parent TEXT, type TEXT, isNewAsset TINYINT, parentId TEXT, createdDate TEXT, condition TEXT, operatorType TEXT, operatorClass TEXT, operatorClassId TEXT, category TEXT, categoryId TEXT, operatorSubclass TEXT, operatorSubclassId TEXT, unableToLocate TINYINT, uploaded TINYINT)";
 const char *create_audit_table =
 "CREATE TABLE IF NOT EXISTS AUDITS (auditId TEXT PRIMARY KEY, assetId TEXT, assetName TEXT, auditType TEXT, imgURL TEXT, dateTime TEXT, latitude REAL, longitude REAL, altitude REAL, uploaded TINYINT)";
 const char *create_download_table =
@@ -774,7 +774,7 @@ static DataManager *singletonObject = nil;
     {
         
         NSString *insertSQL = [NSString stringWithFormat:
-                               @"INSERT INTO ASSETS VALUES (\"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%d\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%d\")",
+                               @"INSERT INTO ASSETS VALUES (\"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%d\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%d\", \"0\")",
                                assetData.assetId, assetData.assetName,assetData.plantName,assetData.description,assetData.tag,assetData.plantId,assetData.parent,assetData.type,assetData.isNewAsset,assetData.parentId,[self GetCurrentTimeStamp],assetData.condition,assetData.operatorType,assetData.operatorClass,assetData.operatorClassId,assetData.category,assetData.categoryId,assetData.operatorSubclass,assetData.operatorSubclassId,assetData.unableToLocate];
         
         const char *insert_stmt = [insertSQL UTF8String];
@@ -819,7 +819,7 @@ static DataManager *singletonObject = nil;
     {
         
         NSString *insertSQL = [NSString stringWithFormat:
-                               @"INSERT INTO ASSETS VALUES (\"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%d\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%d\")",
+                               @"INSERT INTO ASSETS VALUES (\"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%d\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%d\", \"0\")",
                                assetData.assetId, assetData.assetName,assetData.plantName,assetData.description,assetData.tag,assetData.plantId,assetData.parent,assetData.type,assetData.isNewAsset,assetData.parentId,[self GetCurrentTimeStamp],assetData.condition,assetData.operatorType,assetData.operatorClass,assetData.operatorClassId,assetData.category,assetData.categoryId,assetData.operatorSubclass,assetData.operatorSubclassId,assetData.unableToLocate];
         
         const char *insert_stmt = [insertSQL UTF8String];
@@ -847,7 +847,7 @@ static DataManager *singletonObject = nil;
     
     if (sqlite3_open(dbpath, &assetDB) == SQLITE_OK)
     {
-        NSString *querySQL = [NSString stringWithFormat:@"SELECT * FROM ASSETS"];
+        NSString *querySQL = [NSString stringWithFormat:@"SELECT * FROM ASSETS WHERE uploaded = 0"];
         
         const char *query_stmt = [querySQL UTF8String];
         
@@ -1545,7 +1545,7 @@ static DataManager *singletonObject = nil;
     
     if (sqlite3_open(dbpath, &assetDB) == SQLITE_OK)
     {
-        NSString *querySQL = [NSString stringWithFormat:@"SELECT * FROM ASSETS order by createdDate desc"];
+        NSString *querySQL = [NSString stringWithFormat:@"SELECT * FROM ASSETS WHERE uploaded = 0 order by createdDate desc"];
         
         const char *query_stmt = [querySQL UTF8String];
         
@@ -1617,6 +1617,7 @@ static DataManager *singletonObject = nil;
                 [dict setObject:[[NSString alloc] initWithUTF8String: (const char *) sqlite3_column_text(statement, 6)] forKey:@"latitude"];
                 [dict setObject:[[NSString alloc] initWithUTF8String: (const char *) sqlite3_column_text(statement, 7)] forKey:@"longitude"];
                 [dict setObject:[[NSString alloc] initWithUTF8String: (const char *) sqlite3_column_text(statement, 8)] forKey:@"altitude"];
+                [dict setObject:[[NSString alloc] initWithUTF8String: (const char *) sqlite3_column_text(statement, 9)] forKey:@"uploaded"];
                 
                 [arr addObject:dict];
                 NSLog(@"Synced Audit found");
@@ -1642,7 +1643,7 @@ static DataManager *singletonObject = nil;
 //        NSString *querySQL = [NSString stringWithFormat:@"SELECT * FROM DOWNLOADS WHERE assetName LIKE '%%%@%%'",offlineText];
         NSString* filterString = [self getOfflineFilterQueryString:2];
         
-    NSString *querySQL = [NSString stringWithFormat:@"SELECT * FROM DOWNLOADS WHERE (isAuditCompleted = '0') and assetId NOT IN (SELECT assetId from ASSETS) AND (assetName LIKE '%%%@%%' or plantName LIKE '%%%@%%' or description LIKE '%%%@%%' or tag LIKE '%%%@%%' or plantId LIKE '%%%@%%' or parentId LIKE '%%%@%%' or make LIKE '%%%@%%' or type LIKE '%%%@%%') %@ ORDER BY sequence, assetName COLLATE NOCASE",offlineText,offlineText,offlineText,offlineText,offlineText,offlineText,offlineText,offlineText, filterString];
+    NSString *querySQL = [NSString stringWithFormat:@"SELECT * FROM DOWNLOADS WHERE (isAuditCompleted = '0') and assetId NOT IN (SELECT assetId from ASSETS WHERE uploaded = 0) AND (assetName LIKE '%%%@%%' or plantName LIKE '%%%@%%' or description LIKE '%%%@%%' or tag LIKE '%%%@%%' or plantId LIKE '%%%@%%' or parentId LIKE '%%%@%%' or make LIKE '%%%@%%' or type LIKE '%%%@%%') %@ ORDER BY sequence, assetName COLLATE NOCASE",offlineText,offlineText,offlineText,offlineText,offlineText,offlineText,offlineText,offlineText, filterString];
         
         
         const char *query_stmt = [querySQL UTF8String];
@@ -2686,7 +2687,7 @@ static DataManager *singletonObject = nil;
         NSString* filterString = [self getOfflineFilterQueryString:2];
         
         
-        NSString *querySQL = [NSString stringWithFormat:@"SELECT * FROM DOWNLOADS WHERE TRIM(locationList) > '' AND (isAuditCompleted = '0') and assetId NOT IN (SELECT assetId from ASSETS) %@ ORDER BY sequence, assetName COLLATE NOCASE", filterString];
+        NSString *querySQL = [NSString stringWithFormat:@"SELECT * FROM DOWNLOADS WHERE TRIM(locationList) > '' AND (isAuditCompleted = '0') and assetId NOT IN (SELECT assetId from ASSETS WHERE uploaded = 0) %@ ORDER BY sequence, assetName COLLATE NOCASE", filterString];
         
         
         const char *query_stmt = [querySQL UTF8String];
@@ -3291,7 +3292,7 @@ static DataManager *singletonObject = nil;
     
     if (sqlite3_open(dbpath, &assetDB) == SQLITE_OK)
     {
-        NSString *querySQL = [NSString stringWithFormat:@"SELECT count(assetId) FROM ASSETS"];
+        NSString *querySQL = [NSString stringWithFormat:@"SELECT count(assetId) FROM ASSETS WHERE uploaded = 0"];
         
         const char *query_stmt = [querySQL UTF8String];
         
@@ -3560,7 +3561,7 @@ static DataManager *singletonObject = nil;
     if (sqlite3_open(dbpath, &assetDB) == SQLITE_OK)
     {
         NSString* date = [self GetCurrentDate];
-        NSString *querySQL = [NSString stringWithFormat:@"SELECT * FROM ASSETS WHERE createdDate LIKE '%@-%@-%@%%'",[[date componentsSeparatedByString:@"-"] objectAtIndex:0],[[date componentsSeparatedByString:@"-"] objectAtIndex:1],[[date componentsSeparatedByString:@"-"] objectAtIndex:2]];
+        NSString *querySQL = [NSString stringWithFormat:@"SELECT * FROM ASSETS WHERE uploaded = 0 AND createdDate LIKE '%@-%@-%@%%'",[[date componentsSeparatedByString:@"-"] objectAtIndex:0],[[date componentsSeparatedByString:@"-"] objectAtIndex:1],[[date componentsSeparatedByString:@"-"] objectAtIndex:2]];
         
         const char *query_stmt = [querySQL UTF8String];
         
@@ -3654,6 +3655,9 @@ static DataManager *singletonObject = nil;
                 auditData.altitude = [[[NSString alloc]
                                        initWithUTF8String:(const char *)
                                        sqlite3_column_text(statement, 8)] floatValue];
+                auditData.isUploaded = [[[NSString alloc]
+                                       initWithUTF8String:(const char *)
+                                       sqlite3_column_text(statement, 9)] boolValue];
                 [arr addObject:auditData];
                 NSLog(@"Audit found");
             }
@@ -4368,7 +4372,7 @@ static DataManager *singletonObject = nil;
         //        NSString *querySQL = [NSString stringWithFormat:@"SELECT * FROM DOWNLOADS WHERE assetName LIKE '%%%@%%'",offlineText];
         //NSString* filterString = [self getOfflineFilterQueryString:2];
         
-        NSString *querySQL = [NSString stringWithFormat:@"SELECT * FROM ASSETS WHERE (assetName LIKE '%%%@%%' or plantName LIKE '%%%@%%' or description LIKE '%%%@%%' or tag LIKE '%%%@%%' or plantId LIKE '%%%@%%' or parentId LIKE '%%%@%%' or type LIKE '%%%@%%') ORDER BY sequence, assetName COLLATE NOCASE",offlineText,offlineText,offlineText,offlineText,offlineText,offlineText,offlineText];
+        NSString *querySQL = [NSString stringWithFormat:@"SELECT * FROM ASSETS WHERE (assetName LIKE '%%%@%%' or plantName LIKE '%%%@%%' or description LIKE '%%%@%%' or tag LIKE '%%%@%%' or plantId LIKE '%%%@%%' or parentId LIKE '%%%@%%' or type LIKE '%%%@%%') AND uploaded = 0 ORDER BY sequence, assetName COLLATE NOCASE",offlineText,offlineText,offlineText,offlineText,offlineText,offlineText,offlineText];
         
         
         const char *query_stmt = [querySQL UTF8String];
@@ -5038,6 +5042,31 @@ static DataManager *singletonObject = nil;
             sqlite3_step(statement);
             sqlite3_finalize(statement);
             NSLog(@"AUDIT UPLOAD STATUS UPDATED");
+        }
+        sqlite3_close(assetDB);
+    }
+    
+}
+
+
+- (void) updateUploadStatusForAssetId:(NSString *)assetId {
+    
+    const char *dbpath = [databasePath UTF8String];
+    sqlite3_stmt    *statement;
+    sqlite3 *assetDB;
+    
+    if (sqlite3_open(dbpath, &assetDB) == SQLITE_OK)
+    {
+        NSString *querySQL = [NSString stringWithFormat:@"UPDATE ASSETS SET uploaded = 1 WHERE assetId = '%@'",assetId];
+        
+        const char *query_stmt = [querySQL UTF8String];
+        
+        if (sqlite3_prepare_v2(assetDB,
+                               query_stmt, -1, &statement, NULL) == SQLITE_OK)
+        {
+            sqlite3_step(statement);
+            sqlite3_finalize(statement);
+            NSLog(@"ASSET UPLOAD STATUS UPDATED");
         }
         sqlite3_close(assetDB);
     }

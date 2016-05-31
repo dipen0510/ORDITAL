@@ -8,6 +8,7 @@
 
 #import "PreviewPendingAuditsViewController.h"
 #import "DataManager.h"
+#import "PendingAuditFullScreenViewController.h"
 
 @interface PreviewPendingAuditsViewController ()
 
@@ -57,18 +58,53 @@
     UIImageView *recipeImageView = (UIImageView *)[cell viewWithTag:100];
     recipeImageView.image = [auditImageArr objectAtIndex:indexPath.row];
     
+    UIImageView *uploadImageView = (UIImageView *)[cell viewWithTag:101];
+    
+    AuditData* audit = [[AuditData alloc] init];
+    audit = [auditContentArr objectAtIndex:indexPath.row];
+    
+    if (audit.isUploaded) {
+        uploadImageView.hidden = NO;
+    }
+    else {
+        uploadImageView.hidden = YES;
+    }
+    
     return cell;
 }
 
-/*
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    selectedIndex = indexPath.row;
+    
+    [self performSegueWithIdentifier:@"showFullScreenView" sender:nil];
+    
+    
+}
+
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    if ([segue.identifier isEqualToString:@"showFullScreenView"]) {
+        
+        PendingAuditFullScreenViewController* controller = [segue destinationViewController];
+        
+        
+        [controller setAuditContentArr:auditContentArr];
+        [controller setAuditImgArr:auditImageArr];
+        
+        
+        [controller setSelectedIndex:selectedIndex];
+        
+    }
+    
 }
-*/
+
 
 - (IBAction)backButtonTapped:(id)sender {
     

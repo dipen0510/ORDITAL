@@ -222,6 +222,13 @@
     [cell.deleteButton addTarget:self action:@selector(showName:) forControlEvents:UIControlEventTouchUpInside];
     
     cell.deleteButton.tag = (indexPath.row+1)+([(AFIndexedCollectionView *)collectionView indexPath].section*100);
+    
+    if ([[tmpDict valueForKey:@"uploaded"] intValue]) {
+        cell.uploadStatusImgView.hidden = NO;
+    }
+    else {
+        cell.uploadStatusImgView.hidden = YES;
+    }
 
     
     return cell;

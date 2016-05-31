@@ -20,5 +20,6 @@
 @property double longitude;
 @property double altitude;
 @property UIImage* auditImg;
+@property BOOL isUploaded;
 
 @end

@@ -898,7 +898,10 @@ clickedButtonAtIndex:(NSInteger)buttonIndex{
         fdi.taskResumeData = nil;
         
         
-        [[DataManager sharedManager] deleteOnlyAssetWithId:fdi.fileTitle];
+        //[[DataManager sharedManager] deleteOnlyAssetWithId:fdi.fileTitle];
+        
+        [[DataManager sharedManager] updateUploadStatusForAssetId:fdi.fileTitle];
+        
         NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
         [dict setObject:[NSNumber numberWithInt:uploadCounter] forKey:@"current"];
         [dict setObject:[NSNumber numberWithLong:assetContentArr.count] forKey:@"total"];

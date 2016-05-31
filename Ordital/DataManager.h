@@ -184,5 +184,6 @@ FOUNDATION_EXPORT NSString* const kEnvironmentURL;
 - (void) deleteDynamicLabelValues;
 
 - (void) updateUploadStatusForAuditId:(NSString *)auditId;
+- (void) updateUploadStatusForAssetId:(NSString *)assetId;
 
 @end

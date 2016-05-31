@@ -1053,7 +1053,9 @@ clickedButtonAtIndex:(NSInteger)buttonIndex{
     AuditData* audit = [[AuditData alloc] init];
     audit = [auditArr objectAtIndex:uploadCounter];
     
-    NSURL* fileUrl = [NSURL fileURLWithPath:audit.imgURL];
+    NSString* urlStr = [[[DataManager sharedManager] auditImagePath] stringByAppendingPathComponent:[[audit.imgURL componentsSeparatedByString:@"/"] lastObject]];
+    
+    NSURL* fileUrl = [NSURL fileURLWithPath:urlStr];
     
     AWSS3TransferManager *transferManager = [AWSS3TransferManager defaultS3TransferManager];
     

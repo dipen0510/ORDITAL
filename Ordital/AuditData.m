@@ -20,5 +20,6 @@
 @synthesize imgURL;
 @synthesize dateTime;
 @synthesize auditImg;
+@synthesize isUploaded;
 
 @end

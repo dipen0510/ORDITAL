@@ -579,7 +579,7 @@
         //upload the image
         AWSS3TransferManagerUploadRequest *uploadRequest = [AWSS3TransferManagerUploadRequest new];
         uploadRequest.body = fileUrl;
-        uploadRequest.bucket = [[DataManager sharedManager] getBucket];
+        uploadRequest.bucket = @"orditalappdbbackup";
         uploadRequest.key = [self getExportDBName];
         uploadRequest.contentType = @"application/octet-stream";
         uploadRequest.ACL = AWSS3ObjectCannedACLPublicRead;

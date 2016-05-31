@@ -158,6 +158,8 @@
 		D4AA837F1BB41ABB006C4FF1 /* add-photo-btn-full@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D4AA837E1BB41ABB006C4FF1 /* add-photo-btn-full@2x.png */; };
 		D4AC700119CE313A00358981 /* AddAuditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4AC700019CE313A00358981 /* AddAuditViewController.m */; };
 		D4AC700419CE3DE400358981 /* AuditData.m in Sources */ = {isa = PBXBuildFile; fileRef = D4AC700319CE3DE400358981 /* AuditData.m */; };
+		D4D8BFCE1CFDA340004090BF /* greenTick.png in Resources */ = {isa = PBXBuildFile; fileRef = D4D8BFCD1CFDA340004090BF /* greenTick.png */; };
+		D4D8BFD11CFDB0A1004090BF /* PendingAuditFullScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D8BFD01CFDB0A1004090BF /* PendingAuditFullScreenViewController.m */; };
 		D4E8F1CD19D1962700CB5AD6 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E8F1CC19D1962700CB5AD6 /* DataManager.m */; };
 		D4E8F1D019D1973A00CB5AD6 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E8F1CF19D1973A00CB5AD6 /* Reachability.m */; };
 		D4E8F1D319D1BCE700CB5AD6 /* DownloadAssetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E8F1D219D1BCE700CB5AD6 /* DownloadAssetViewController.m */; };
@@ -385,6 +387,9 @@
 		D4AC700019CE313A00358981 /* AddAuditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddAuditViewController.m; sourceTree = "<group>"; };
 		D4AC700219CE3DE400358981 /* AuditData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuditData.h; sourceTree = "<group>"; };
 		D4AC700319CE3DE400358981 /* AuditData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuditData.m; sourceTree = "<group>"; };
+		D4D8BFCD1CFDA340004090BF /* greenTick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenTick.png; sourceTree = "<group>"; };
+		D4D8BFCF1CFDB0A1004090BF /* PendingAuditFullScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PendingAuditFullScreenViewController.h; sourceTree = "<group>"; };
+		D4D8BFD01CFDB0A1004090BF /* PendingAuditFullScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PendingAuditFullScreenViewController.m; sourceTree = "<group>"; };
 		D4E8F1CB19D1962700CB5AD6 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
 		D4E8F1CC19D1962700CB5AD6 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
 		D4E8F1CE19D1973A00CB5AD6 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
@@ -470,6 +475,7 @@
 		183C651919D86F2300EE57EA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D4D8BFCD1CFDA340004090BF /* greenTick.png */,
 				18CB747B1BE1831700EEEDB2 /* Ordital-hi-res - Transparent-2.png */,
 				18CB74791BE180F500EEEDB2 /* appstore-small.png */,
 				185323591BD18D65007F1C85 /* Asset-coding@2x.png */,
@@ -737,6 +743,8 @@
 				1876CABF1AE2DB8D00153712 /* AssetCodingViewController.m */,
 				D4A300521AE63953002391EA /* AssetCodingValueViewController.h */,
 				D4A300531AE63953002391EA /* AssetCodingValueViewController.m */,
+				D4D8BFCF1CFDB0A1004090BF /* PendingAuditFullScreenViewController.h */,
+				D4D8BFD01CFDB0A1004090BF /* PendingAuditFullScreenViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -895,6 +903,7 @@
 				18E4E6721B80D2D600646985 /* selected-bar@2x.png in Resources */,
 				187A8C461BAE77CB00BC88D3 /* checkbox-normal@2x.png in Resources */,
 				186539661B9BA687005D8052 /* search-text-field@2x.png in Resources */,
+				D4D8BFCE1CFDA340004090BF /* greenTick.png in Resources */,
 				18E4E67C1B811DCF00646985 /* no-plan-selected-icon@2x.png in Resources */,
 				D4AA837F1BB41ABB006C4FF1 /* add-photo-btn-full@2x.png in Resources */,
 				187A8C431BAE77C100BC88D3 /* clear-cache-btn@2x.png in Resources */,
@@ -975,6 +984,7 @@
 				1852F7C31A40114A006715D2 /* LogsViewController.m in Sources */,
 				D4E8F1D319D1BCE700CB5AD6 /* DownloadAssetViewController.m in Sources */,
 				D4AC700419CE3DE400358981 /* AuditData.m in Sources */,
+				D4D8BFD11CFDB0A1004090BF /* PendingAuditFullScreenViewController.m in Sources */,
 				183BA9BE1A02B5F700697904 /* AboutUsViewController.m in Sources */,
 				D46D95E819F690E400543338 /* AssetsListViewController.m in Sources */,
 				D439DB0419CDB331009486C3 /* MainViewController.m in Sources */,
