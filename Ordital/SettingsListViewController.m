@@ -579,7 +579,7 @@
         //upload the image
         AWSS3TransferManagerUploadRequest *uploadRequest = [AWSS3TransferManagerUploadRequest new];
         uploadRequest.body = fileUrl;
-        uploadRequest.bucket = @"orditalappdbbackup";
+        uploadRequest.bucket = [[DataManager sharedManager] getBucket];//@"orditalappdbbackup";
         uploadRequest.key = [self getExportDBName];
         uploadRequest.contentType = @"application/octet-stream";
         uploadRequest.ACL = AWSS3ObjectCannedACLPublicRead;
@@ -615,7 +615,7 @@
 
 - (NSString *) getExportDBName {
     
-    NSString* str = [NSString stringWithFormat:@"DB_%@.db",[NSDate date]];
+    NSString* str = [NSString stringWithFormat:@"DB_%@_%@.db",[[[DataManager sharedManager] getUsername] stringByReplacingOccurrencesOfString:@" " withString:@"_"],[NSDate date]];
     
     return str;
     

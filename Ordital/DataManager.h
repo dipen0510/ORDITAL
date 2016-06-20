@@ -65,7 +65,7 @@ FOUNDATION_EXPORT NSString* const kEnvironmentURL;
 - (int) getAuditDataCount;
 - (NSMutableArray *) getAuditDataForAssetId:(NSString *)tmpAssetId;
 - (NSMutableArray *) getAllAuditImagePath;
-- (void) saveAuthToken:(NSString *)token withInstanceURL:(NSString *)instanceURL withIdentity:(NSString *)identity withBucket:(NSString *)bucket;
+- (void) saveAuthToken:(NSString *)token withInstanceURL:(NSString *)instanceURL withIdentity:(NSString *)identity withBucket:(NSString *)bucket andUsername:(NSString *)username;
 - (NSString *) getAuthToken;
 - (NSString *) getInstanceURL;
 - (NSString *) getIdentity;
@@ -185,5 +185,7 @@ FOUNDATION_EXPORT NSString* const kEnvironmentURL;
 
 - (void) updateUploadStatusForAuditId:(NSString *)auditId;
 - (void) updateUploadStatusForAssetId:(NSString *)assetId;
+
+- (NSString *) getUsername;
 
 @end

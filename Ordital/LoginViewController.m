@@ -106,7 +106,7 @@
                                         options: NSJSONReadingMutableContainers
                                           error: nil];
         
-        [[DataManager sharedManager] saveAuthToken:[dict valueForKey:@"token"] withInstanceURL:[dict valueForKey:@"instance_url"] withIdentity:[dict valueForKey:@"identity"] withBucket:[dict valueForKey:@"bucket"]];
+        [[DataManager sharedManager] saveAuthToken:[dict valueForKey:@"token"] withInstanceURL:[dict valueForKey:@"instance_url"] withIdentity:[dict valueForKey:@"identity"] withBucket:[dict valueForKey:@"bucket"] andUsername:[dict valueForKey:@"user_name"]];
         
         [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"about:blank"]]];
         [self startDynamicLabelAPI];

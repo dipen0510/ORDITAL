@@ -25,7 +25,7 @@ NSString* const kEnvironmentURL = @"";//@"testingapp-ordital.cs6.force.com";
 @implementation DataManager
 
 const char *create_authToken_table =
-"CREATE TABLE IF NOT EXISTS AUTHTOKEN (token TEXT PRIMARY KEY, instanceURL TEXT, identity TEXT, bucket TEXT)";
+"CREATE TABLE IF NOT EXISTS AUTHTOKEN (token TEXT PRIMARY KEY, instanceURL TEXT, identity TEXT, bucket TEXT, username TEXT)";
 const char *create_plant_table =
 "CREATE TABLE IF NOT EXISTS SELECTEDPLANT (plantId TEXT PRIMARY KEY, plantName TEXT, operatingName TEXT)";
 const char *create_asset_table =
@@ -306,9 +306,9 @@ static DataManager *singletonObject = nil;
 
 -(BOOL)isInternetConnectionAvailable{
     
-    if ([self getForceOfflineDetails]) {
-        return false;
-    }
+//    if ([self getForceOfflineDetails]) {
+//        return false;
+//    }
     
     Reachability *networkReachability = [Reachability reachabilityForInternetConnection];
     NetworkStatus networkStatus = [networkReachability currentReachabilityStatus];
@@ -1245,7 +1245,7 @@ static DataManager *singletonObject = nil;
     return arr;
 }
 
-- (void) saveAuthToken:(NSString *)token withInstanceURL:(NSString *)instanceURL withIdentity:(NSString *)identity withBucket:(NSString *)bucket
+- (void) saveAuthToken:(NSString *)token withInstanceURL:(NSString *)instanceURL withIdentity:(NSString *)identity withBucket:(NSString *)bucket andUsername:(NSString *)username
 {
     sqlite3_stmt    *statement;
     sqlite3 *assetDB;
@@ -1255,7 +1255,7 @@ static DataManager *singletonObject = nil;
     {
         
         NSString *insertSQL = [NSString stringWithFormat:
-                               @"INSERT INTO AUTHTOKEN VALUES (\"%@\", \"%@\", \"%@\", \"%@\")",token,instanceURL,identity,bucket];
+                               @"INSERT INTO AUTHTOKEN VALUES (\"%@\", \"%@\", \"%@\", \"%@\", \"%@\")",token,instanceURL,identity,bucket,username];
         
         const char *insert_stmt = [insertSQL UTF8String];
         sqlite3_prepare_v2(assetDB, insert_stmt,
@@ -1411,6 +1411,43 @@ static DataManager *singletonObject = nil;
             else
             {
                 NSLog(@"No Bucket found in DB");
+                return nil;
+            }
+            sqlite3_finalize(statement);
+        }
+        sqlite3_close(assetDB);
+    }
+    return token;
+}
+
+- (NSString *) getUsername
+{
+    NSString * token = [[NSString alloc] init];
+    
+    const char *dbpath = [databasePath UTF8String];
+    sqlite3_stmt    *statement;
+    sqlite3 *assetDB;
+    
+    if (sqlite3_open(dbpath, &assetDB) == SQLITE_OK)
+    {
+        NSString *querySQL = [NSString stringWithFormat:@"SELECT username FROM AUTHTOKEN"];
+        
+        const char *query_stmt = [querySQL UTF8String];
+        
+        if (sqlite3_prepare_v2(assetDB,
+                               query_stmt, -1, &statement, NULL) == SQLITE_OK)
+        {
+            if (sqlite3_step(statement) == SQLITE_ROW)
+            {
+                token = [[NSString alloc]
+                         initWithUTF8String:
+                         (const char *) sqlite3_column_text(
+                                                            statement, 0)];
+                NSLog(@"username found");
+            }
+            else
+            {
+                NSLog(@"No username found in DB");
                 return nil;
             }
             sqlite3_finalize(statement);
