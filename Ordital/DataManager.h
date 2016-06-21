@@ -187,5 +187,6 @@ FOUNDATION_EXPORT NSString* const kEnvironmentURL;
 - (void) updateUploadStatusForAssetId:(NSString *)assetId;
 
 - (NSString *) getUsername;
+- (NSMutableArray *) getCompletedAuditData;
 
 @end

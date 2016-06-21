@@ -3463,6 +3463,63 @@ static DataManager *singletonObject = nil;
     return arr;
 }
 
+- (NSMutableArray *) getCompletedAuditData
+{
+    NSMutableArray* arr  = [[NSMutableArray alloc] init];
+    AuditData * auditData;
+    
+    const char *dbpath = [databasePath UTF8String];
+    sqlite3_stmt    *statement;
+    sqlite3 *assetDB;
+    
+    if (sqlite3_open(dbpath, &assetDB) == SQLITE_OK)
+    {
+        NSString *querySQL = [NSString stringWithFormat:@"SELECT * FROM AUDITS WHERE uploaded = 1"];
+        
+        const char *query_stmt = [querySQL UTF8String];
+        
+        if (sqlite3_prepare_v2(assetDB,
+                               query_stmt, -1, &statement, NULL) == SQLITE_OK)
+        {
+            while (sqlite3_step(statement) == SQLITE_ROW)
+            {
+                auditData = [[AuditData alloc] init];
+                auditData.auditId = [[NSString alloc] initWithUTF8String: (const char *) sqlite3_column_text(statement, 0)];
+                
+                auditData.assetId = [[NSString alloc]
+                                     initWithUTF8String:(const char *)
+                                     sqlite3_column_text(statement, 1)];
+                auditData.assetName = [[NSString alloc]
+                                       initWithUTF8String:(const char *)
+                                       sqlite3_column_text(statement, 2)];
+                auditData.auditType = [[NSString alloc]
+                                       initWithUTF8String:(const char *)
+                                       sqlite3_column_text(statement, 3)];
+                auditData.imgURL = [[NSString alloc]
+                                    initWithUTF8String:(const char *)
+                                    sqlite3_column_text(statement, 4)];
+                auditData.dateTime = [[NSString alloc]
+                                      initWithUTF8String:(const char *)
+                                      sqlite3_column_text(statement, 5)];
+                auditData.latitude = [[[NSString alloc]
+                                       initWithUTF8String:(const char *)
+                                       sqlite3_column_text(statement, 6)] floatValue];
+                auditData.longitude = [[[NSString alloc]
+                                        initWithUTF8String:(const char *)
+                                        sqlite3_column_text(statement, 7)] floatValue];
+                auditData.altitude = [[[NSString alloc]
+                                       initWithUTF8String:(const char *)
+                                       sqlite3_column_text(statement, 8)] floatValue];
+                [arr addObject:auditData];
+                NSLog(@"Audit found");
+            }
+            sqlite3_finalize(statement);
+        }
+        sqlite3_close(assetDB);
+    }
+    return arr;
+}
+
 
 
 - (void) saveSyncRecordsWithValue:(BOOL)val

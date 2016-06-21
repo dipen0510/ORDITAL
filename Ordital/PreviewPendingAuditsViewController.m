@@ -8,7 +8,7 @@
 
 #import "PreviewPendingAuditsViewController.h"
 #import "DataManager.h"
-#import "PendingAuditFullScreenViewController.h"
+#import "PendingAuditDetailViewController.h"
 
 @interface PreviewPendingAuditsViewController ()
 
@@ -77,7 +77,8 @@
     
     selectedIndex = indexPath.row;
     
-    [self performSegueWithIdentifier:@"showFullScreenView" sender:nil];
+    //[self performSegueWithIdentifier:@"showFullScreenView" sender:nil];
+    [self performSegueWithIdentifier:@"showAuditDetailSegue" sender:nil];
     
     
 }
@@ -90,16 +91,26 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     
-    if ([segue.identifier isEqualToString:@"showFullScreenView"]) {
+//    if ([segue.identifier isEqualToString:@"showFullScreenView"]) {
+//        
+//        PendingAuditFullScreenViewController* controller = [segue destinationViewController];
+//        
+//        
+//        [controller setAuditContentArr:auditContentArr];
+//        [controller setAuditImgArr:auditImageArr];
+//        
+//        
+//        [controller setSelectedIndex:selectedIndex];
+//        
+//    }
+    if ([segue.identifier isEqualToString:@"showAuditDetailSegue"]) {
         
-        PendingAuditFullScreenViewController* controller = [segue destinationViewController];
+        PendingAuditDetailViewController* controller = [segue destinationViewController];
         
+        AuditData* tmpAudit = [[AuditData alloc] init];
+        tmpAudit = [auditContentArr objectAtIndex:selectedIndex];
         
-        [controller setAuditContentArr:auditContentArr];
-        [controller setAuditImgArr:auditImageArr];
-        
-        
-        [controller setSelectedIndex:selectedIndex];
+        [controller setAudit:tmpAudit];
         
     }
     
@@ -109,6 +120,33 @@
 - (IBAction)backButtonTapped:(id)sender {
     
     [self.navigationController popViewControllerAnimated:YES];
+    
+}
+
+- (IBAction)purgeButtonTapped:(id)sender {
+    
+    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Attention" message:@"Are you sure you want to delete all synced photos." delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
+    [alert show];
+    
+}
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
+    if (buttonIndex == 1) {
+        
+        NSMutableArray* syncedAuditArr = [[NSMutableArray alloc] initWithArray:[[DataManager sharedManager] getCompletedAuditData]];
+        
+        for (int i = 0; i < syncedAuditArr.count; i++) {
+            
+            AuditData* audit = [[AuditData alloc] init];
+            audit = [syncedAuditArr objectAtIndex:i];
+            
+            [[DataManager sharedManager] deleteAllAuditImagesWithAuditId:audit.auditId];
+            [[DataManager sharedManager] deleteAuditWithId:audit.auditId];
+            
+        }
+        
+    }
     
 }
 @end

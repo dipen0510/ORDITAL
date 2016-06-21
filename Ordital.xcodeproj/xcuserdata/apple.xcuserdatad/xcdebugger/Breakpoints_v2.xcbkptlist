@@ -1146,11 +1146,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/DataManager.m"
-            timestampString = "488150304.243123"
+            timestampString = "488230050.123081"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "3570"
-            endingLineNumber = "3570"
+            startingLineNumber = "3627"
+            endingLineNumber = "3627"
             landmarkName = "-getOfflineFilterQueryString:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1162,11 +1162,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/DataManager.m"
-            timestampString = "488150304.243123"
+            timestampString = "488230050.123081"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "3587"
-            endingLineNumber = "3587"
+            startingLineNumber = "3644"
+            endingLineNumber = "3644"
             landmarkName = "-getOfflineFilterQueryString:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1242,11 +1242,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/DataManager.m"
-            timestampString = "488150304.243123"
+            timestampString = "488230050.123081"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "3584"
-            endingLineNumber = "3584"
+            startingLineNumber = "3641"
+            endingLineNumber = "3641"
             landmarkName = "-getOfflineFilterQueryString:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1482,11 +1482,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/DataManager.m"
-            timestampString = "488150304.243123"
+            timestampString = "488230050.123081"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "4239"
-            endingLineNumber = "4239"
+            startingLineNumber = "4296"
+            endingLineNumber = "4296"
             landmarkName = "-getAssetCodingOptions"
             landmarkType = "5">
          </BreakpointContent>
@@ -1850,11 +1850,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/DataManager.m"
-            timestampString = "488150304.243123"
+            timestampString = "488230050.123081"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "4403"
-            endingLineNumber = "4403"
+            startingLineNumber = "4460"
+            endingLineNumber = "4460"
             landmarkName = "-getAllAssetsForOfflineTextinStandaloneMode:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2234,11 +2234,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/DataManager.m"
-            timestampString = "488150304.243123"
+            timestampString = "488230050.123081"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "4394"
-            endingLineNumber = "4394"
+            startingLineNumber = "4451"
+            endingLineNumber = "4451"
             landmarkName = "-deleteSelectedConnectionDetails"
             landmarkType = "5">
          </BreakpointContent>

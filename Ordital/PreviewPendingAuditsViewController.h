@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PreviewPendingAuditsViewController : UIViewController<UICollectionViewDataSource,UICollectionViewDelegateFlowLayout> {
+@interface PreviewPendingAuditsViewController : UIViewController<UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UIAlertViewDelegate> {
     NSMutableArray* auditContentArr;
     NSMutableArray* auditImageArr;
     NSInteger selectedIndex;
@@ -17,5 +17,6 @@
 
 @property (strong, nonatomic) IBOutlet UICollectionView *auditCollectionView;
 - (IBAction)backButtonTapped:(id)sender;
+- (IBAction)purgeButtonTapped:(id)sender;
 
 @end

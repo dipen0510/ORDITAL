@@ -59,6 +59,7 @@
 		18845DEA1B7F6A01001C5683 /* upload-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18845DE71B7F6A01001C5683 /* upload-icon@2x.png */; };
 		18845DED1B7F6ED6001C5683 /* connect-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18845DEB1B7F6ED6001C5683 /* connect-icon@2x.png */; };
 		18845DEE1B7F6ED6001C5683 /* disconnect-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18845DEC1B7F6ED6001C5683 /* disconnect-icon@2x.png */; };
+		1891E5BD1D19CE9700A673C1 /* PendingAuditDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1891E5BC1D19CE9700A673C1 /* PendingAuditDetailViewController.m */; };
 		189A5D161A2A61D50060E26F /* SetListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189A5D151A2A61D50060E26F /* SetListViewController.m */; };
 		189EF0E71C4EC29A007B46A8 /* FileDownloadInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 189EF0E61C4EC29A007B46A8 /* FileDownloadInfo.m */; };
 		18A5250A1C39B5C60037AE0B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A525091C39B5C60037AE0B /* Launch Screen.storyboard */; };
@@ -288,6 +289,8 @@
 		18845DE71B7F6A01001C5683 /* upload-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "upload-icon@2x.png"; sourceTree = "<group>"; };
 		18845DEB1B7F6ED6001C5683 /* connect-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "connect-icon@2x.png"; sourceTree = "<group>"; };
 		18845DEC1B7F6ED6001C5683 /* disconnect-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "disconnect-icon@2x.png"; sourceTree = "<group>"; };
+		1891E5BB1D19CE9700A673C1 /* PendingAuditDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PendingAuditDetailViewController.h; sourceTree = "<group>"; };
+		1891E5BC1D19CE9700A673C1 /* PendingAuditDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PendingAuditDetailViewController.m; sourceTree = "<group>"; };
 		189A5D141A2A61D50060E26F /* SetListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetListViewController.h; sourceTree = "<group>"; };
 		189A5D151A2A61D50060E26F /* SetListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetListViewController.m; sourceTree = "<group>"; };
 		189EF0E51C4EC29A007B46A8 /* FileDownloadInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileDownloadInfo.h; sourceTree = "<group>"; };
@@ -745,6 +748,8 @@
 				D4A300531AE63953002391EA /* AssetCodingValueViewController.m */,
 				D4D8BFCF1CFDB0A1004090BF /* PendingAuditFullScreenViewController.h */,
 				D4D8BFD01CFDB0A1004090BF /* PendingAuditFullScreenViewController.m */,
+				1891E5BB1D19CE9700A673C1 /* PendingAuditDetailViewController.h */,
+				1891E5BC1D19CE9700A673C1 /* PendingAuditDetailViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -996,6 +1001,7 @@
 				184673C11B9CE5B50016C6DD /* AuditImageCollectionViewCell.m in Sources */,
 				D42D56321A55531400E77988 /* UploadInfoViewController.m in Sources */,
 				184673BD1B9CCBB00016C6DD /* AFViewController.m in Sources */,
+				1891E5BD1D19CE9700A673C1 /* PendingAuditDetailViewController.m in Sources */,
 				D439DB2419CDDB21009486C3 /* CreateAssetViewController.m in Sources */,
 				183F30E51A11473A00191147 /* syncRecordsActionViewController.m in Sources */,
 				189EF0E71C4EC29A007B46A8 /* FileDownloadInfo.m in Sources */,
