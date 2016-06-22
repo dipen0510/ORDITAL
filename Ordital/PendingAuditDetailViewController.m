@@ -33,8 +33,15 @@
     NSData *imgData = UIImageJPEGRepresentation(self.auditImgView.image, 1.0);
     NSLog(@"Size of Image(bytes):%lu",(unsigned long)[imgData length]);
     
-    self.deviceFileNameLabel.text = [NSString stringWithFormat:@"File Size - %lu",(unsigned long)[imgData length]];
+    self.deviceFileSizeLabel.text = [NSString stringWithFormat:@"File Size - %lu bytes",(unsigned long)[imgData length]];
     self.deviceCreatedLabel.text = [NSString stringWithFormat:@"Created - %@",audit.dateTime];
+    
+    if (audit.isUploaded) {
+        self.auditUploadStatusImgView.hidden = NO;
+    }
+    else {
+        self.auditUploadStatusImgView.hidden = YES;
+    }
     
 }
 
@@ -54,6 +61,23 @@
 */
 
 - (IBAction)checkSyncButtonTapped:(id)sender {
+    
+    [SVProgressHUD showWithStatus:@"Checking Sync Status" maskType:SVProgressHUDMaskTypeGradient];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        
+        fileArr = [[NSMutableArray alloc] init];
+        [self listFilesAWS_S3WithBucketName:[[DataManager sharedManager] getBucket]];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            
+        });
+    });
+    
+    
+    
+    
 }
 
 - (IBAction)backButtonTapped:(id)sender {
@@ -100,11 +124,79 @@
             // The file uploaded successfully.
             [[DataManager sharedManager] updateUploadStatusForAuditId:audit.auditId];
             
-            [SVProgressHUD showSuccessWithStatus:@"Audit uplaoded successfully"];
+            [SVProgressHUD showSuccessWithStatus:@"Audit uploaded successfully"];
             
         }
         return nil;
     }];
+    
+}
+
+- (void) listFilesAWS_S3WithBucketName: (NSString *) bucketName
+{
+    AWSS3 *s3 = [AWSS3 defaultS3];
+    
+    AWSS3ListObjectsRequest *listObjectReq=[AWSS3ListObjectsRequest new];
+    listObjectReq.bucket=bucketName;
+    listObjectReq.prefix = audit.auditId;
+    
+    [[[s3 listObjects:listObjectReq] continueWithBlock:^id(AWSTask *task)
+      {
+          [SVProgressHUD dismiss];
+          
+          if(task.error)
+          {
+              NSLog(@"the request failed. error %@",task.error);
+              [SVProgressHUD showErrorWithStatus:@"Status check failed. Please try again later"];
+          }
+          else if(task.result)
+          {
+              AWSS3ListObjectsOutput *listObjectsOutput=task.result;
+              NSArray * files = listObjectsOutput.contents;
+              NSLog(@"files: %@\ncount: %lu", files, (unsigned long)files.count);
+              
+              fileArr = [files mutableCopy];
+              
+              [self performSelectorOnMainThread:@selector(updateServerSpecificUI) withObject:nil waitUntilDone:YES];
+              
+          }
+          return nil;
+          
+      }] waitUntilFinished];
+}
+
+- (void) updateServerSpecificUI {
+    
+    if (fileArr.count>0) {
+        
+        AWSS3Object* obj = [[AWSS3Object alloc] init];
+        obj = [fileArr objectAtIndex:0];
+        
+        NSString *key = [obj key];
+        NSLog(@"%@", key);
+        
+        self.auditUploadStatusImgView.hidden = NO;
+        self.serverBucketLabel.hidden = NO;
+        self.serverFileNameLabel.hidden = NO;
+        self.serverFileSizeLabel.hidden = NO;
+        self.serverCreatedLabel.hidden = NO;
+        self.serverBucketLabel.text = [NSString stringWithFormat:@"Bucket - %@",[[DataManager sharedManager] getBucket]];
+        self.serverFileNameLabel.text = [NSString stringWithFormat:@"File Name - %@",key];
+        self.serverFileSizeLabel.text = [NSString stringWithFormat:@"File Size - %lu bytes",(unsigned long)obj.size];
+        self.serverCreatedLabel.text = [NSString stringWithFormat:@"Created - %@",[obj lastModified]];
+        
+    }
+    else {
+        
+        self.auditUploadStatusImgView.hidden = YES;
+        self.serverBucketLabel.hidden = YES;
+        self.serverFileNameLabel.hidden = YES;
+        self.serverFileSizeLabel.hidden = YES;
+        self.serverCreatedLabel.hidden = YES;
+        
+    }
+    
+    [SVProgressHUD showSuccessWithStatus:@"Status updated successfully"];
     
 }
 @end

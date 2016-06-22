@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PendingAuditDetailViewController : UIViewController
+@interface PendingAuditDetailViewController : UIViewController {
+    NSMutableArray* fileArr;
+}
 
 @property (weak, nonatomic) IBOutlet UIImageView *auditImgView;
 @property (weak, nonatomic) IBOutlet UIImageView *auditUploadStatusImgView;

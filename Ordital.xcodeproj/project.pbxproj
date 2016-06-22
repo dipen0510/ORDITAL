@@ -63,44 +63,6 @@
 		189A5D161A2A61D50060E26F /* SetListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189A5D151A2A61D50060E26F /* SetListViewController.m */; };
 		189EF0E71C4EC29A007B46A8 /* FileDownloadInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 189EF0E61C4EC29A007B46A8 /* FileDownloadInfo.m */; };
 		18A5250A1C39B5C60037AE0B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A525091C39B5C60037AE0B /* Launch Screen.storyboard */; };
-		18A665021CF1858100E15299 /* AWSAPIGateway.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A664EF1CF1858100E15299 /* AWSAPIGateway.framework */; };
-		18A665031CF1858100E15299 /* AWSAPIGateway.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18A664EF1CF1858100E15299 /* AWSAPIGateway.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		18A665041CF1858100E15299 /* AWSAutoScaling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A664F01CF1858100E15299 /* AWSAutoScaling.framework */; };
-		18A665051CF1858100E15299 /* AWSAutoScaling.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18A664F01CF1858100E15299 /* AWSAutoScaling.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		18A665061CF1858100E15299 /* AWSCloudWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A664F11CF1858100E15299 /* AWSCloudWatch.framework */; };
-		18A665071CF1858100E15299 /* AWSCloudWatch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18A664F11CF1858100E15299 /* AWSCloudWatch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		18A665081CF1858100E15299 /* AWSCognito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A664F21CF1858100E15299 /* AWSCognito.framework */; };
-		18A665091CF1858100E15299 /* AWSCognito.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18A664F21CF1858100E15299 /* AWSCognito.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		18A6650A1CF1858100E15299 /* AWSCognitoIdentityProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A664F31CF1858100E15299 /* AWSCognitoIdentityProvider.framework */; };
-		18A6650B1CF1858100E15299 /* AWSCognitoIdentityProvider.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18A664F31CF1858100E15299 /* AWSCognitoIdentityProvider.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		18A6650C1CF1858100E15299 /* AWSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A664F41CF1858100E15299 /* AWSCore.framework */; };
-		18A6650D1CF1858100E15299 /* AWSCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18A664F41CF1858100E15299 /* AWSCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		18A6650E1CF1858100E15299 /* AWSDynamoDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A664F51CF1858100E15299 /* AWSDynamoDB.framework */; };
-		18A6650F1CF1858100E15299 /* AWSDynamoDB.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18A664F51CF1858100E15299 /* AWSDynamoDB.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		18A665101CF1858100E15299 /* AWSEC2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A664F61CF1858100E15299 /* AWSEC2.framework */; };
-		18A665111CF1858100E15299 /* AWSEC2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18A664F61CF1858100E15299 /* AWSEC2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		18A665121CF1858100E15299 /* AWSElasticLoadBalancing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A664F71CF1858100E15299 /* AWSElasticLoadBalancing.framework */; };
-		18A665131CF1858100E15299 /* AWSElasticLoadBalancing.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18A664F71CF1858100E15299 /* AWSElasticLoadBalancing.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		18A665141CF1858100E15299 /* AWSIoT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A664F81CF1858100E15299 /* AWSIoT.framework */; };
-		18A665151CF1858100E15299 /* AWSIoT.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18A664F81CF1858100E15299 /* AWSIoT.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		18A665161CF1858100E15299 /* AWSKinesis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A664F91CF1858100E15299 /* AWSKinesis.framework */; };
-		18A665171CF1858100E15299 /* AWSKinesis.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18A664F91CF1858100E15299 /* AWSKinesis.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		18A665181CF1858100E15299 /* AWSLambda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A664FA1CF1858100E15299 /* AWSLambda.framework */; };
-		18A665191CF1858100E15299 /* AWSLambda.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18A664FA1CF1858100E15299 /* AWSLambda.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		18A6651A1CF1858100E15299 /* AWSMachineLearning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A664FB1CF1858100E15299 /* AWSMachineLearning.framework */; };
-		18A6651B1CF1858100E15299 /* AWSMachineLearning.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18A664FB1CF1858100E15299 /* AWSMachineLearning.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		18A6651C1CF1858200E15299 /* AWSMobileAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A664FC1CF1858100E15299 /* AWSMobileAnalytics.framework */; };
-		18A6651D1CF1858200E15299 /* AWSMobileAnalytics.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18A664FC1CF1858100E15299 /* AWSMobileAnalytics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		18A6651E1CF1858200E15299 /* AWSS3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A664FD1CF1858100E15299 /* AWSS3.framework */; };
-		18A6651F1CF1858200E15299 /* AWSS3.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18A664FD1CF1858100E15299 /* AWSS3.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		18A665201CF1858200E15299 /* AWSSES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A664FE1CF1858100E15299 /* AWSSES.framework */; };
-		18A665211CF1858200E15299 /* AWSSES.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18A664FE1CF1858100E15299 /* AWSSES.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		18A665221CF1858200E15299 /* AWSSimpleDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A664FF1CF1858100E15299 /* AWSSimpleDB.framework */; };
-		18A665231CF1858200E15299 /* AWSSimpleDB.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18A664FF1CF1858100E15299 /* AWSSimpleDB.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		18A665241CF1858200E15299 /* AWSSNS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A665001CF1858100E15299 /* AWSSNS.framework */; };
-		18A665251CF1858200E15299 /* AWSSNS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18A665001CF1858100E15299 /* AWSSNS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		18A665261CF1858200E15299 /* AWSSQS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A665011CF1858100E15299 /* AWSSQS.framework */; };
-		18A665271CF1858200E15299 /* AWSSQS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18A665011CF1858100E15299 /* AWSSQS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		18B2481519D9CC5500A7C880 /* PreSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B2481419D9CC5500A7C880 /* PreSettingsViewController.m */; };
 		18B3B6841B9F72B300C1EA71 /* inspection-tab@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B3B6811B9F72B300C1EA71 /* inspection-tab@2x.png */; };
 		18B3B6851B9F72B300C1EA71 /* service-tab@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B3B6821B9F72B300C1EA71 /* service-tab@2x.png */; };
@@ -119,6 +81,7 @@
 		18E4E6831B81214200646985 /* slider-gray@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18E4E6811B81214200646985 /* slider-gray@2x.png */; };
 		18E4E6841B81214200646985 /* slider-orange@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18E4E6821B81214200646985 /* slider-orange@2x.png */; };
 		18E4E6861B81252200646985 /* back-btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18E4E6851B81252200646985 /* back-btn@2x.png */; };
+		B5EFFD28175C66B6281F6EA3 /* libPods-Ordital.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92535535B6821EA12D4FD89A /* libPods-Ordital.a */; };
 		D42D56321A55531400E77988 /* UploadInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D42D56311A55531400E77988 /* UploadInfoViewController.m */; };
 		D439DAEE19CDB331009486C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D439DAED19CDB331009486C3 /* Foundation.framework */; };
 		D439DAF019CDB331009486C3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D439DAEF19CDB331009486C3 /* CoreGraphics.framework */; };
@@ -145,6 +108,24 @@
 		D45A30E81B94479700CDCDC5 /* tag-tab@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D45A30E51B94479700CDCDC5 /* tag-tab@2x.png */; };
 		D46D95E519F6853100543338 /* DefaultSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D46D95E419F6853100543338 /* DefaultSetViewController.m */; };
 		D46D95E819F690E400543338 /* AssetsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D46D95E719F690E400543338 /* AssetsListViewController.m */; };
+		D46E4D9D1D1A9294003FBFD4 /* libAWSAutoScaling.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D46E4D8B1D1A9293003FBFD4 /* libAWSAutoScaling.a */; };
+		D46E4D9E1D1A9294003FBFD4 /* libAWSCloudWatch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D46E4D8C1D1A9293003FBFD4 /* libAWSCloudWatch.a */; };
+		D46E4D9F1D1A9294003FBFD4 /* libAWSCognito.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D46E4D8D1D1A9293003FBFD4 /* libAWSCognito.a */; };
+		D46E4DA01D1A9294003FBFD4 /* libAWSCognitoIdentityProvider.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D46E4D8E1D1A9293003FBFD4 /* libAWSCognitoIdentityProvider.a */; };
+		D46E4DA11D1A9294003FBFD4 /* libAWSCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D46E4D8F1D1A9293003FBFD4 /* libAWSCore.a */; };
+		D46E4DA21D1A9294003FBFD4 /* libAWSDynamoDB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D46E4D901D1A9293003FBFD4 /* libAWSDynamoDB.a */; };
+		D46E4DA31D1A9294003FBFD4 /* libAWSEC2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D46E4D911D1A9293003FBFD4 /* libAWSEC2.a */; };
+		D46E4DA41D1A9294003FBFD4 /* libAWSElasticLoadBalancing.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D46E4D921D1A9293003FBFD4 /* libAWSElasticLoadBalancing.a */; };
+		D46E4DA51D1A9294003FBFD4 /* libAWSIoT.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D46E4D931D1A9293003FBFD4 /* libAWSIoT.a */; };
+		D46E4DA61D1A9294003FBFD4 /* libAWSKinesis.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D46E4D941D1A9293003FBFD4 /* libAWSKinesis.a */; };
+		D46E4DA71D1A9294003FBFD4 /* libAWSLambda.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D46E4D951D1A9293003FBFD4 /* libAWSLambda.a */; };
+		D46E4DA81D1A9294003FBFD4 /* libAWSMachineLearning.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D46E4D961D1A9294003FBFD4 /* libAWSMachineLearning.a */; };
+		D46E4DA91D1A9294003FBFD4 /* libAWSMobileAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D46E4D971D1A9294003FBFD4 /* libAWSMobileAnalytics.a */; };
+		D46E4DAA1D1A9294003FBFD4 /* libAWSS3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D46E4D981D1A9294003FBFD4 /* libAWSS3.a */; };
+		D46E4DAB1D1A9294003FBFD4 /* libAWSSES.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D46E4D991D1A9294003FBFD4 /* libAWSSES.a */; };
+		D46E4DAC1D1A9294003FBFD4 /* libAWSSimpleDB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D46E4D9A1D1A9294003FBFD4 /* libAWSSimpleDB.a */; };
+		D46E4DAD1D1A9294003FBFD4 /* libAWSSNS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D46E4D9B1D1A9294003FBFD4 /* libAWSSNS.a */; };
+		D46E4DAE1D1A9294003FBFD4 /* libAWSSQS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D46E4D9C1D1A9294003FBFD4 /* libAWSSQS.a */; };
 		D47BDA6F1B845F4000745D0E /* add-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D47BDA691B845F4000745D0E /* add-icon@2x.png */; };
 		D47BDA701B845F4000745D0E /* add-photo-btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D47BDA6A1B845F4000745D0E /* add-photo-btn@2x.png */; };
 		D47BDA711B845F4000745D0E /* down-aroow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D47BDA6B1B845F4000745D0E /* down-aroow@2x.png */; };
@@ -193,25 +174,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				18A665271CF1858200E15299 /* AWSSQS.framework in Embed Frameworks */,
-				18A665071CF1858100E15299 /* AWSCloudWatch.framework in Embed Frameworks */,
-				18A665251CF1858200E15299 /* AWSSNS.framework in Embed Frameworks */,
-				18A665111CF1858100E15299 /* AWSEC2.framework in Embed Frameworks */,
-				18A665211CF1858200E15299 /* AWSSES.framework in Embed Frameworks */,
-				18A665031CF1858100E15299 /* AWSAPIGateway.framework in Embed Frameworks */,
-				18A665191CF1858100E15299 /* AWSLambda.framework in Embed Frameworks */,
-				18A665151CF1858100E15299 /* AWSIoT.framework in Embed Frameworks */,
-				18A665091CF1858100E15299 /* AWSCognito.framework in Embed Frameworks */,
-				18A665131CF1858100E15299 /* AWSElasticLoadBalancing.framework in Embed Frameworks */,
-				18A6651D1CF1858200E15299 /* AWSMobileAnalytics.framework in Embed Frameworks */,
-				18A6651B1CF1858100E15299 /* AWSMachineLearning.framework in Embed Frameworks */,
-				18A665171CF1858100E15299 /* AWSKinesis.framework in Embed Frameworks */,
-				18A6650B1CF1858100E15299 /* AWSCognitoIdentityProvider.framework in Embed Frameworks */,
-				18A665231CF1858200E15299 /* AWSSimpleDB.framework in Embed Frameworks */,
-				18A665051CF1858100E15299 /* AWSAutoScaling.framework in Embed Frameworks */,
-				18A6650F1CF1858100E15299 /* AWSDynamoDB.framework in Embed Frameworks */,
-				18A6650D1CF1858100E15299 /* AWSCore.framework in Embed Frameworks */,
-				18A6651F1CF1858200E15299 /* AWSS3.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,6 +181,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		14419116489D845E6DD31DC7 /* Pods-Ordital.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ordital.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ordital/Pods-Ordital.debug.xcconfig"; sourceTree = "<group>"; };
 		1813802B1B808261004FE26F /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		1813802C1B808261004FE26F /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		183BA9AD1A02A63900697904 /* SettingsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsListViewController.h; sourceTree = "<group>"; };
@@ -296,25 +259,6 @@
 		189EF0E51C4EC29A007B46A8 /* FileDownloadInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileDownloadInfo.h; sourceTree = "<group>"; };
 		189EF0E61C4EC29A007B46A8 /* FileDownloadInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileDownloadInfo.m; sourceTree = "<group>"; };
 		18A525091C39B5C60037AE0B /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		18A664EF1CF1858100E15299 /* AWSAPIGateway.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSAPIGateway.framework; sourceTree = "<group>"; };
-		18A664F01CF1858100E15299 /* AWSAutoScaling.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSAutoScaling.framework; sourceTree = "<group>"; };
-		18A664F11CF1858100E15299 /* AWSCloudWatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSCloudWatch.framework; sourceTree = "<group>"; };
-		18A664F21CF1858100E15299 /* AWSCognito.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSCognito.framework; sourceTree = "<group>"; };
-		18A664F31CF1858100E15299 /* AWSCognitoIdentityProvider.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSCognitoIdentityProvider.framework; sourceTree = "<group>"; };
-		18A664F41CF1858100E15299 /* AWSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSCore.framework; sourceTree = "<group>"; };
-		18A664F51CF1858100E15299 /* AWSDynamoDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSDynamoDB.framework; sourceTree = "<group>"; };
-		18A664F61CF1858100E15299 /* AWSEC2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSEC2.framework; sourceTree = "<group>"; };
-		18A664F71CF1858100E15299 /* AWSElasticLoadBalancing.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSElasticLoadBalancing.framework; sourceTree = "<group>"; };
-		18A664F81CF1858100E15299 /* AWSIoT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSIoT.framework; sourceTree = "<group>"; };
-		18A664F91CF1858100E15299 /* AWSKinesis.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSKinesis.framework; sourceTree = "<group>"; };
-		18A664FA1CF1858100E15299 /* AWSLambda.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSLambda.framework; sourceTree = "<group>"; };
-		18A664FB1CF1858100E15299 /* AWSMachineLearning.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSMachineLearning.framework; sourceTree = "<group>"; };
-		18A664FC1CF1858100E15299 /* AWSMobileAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSMobileAnalytics.framework; sourceTree = "<group>"; };
-		18A664FD1CF1858100E15299 /* AWSS3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSS3.framework; sourceTree = "<group>"; };
-		18A664FE1CF1858100E15299 /* AWSSES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSSES.framework; sourceTree = "<group>"; };
-		18A664FF1CF1858100E15299 /* AWSSimpleDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSSimpleDB.framework; sourceTree = "<group>"; };
-		18A665001CF1858100E15299 /* AWSSNS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSSNS.framework; sourceTree = "<group>"; };
-		18A665011CF1858100E15299 /* AWSSQS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSSQS.framework; sourceTree = "<group>"; };
 		18B2481319D9CC5500A7C880 /* PreSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreSettingsViewController.h; sourceTree = "<group>"; };
 		18B2481419D9CC5500A7C880 /* PreSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreSettingsViewController.m; sourceTree = "<group>"; };
 		18B3B6811B9F72B300C1EA71 /* inspection-tab@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "inspection-tab@2x.png"; sourceTree = "<group>"; };
@@ -334,6 +278,7 @@
 		18E4E6811B81214200646985 /* slider-gray@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slider-gray@2x.png"; sourceTree = "<group>"; };
 		18E4E6821B81214200646985 /* slider-orange@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slider-orange@2x.png"; sourceTree = "<group>"; };
 		18E4E6851B81252200646985 /* back-btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back-btn@2x.png"; sourceTree = "<group>"; };
+		92535535B6821EA12D4FD89A /* libPods-Ordital.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Ordital.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D42D56301A55531400E77988 /* UploadInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadInfoViewController.h; sourceTree = "<group>"; };
 		D42D56311A55531400E77988 /* UploadInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadInfoViewController.m; sourceTree = "<group>"; };
 		D439DAEA19CDB331009486C3 /* ORDITAL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ORDITAL.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -370,6 +315,24 @@
 		D46D95E419F6853100543338 /* DefaultSetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultSetViewController.m; sourceTree = "<group>"; };
 		D46D95E619F690E400543338 /* AssetsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetsListViewController.h; sourceTree = "<group>"; };
 		D46D95E719F690E400543338 /* AssetsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssetsListViewController.m; sourceTree = "<group>"; };
+		D46E4D8B1D1A9293003FBFD4 /* libAWSAutoScaling.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAWSAutoScaling.a; path = "../../../Library/Developer/Xcode/DerivedData/Ordital-gcwbkwusahhfeyhaweqxejinwwmr/Build/Products/Debug-iphoneos/libAWSAutoScaling.a"; sourceTree = "<group>"; };
+		D46E4D8C1D1A9293003FBFD4 /* libAWSCloudWatch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAWSCloudWatch.a; path = "../../../Library/Developer/Xcode/DerivedData/Ordital-gcwbkwusahhfeyhaweqxejinwwmr/Build/Products/Debug-iphoneos/libAWSCloudWatch.a"; sourceTree = "<group>"; };
+		D46E4D8D1D1A9293003FBFD4 /* libAWSCognito.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAWSCognito.a; path = "../../../Library/Developer/Xcode/DerivedData/Ordital-gcwbkwusahhfeyhaweqxejinwwmr/Build/Products/Debug-iphoneos/libAWSCognito.a"; sourceTree = "<group>"; };
+		D46E4D8E1D1A9293003FBFD4 /* libAWSCognitoIdentityProvider.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAWSCognitoIdentityProvider.a; path = "../../../Library/Developer/Xcode/DerivedData/Ordital-gcwbkwusahhfeyhaweqxejinwwmr/Build/Products/Debug-iphoneos/libAWSCognitoIdentityProvider.a"; sourceTree = "<group>"; };
+		D46E4D8F1D1A9293003FBFD4 /* libAWSCore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAWSCore.a; path = "../../../Library/Developer/Xcode/DerivedData/Ordital-gcwbkwusahhfeyhaweqxejinwwmr/Build/Products/Debug-iphoneos/libAWSCore.a"; sourceTree = "<group>"; };
+		D46E4D901D1A9293003FBFD4 /* libAWSDynamoDB.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAWSDynamoDB.a; path = "../../../Library/Developer/Xcode/DerivedData/Ordital-gcwbkwusahhfeyhaweqxejinwwmr/Build/Products/Debug-iphoneos/libAWSDynamoDB.a"; sourceTree = "<group>"; };
+		D46E4D911D1A9293003FBFD4 /* libAWSEC2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAWSEC2.a; path = "../../../Library/Developer/Xcode/DerivedData/Ordital-gcwbkwusahhfeyhaweqxejinwwmr/Build/Products/Debug-iphoneos/libAWSEC2.a"; sourceTree = "<group>"; };
+		D46E4D921D1A9293003FBFD4 /* libAWSElasticLoadBalancing.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAWSElasticLoadBalancing.a; path = "../../../Library/Developer/Xcode/DerivedData/Ordital-gcwbkwusahhfeyhaweqxejinwwmr/Build/Products/Debug-iphoneos/libAWSElasticLoadBalancing.a"; sourceTree = "<group>"; };
+		D46E4D931D1A9293003FBFD4 /* libAWSIoT.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAWSIoT.a; path = "../../../Library/Developer/Xcode/DerivedData/Ordital-gcwbkwusahhfeyhaweqxejinwwmr/Build/Products/Debug-iphoneos/libAWSIoT.a"; sourceTree = "<group>"; };
+		D46E4D941D1A9293003FBFD4 /* libAWSKinesis.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAWSKinesis.a; path = "../../../Library/Developer/Xcode/DerivedData/Ordital-gcwbkwusahhfeyhaweqxejinwwmr/Build/Products/Debug-iphoneos/libAWSKinesis.a"; sourceTree = "<group>"; };
+		D46E4D951D1A9293003FBFD4 /* libAWSLambda.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAWSLambda.a; path = "../../../Library/Developer/Xcode/DerivedData/Ordital-gcwbkwusahhfeyhaweqxejinwwmr/Build/Products/Debug-iphoneos/libAWSLambda.a"; sourceTree = "<group>"; };
+		D46E4D961D1A9294003FBFD4 /* libAWSMachineLearning.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAWSMachineLearning.a; path = "../../../Library/Developer/Xcode/DerivedData/Ordital-gcwbkwusahhfeyhaweqxejinwwmr/Build/Products/Debug-iphoneos/libAWSMachineLearning.a"; sourceTree = "<group>"; };
+		D46E4D971D1A9294003FBFD4 /* libAWSMobileAnalytics.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAWSMobileAnalytics.a; path = "../../../Library/Developer/Xcode/DerivedData/Ordital-gcwbkwusahhfeyhaweqxejinwwmr/Build/Products/Debug-iphoneos/libAWSMobileAnalytics.a"; sourceTree = "<group>"; };
+		D46E4D981D1A9294003FBFD4 /* libAWSS3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAWSS3.a; path = "../../../Library/Developer/Xcode/DerivedData/Ordital-gcwbkwusahhfeyhaweqxejinwwmr/Build/Products/Debug-iphoneos/libAWSS3.a"; sourceTree = "<group>"; };
+		D46E4D991D1A9294003FBFD4 /* libAWSSES.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAWSSES.a; path = "../../../Library/Developer/Xcode/DerivedData/Ordital-gcwbkwusahhfeyhaweqxejinwwmr/Build/Products/Debug-iphoneos/libAWSSES.a"; sourceTree = "<group>"; };
+		D46E4D9A1D1A9294003FBFD4 /* libAWSSimpleDB.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAWSSimpleDB.a; path = "../../../Library/Developer/Xcode/DerivedData/Ordital-gcwbkwusahhfeyhaweqxejinwwmr/Build/Products/Debug-iphoneos/libAWSSimpleDB.a"; sourceTree = "<group>"; };
+		D46E4D9B1D1A9294003FBFD4 /* libAWSSNS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAWSSNS.a; path = "../../../Library/Developer/Xcode/DerivedData/Ordital-gcwbkwusahhfeyhaweqxejinwwmr/Build/Products/Debug-iphoneos/libAWSSNS.a"; sourceTree = "<group>"; };
+		D46E4D9C1D1A9294003FBFD4 /* libAWSSQS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAWSSQS.a; path = "../../../Library/Developer/Xcode/DerivedData/Ordital-gcwbkwusahhfeyhaweqxejinwwmr/Build/Products/Debug-iphoneos/libAWSSQS.a"; sourceTree = "<group>"; };
 		D47BDA691B845F4000745D0E /* add-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add-icon@2x.png"; sourceTree = "<group>"; };
 		D47BDA6A1B845F4000745D0E /* add-photo-btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add-photo-btn@2x.png"; sourceTree = "<group>"; };
 		D47BDA6B1B845F4000745D0E /* down-aroow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "down-aroow@2x.png"; sourceTree = "<group>"; };
@@ -390,6 +353,7 @@
 		D4AC700019CE313A00358981 /* AddAuditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddAuditViewController.m; sourceTree = "<group>"; };
 		D4AC700219CE3DE400358981 /* AuditData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuditData.h; sourceTree = "<group>"; };
 		D4AC700319CE3DE400358981 /* AuditData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuditData.m; sourceTree = "<group>"; };
+		D4B6C5A2943333E3C8B296BE /* Pods-Ordital.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ordital.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ordital/Pods-Ordital.release.xcconfig"; sourceTree = "<group>"; };
 		D4D8BFCD1CFDA340004090BF /* greenTick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenTick.png; sourceTree = "<group>"; };
 		D4D8BFCF1CFDB0A1004090BF /* PendingAuditFullScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PendingAuditFullScreenViewController.h; sourceTree = "<group>"; };
 		D4D8BFD01CFDB0A1004090BF /* PendingAuditFullScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PendingAuditFullScreenViewController.m; sourceTree = "<group>"; };
@@ -422,34 +386,34 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18A665061CF1858100E15299 /* AWSCloudWatch.framework in Frameworks */,
+				D46E4D9D1D1A9294003FBFD4 /* libAWSAutoScaling.a in Frameworks */,
+				D46E4D9E1D1A9294003FBFD4 /* libAWSCloudWatch.a in Frameworks */,
+				D46E4D9F1D1A9294003FBFD4 /* libAWSCognito.a in Frameworks */,
+				D46E4DA01D1A9294003FBFD4 /* libAWSCognitoIdentityProvider.a in Frameworks */,
+				D46E4DA11D1A9294003FBFD4 /* libAWSCore.a in Frameworks */,
+				D46E4DA21D1A9294003FBFD4 /* libAWSDynamoDB.a in Frameworks */,
+				D46E4DA31D1A9294003FBFD4 /* libAWSEC2.a in Frameworks */,
+				D46E4DA41D1A9294003FBFD4 /* libAWSElasticLoadBalancing.a in Frameworks */,
+				D46E4DA51D1A9294003FBFD4 /* libAWSIoT.a in Frameworks */,
+				D46E4DA61D1A9294003FBFD4 /* libAWSKinesis.a in Frameworks */,
+				D46E4DA71D1A9294003FBFD4 /* libAWSLambda.a in Frameworks */,
+				D46E4DA81D1A9294003FBFD4 /* libAWSMachineLearning.a in Frameworks */,
+				D46E4DA91D1A9294003FBFD4 /* libAWSMobileAnalytics.a in Frameworks */,
+				D46E4DAA1D1A9294003FBFD4 /* libAWSS3.a in Frameworks */,
+				D46E4DAB1D1A9294003FBFD4 /* libAWSSES.a in Frameworks */,
+				D46E4DAC1D1A9294003FBFD4 /* libAWSSimpleDB.a in Frameworks */,
+				D46E4DAD1D1A9294003FBFD4 /* libAWSSNS.a in Frameworks */,
+				D46E4DAE1D1A9294003FBFD4 /* libAWSSQS.a in Frameworks */,
 				F7B1D87219D4B9CC003A4D05 /* QuartzCore.framework in Frameworks */,
 				18E4E6761B80D5ED00646985 /* Security.framework in Frameworks */,
-				18A6650A1CF1858100E15299 /* AWSCognitoIdentityProvider.framework in Frameworks */,
-				18A665121CF1858100E15299 /* AWSElasticLoadBalancing.framework in Frameworks */,
-				18A665101CF1858100E15299 /* AWSEC2.framework in Frameworks */,
-				18A665261CF1858200E15299 /* AWSSQS.framework in Frameworks */,
-				18A6651C1CF1858200E15299 /* AWSMobileAnalytics.framework in Frameworks */,
-				18A6651A1CF1858100E15299 /* AWSMachineLearning.framework in Frameworks */,
 				18E4E6741B80D5D900646985 /* DropboxSDK.framework in Frameworks */,
 				F7A8124A19D596B800753556 /* libz.dylib in Frameworks */,
-				18A665241CF1858200E15299 /* AWSSNS.framework in Frameworks */,
-				18A665021CF1858100E15299 /* AWSAPIGateway.framework in Frameworks */,
 				F7A6AF7A19D353F600112DC8 /* libsqlite3.dylib in Frameworks */,
-				18A665141CF1858100E15299 /* AWSIoT.framework in Frameworks */,
 				D4F3A3ED19CF095100440AA3 /* CoreLocation.framework in Frameworks */,
-				18A665181CF1858100E15299 /* AWSLambda.framework in Frameworks */,
-				18A665041CF1858100E15299 /* AWSAutoScaling.framework in Frameworks */,
-				18A665161CF1858100E15299 /* AWSKinesis.framework in Frameworks */,
-				18A665201CF1858200E15299 /* AWSSES.framework in Frameworks */,
-				18A6650E1CF1858100E15299 /* AWSDynamoDB.framework in Frameworks */,
 				D439DAF019CDB331009486C3 /* CoreGraphics.framework in Frameworks */,
-				18A6650C1CF1858100E15299 /* AWSCore.framework in Frameworks */,
-				18A6651E1CF1858200E15299 /* AWSS3.framework in Frameworks */,
 				D439DAF219CDB331009486C3 /* UIKit.framework in Frameworks */,
-				18A665081CF1858100E15299 /* AWSCognito.framework in Frameworks */,
-				18A665221CF1858200E15299 /* AWSSimpleDB.framework in Frameworks */,
 				D439DAEE19CDB331009486C3 /* Foundation.framework in Frameworks */,
+				B5EFFD28175C66B6281F6EA3 /* libPods-Ordital.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,6 +529,15 @@
 			name = PDFHelper;
 			sourceTree = "<group>";
 		};
+		5DDCD57C309397EC57266DE3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				14419116489D845E6DD31DC7 /* Pods-Ordital.debug.xcconfig */,
+				D4B6C5A2943333E3C8B296BE /* Pods-Ordital.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D439DAE119CDB331009486C3 = {
 			isa = PBXGroup;
 			children = (
@@ -572,6 +545,7 @@
 				D439DB1219CDB331009486C3 /* OrditalTests */,
 				D439DAEC19CDB331009486C3 /* Frameworks */,
 				D439DAEB19CDB331009486C3 /* Products */,
+				5DDCD57C309397EC57266DE3 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -587,25 +561,24 @@
 		D439DAEC19CDB331009486C3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				18A664EF1CF1858100E15299 /* AWSAPIGateway.framework */,
-				18A664F01CF1858100E15299 /* AWSAutoScaling.framework */,
-				18A664F11CF1858100E15299 /* AWSCloudWatch.framework */,
-				18A664F21CF1858100E15299 /* AWSCognito.framework */,
-				18A664F31CF1858100E15299 /* AWSCognitoIdentityProvider.framework */,
-				18A664F41CF1858100E15299 /* AWSCore.framework */,
-				18A664F51CF1858100E15299 /* AWSDynamoDB.framework */,
-				18A664F61CF1858100E15299 /* AWSEC2.framework */,
-				18A664F71CF1858100E15299 /* AWSElasticLoadBalancing.framework */,
-				18A664F81CF1858100E15299 /* AWSIoT.framework */,
-				18A664F91CF1858100E15299 /* AWSKinesis.framework */,
-				18A664FA1CF1858100E15299 /* AWSLambda.framework */,
-				18A664FB1CF1858100E15299 /* AWSMachineLearning.framework */,
-				18A664FC1CF1858100E15299 /* AWSMobileAnalytics.framework */,
-				18A664FD1CF1858100E15299 /* AWSS3.framework */,
-				18A664FE1CF1858100E15299 /* AWSSES.framework */,
-				18A664FF1CF1858100E15299 /* AWSSimpleDB.framework */,
-				18A665001CF1858100E15299 /* AWSSNS.framework */,
-				18A665011CF1858100E15299 /* AWSSQS.framework */,
+				D46E4D8B1D1A9293003FBFD4 /* libAWSAutoScaling.a */,
+				D46E4D8C1D1A9293003FBFD4 /* libAWSCloudWatch.a */,
+				D46E4D8D1D1A9293003FBFD4 /* libAWSCognito.a */,
+				D46E4D8E1D1A9293003FBFD4 /* libAWSCognitoIdentityProvider.a */,
+				D46E4D8F1D1A9293003FBFD4 /* libAWSCore.a */,
+				D46E4D901D1A9293003FBFD4 /* libAWSDynamoDB.a */,
+				D46E4D911D1A9293003FBFD4 /* libAWSEC2.a */,
+				D46E4D921D1A9293003FBFD4 /* libAWSElasticLoadBalancing.a */,
+				D46E4D931D1A9293003FBFD4 /* libAWSIoT.a */,
+				D46E4D941D1A9293003FBFD4 /* libAWSKinesis.a */,
+				D46E4D951D1A9293003FBFD4 /* libAWSLambda.a */,
+				D46E4D961D1A9294003FBFD4 /* libAWSMachineLearning.a */,
+				D46E4D971D1A9294003FBFD4 /* libAWSMobileAnalytics.a */,
+				D46E4D981D1A9294003FBFD4 /* libAWSS3.a */,
+				D46E4D991D1A9294003FBFD4 /* libAWSSES.a */,
+				D46E4D9A1D1A9294003FBFD4 /* libAWSSimpleDB.a */,
+				D46E4D9B1D1A9294003FBFD4 /* libAWSSNS.a */,
+				D46E4D9C1D1A9294003FBFD4 /* libAWSSQS.a */,
 				18E4E6751B80D5ED00646985 /* Security.framework */,
 				F7A8124919D596B800753556 /* libz.dylib */,
 				F7B1D87119D4B9CC003A4D05 /* QuartzCore.framework */,
@@ -615,6 +588,7 @@
 				D439DAEF19CDB331009486C3 /* CoreGraphics.framework */,
 				D439DAF119CDB331009486C3 /* UIKit.framework */,
 				D439DB0C19CDB331009486C3 /* XCTest.framework */,
+				92535535B6821EA12D4FD89A /* libPods-Ordital.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -795,11 +769,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D439DB1C19CDB331009486C3 /* Build configuration list for PBXNativeTarget "Ordital" */;
 			buildPhases = (
+				13C333DBCCD6721A6CB4283F /* Check Pods Manifest.lock */,
 				D439DAE619CDB331009486C3 /* Sources */,
 				D439DAE719CDB331009486C3 /* Frameworks */,
 				D439DAE819CDB331009486C3 /* Resources */,
 				18A665281CF1858200E15299 /* Embed Frameworks */,
-				18A665291CF185D500E15299 /* ShellScript */,
+				C2C92B7959C45E48AFAB61BB /* Embed Pods Frameworks */,
+				19C41CD19202472826BB14AA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -958,18 +934,50 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		18A665291CF185D500E15299 /* ShellScript */ = {
+		13C333DBCCD6721A6CB4283F /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework/strip-frameworks.sh\"";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		19C41CD19202472826BB14AA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ordital/Pods-Ordital-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2C92B7959C45E48AFAB61BB /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ordital/Pods-Ordital-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1148,11 +1156,12 @@
 		};
 		D439DB1D19CDB331009486C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14419116489D845E6DD31DC7 /* Pods-Ordital.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ORDITAL PTY. LTD. (2YQM7F2CL6)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ORDITAL PTY. LTD. (2YQM7F2CL6)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Stephen Crampton (W693Y85DKA)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Stephen Crampton (W693Y85DKA)";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1167,18 +1176,19 @@
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.beta.Ordital;
 				PRODUCT_NAME = ORDITAL;
-				PROVISIONING_PROFILE = "41bdbb9f-4813-432f-9656-14c8e8d17abb";
+				PROVISIONING_PROFILE = "57a99c92-cabc-4d22-8d81-c1df88ff7231";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		D439DB1E19CDB331009486C3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4B6C5A2943333E3C8B296BE /* Pods-Ordital.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ORDITAL PTY. LTD. (2YQM7F2CL6)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ORDITAL PTY. LTD. (2YQM7F2CL6)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Stephen Crampton (W693Y85DKA)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Stephen Crampton (W693Y85DKA)";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1193,7 +1203,7 @@
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.beta.Ordital;
 				PRODUCT_NAME = ORDITAL;
-				PROVISIONING_PROFILE = "41bdbb9f-4813-432f-9656-14c8e8d17abb";
+				PROVISIONING_PROFILE = "57a99c92-cabc-4d22-8d81-c1df88ff7231";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
