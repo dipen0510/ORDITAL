@@ -306,9 +306,26 @@ static DataManager *singletonObject = nil;
 
 -(BOOL)isInternetConnectionAvailable{
     
-//    if ([self getForceOfflineDetails]) {
-//        return false;
-//    }
+    if ([self getForceOfflineDetails]) {
+        return false;
+    }
+    
+    Reachability *networkReachability = [Reachability reachabilityForInternetConnection];
+    NetworkStatus networkStatus = [networkReachability currentReachabilityStatus];
+    if (networkStatus == NotReachable) {
+        [[DataManager sharedManager] setLogsString:[[[DataManager sharedManager] logsString] stringByAppendingString:[NSString stringWithFormat:@"\nInternet Disabled"]]];
+        return false;
+    } else {
+        [[DataManager sharedManager] setLogsString:[[[DataManager sharedManager] logsString] stringByAppendingString:[NSString stringWithFormat:@"\nInternet Enabled"]]];
+        return true;
+    }
+}
+
+-(BOOL)isInternetConnectionAvailableForAudits {
+    
+    //    if ([self getForceOfflineDetails]) {
+    //        return false;
+    //    }
     
     Reachability *networkReachability = [Reachability reachabilityForInternetConnection];
     NetworkStatus networkStatus = [networkReachability currentReachabilityStatus];
@@ -3474,7 +3491,7 @@ static DataManager *singletonObject = nil;
     
     if (sqlite3_open(dbpath, &assetDB) == SQLITE_OK)
     {
-        NSString *querySQL = [NSString stringWithFormat:@"SELECT * FROM AUDITS WHERE uploaded = 1"];
+        NSString *querySQL = [NSString stringWithFormat:@"SELECT * FROM AUDITS WHERE uploaded = 1 AND WHERE assetId NOT IN (SELECT assetId FROM ASSETS WHERE uploaded = 0)"];
         
         const char *query_stmt = [querySQL UTF8String];
         

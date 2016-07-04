@@ -47,7 +47,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1604"
             endingLineNumber = "1604"
-            landmarkName = "-getAllAuditsToBeSyncedForAssetId:"
+            landmarkName = "-getAllAssetsToBeSynced"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -63,7 +63,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1634"
             endingLineNumber = "1634"
-            landmarkName = "-getAllAssetsForOfflineTextWithAuditUncompleted:"
+            landmarkName = "-getAllAuditsToBeSyncedForAssetId:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -557,7 +557,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "2392"
             endingLineNumber = "2392"
-            landmarkName = "-saveSystemDetailsWithName:"
+            landmarkName = "-getSelectedPlantSectionDetails"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -621,7 +621,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "3178"
             endingLineNumber = "3178"
-            landmarkName = "-deleteCriticalityDetails"
+            landmarkName = "-getSelectedCriticalityDetails"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -877,7 +877,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1514"
             endingLineNumber = "1514"
-            landmarkName = "-deleteAllDownloadsData"
+            landmarkName = "-deleteAllAssetsAndAudits"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -893,7 +893,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1455"
             endingLineNumber = "1455"
-            landmarkName = "-deleteAllAssetsAndAudits"
+            landmarkName = "-getUsername"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -973,7 +973,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1270"
             endingLineNumber = "1270"
-            landmarkName = "-saveAuthToken:withInstanceURL:withIdentity:withBucket:"
+            landmarkName = "-saveAuthToken:withInstanceURL:withIdentity:withBucket:andUsername:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1021,7 +1021,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "3572"
             endingLineNumber = "3572"
-            landmarkName = "-getAllTodayAssets"
+            landmarkName = "-getSyncRecordsDetails"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1069,7 +1069,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "3871"
             endingLineNumber = "3871"
-            landmarkName = "-deleteTodayDetails"
+            landmarkName = "-saveTodayAssets:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1197,8 +1197,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "2869"
             endingLineNumber = "2869"
-            landmarkName = "@implementation DataManager"
-            landmarkType = "3">
+            landmarkName = "-getAllAssetsForOfflineTextWithAuditCompleted:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1501,7 +1501,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1425"
             endingLineNumber = "1425"
-            landmarkName = "-deleteAuthToken"
+            landmarkName = "-getUsername"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1549,7 +1549,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "4373"
             endingLineNumber = "4373"
-            landmarkName = "-getAllAssetsForOfflineTextinStandaloneMode:"
+            landmarkName = "-saveSeletedConnectionDetailsWithName:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1916,7 +1916,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "4736"
             endingLineNumber = "4736"
-            landmarkName = "-deleteForceOfflineDetails"
+            landmarkName = "-deletePunchListDetails"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2092,7 +2092,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1493"
             endingLineNumber = "1493"
-            landmarkName = "-saveDownloadData:"
+            landmarkName = "-deleteAllAssetsAndAudits"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2108,7 +2108,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "2752"
             endingLineNumber = "2752"
-            landmarkName = "-getAllDownloadedAssetsWithAuditCompleted"
+            landmarkName = "-getAllDownloadedAssetsWithAuditUncompleted"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2188,7 +2188,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "4931"
             endingLineNumber = "4931"
-            landmarkName = "-saveDynamicLabelValues:"
+            landmarkName = "-saveAuditTypeForId:andName:andOrder:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2492,8 +2492,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "3381"
             endingLineNumber = "3381"
-            landmarkName = "-getPendingAuditData"
-            landmarkType = "5">
+            landmarkName = "@implementation DataManager"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

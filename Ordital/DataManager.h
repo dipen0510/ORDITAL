@@ -188,5 +188,6 @@ FOUNDATION_EXPORT NSString* const kEnvironmentURL;
 
 - (NSString *) getUsername;
 - (NSMutableArray *) getCompletedAuditData;
+-(BOOL)isInternetConnectionAvailableForAudits;
 
 @end
