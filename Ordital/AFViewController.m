@@ -11,6 +11,7 @@
 #import "ScrollAuditImageViewController.h"
 #import "AddAuditViewController.h"
 #import "AuditImageCollectionViewCell.h"
+#import "PendingAuditDetailViewController.h"
 
 @interface AFViewController ()
 
@@ -240,7 +241,7 @@
     selectedIndex = [(AFIndexedCollectionView *)collectionView indexPath];
     NSLog(@"Selected Index %@",selectedIndex);
     // [self performSegueWithIdentifier:@"detailViewPushSegue" sender:nil];*/
-    [self performSegueWithIdentifier:@"scrollPushSegue" sender:nil];
+    [self performSegueWithIdentifier:@"auditDetailSegue" sender:nil];
     
 }
 
@@ -323,28 +324,17 @@ clickedButtonAtIndex:(NSInteger)buttonIndex{
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    if ([segue.identifier isEqualToString:@"scrollPushSegue"]) {
-        
-        ScrollAuditImageViewController* controller = [segue destinationViewController];
-        
+    if ([segue.identifier isEqualToString:@"auditDetailSegue"]) {
         
         NSMutableArray* tmpArr = [[NSMutableArray alloc] init];
         tmpArr = [[auditContentSortedArr objectAtIndex:selectedIndex.section] valueForKey:@"AuditArr"];
         
-        NSMutableArray* tmpImgArr = [[NSMutableArray alloc] init];
+        PendingAuditDetailViewController* controller = [segue destinationViewController];
         
-        for (int i = 0; i<tmpArr.count; i++) {
-            
-            NSMutableDictionary* tmpDict = [tmpArr objectAtIndex:i];
-            [tmpImgArr addObject:[[DataManager sharedManager] loadAuditImagewithPath:[tmpDict valueForKey:@"imgURL"]]];
-            
-        }
+        AuditData* tmpAudit = [[AuditData alloc] init];
+        tmpAudit = [tmpArr objectAtIndex:selectedIndex.row];
         
-        [controller setAuditContentArr:tmpArr];
-        [controller setAuditImgArr:tmpImgArr];
-        
-        
-        [controller setSelectedIndex:selectedIndex.row];
+        [controller setAudit:tmpAudit];
         
     }
     if ([segue.identifier isEqualToString:@"addMoreAuditsSegue"]) {

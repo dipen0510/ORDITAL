@@ -82,7 +82,6 @@
 		18E4E6841B81214200646985 /* slider-orange@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18E4E6821B81214200646985 /* slider-orange@2x.png */; };
 		18E4E6861B81252200646985 /* back-btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18E4E6851B81252200646985 /* back-btn@2x.png */; };
 		B5EFFD28175C66B6281F6EA3 /* libPods-Ordital.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92535535B6821EA12D4FD89A /* libPods-Ordital.a */; };
-		D42D56321A55531400E77988 /* UploadInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D42D56311A55531400E77988 /* UploadInfoViewController.m */; };
 		D439DAEE19CDB331009486C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D439DAED19CDB331009486C3 /* Foundation.framework */; };
 		D439DAF019CDB331009486C3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D439DAEF19CDB331009486C3 /* CoreGraphics.framework */; };
 		D439DAF219CDB331009486C3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D439DAF119CDB331009486C3 /* UIKit.framework */; };
@@ -279,8 +278,6 @@
 		18E4E6821B81214200646985 /* slider-orange@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slider-orange@2x.png"; sourceTree = "<group>"; };
 		18E4E6851B81252200646985 /* back-btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back-btn@2x.png"; sourceTree = "<group>"; };
 		92535535B6821EA12D4FD89A /* libPods-Ordital.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Ordital.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D42D56301A55531400E77988 /* UploadInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadInfoViewController.h; sourceTree = "<group>"; };
-		D42D56311A55531400E77988 /* UploadInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadInfoViewController.m; sourceTree = "<group>"; };
 		D439DAEA19CDB331009486C3 /* ORDITAL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ORDITAL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D439DAED19CDB331009486C3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D439DAEF19CDB331009486C3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -706,8 +703,6 @@
 				189A5D151A2A61D50060E26F /* SetListViewController.m */,
 				1852F7C11A40114A006715D2 /* LogsViewController.h */,
 				1852F7C21A40114A006715D2 /* LogsViewController.m */,
-				D42D56301A55531400E77988 /* UploadInfoViewController.h */,
-				D42D56311A55531400E77988 /* UploadInfoViewController.m */,
 				D49C560C1A5567A8004344D0 /* PreviewPendingAuditsViewController.h */,
 				D49C560D1A5567A8004344D0 /* PreviewPendingAuditsViewController.m */,
 				184441571A599141005A37CD /* PrivacyPolicyViewController.h */,
@@ -1007,7 +1002,6 @@
 				184673BA1B9CCAA40016C6DD /* AFTableViewCell.m in Sources */,
 				D439DB2719CDE4E6009486C3 /* AssetData.m in Sources */,
 				184673C11B9CE5B50016C6DD /* AuditImageCollectionViewCell.m in Sources */,
-				D42D56321A55531400E77988 /* UploadInfoViewController.m in Sources */,
 				184673BD1B9CCBB00016C6DD /* AFViewController.m in Sources */,
 				1891E5BD1D19CE9700A673C1 /* PendingAuditDetailViewController.m in Sources */,
 				D439DB2419CDDB21009486C3 /* CreateAssetViewController.m in Sources */,
@@ -1176,7 +1170,7 @@
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.beta.Ordital;
 				PRODUCT_NAME = ORDITAL;
-				PROVISIONING_PROFILE = "e4a96560-adfd-4d41-8983-6558da7b81c8";
+				PROVISIONING_PROFILE = "41bdbb9f-4813-432f-9656-14c8e8d17abb";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1203,7 +1197,7 @@
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.beta.Ordital;
 				PRODUCT_NAME = ORDITAL;
-				PROVISIONING_PROFILE = "e4a96560-adfd-4d41-8983-6558da7b81c8";
+				PROVISIONING_PROFILE = "41bdbb9f-4813-432f-9656-14c8e8d17abb";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
