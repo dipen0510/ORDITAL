@@ -997,7 +997,7 @@ clickedButtonAtIndex:(NSInteger)buttonIndex{
         
         if ([auditArr count]>0 && [[DataManager sharedManager] getSyncRecordsDetails]) {
             
-            if ([[DataManager sharedManager] isInternetConnectionAvailable] && [[DataManager sharedManager] isLoggedIn]) {
+            if ([[DataManager sharedManager] isInternetConnectionAvailableForAudits] && [[DataManager sharedManager] isLoggedIn]) {
                 
                 //[self startSingleUpload];
                 [self startAWSUpload];

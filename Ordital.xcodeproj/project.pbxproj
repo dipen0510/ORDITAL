@@ -1115,7 +1115,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "c9debc1a-fb24-4777-b675-7a87a38f42de";
+				PROVISIONING_PROFILE = "e4a96560-adfd-4d41-8983-6558da7b81c8";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1148,7 +1148,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				PROVISIONING_PROFILE = "c9debc1a-fb24-4777-b675-7a87a38f42de";
+				PROVISIONING_PROFILE = "e4a96560-adfd-4d41-8983-6558da7b81c8";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1160,8 +1160,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Stephen Crampton (W693Y85DKA)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Stephen Crampton (W693Y85DKA)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ORDITAL PTY. LTD. (2YQM7F2CL6)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ORDITAL PTY. LTD. (2YQM7F2CL6)";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1176,7 +1176,7 @@
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.beta.Ordital;
 				PRODUCT_NAME = ORDITAL;
-				PROVISIONING_PROFILE = "57a99c92-cabc-4d22-8d81-c1df88ff7231";
+				PROVISIONING_PROFILE = "e4a96560-adfd-4d41-8983-6558da7b81c8";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1187,8 +1187,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Stephen Crampton (W693Y85DKA)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Stephen Crampton (W693Y85DKA)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ORDITAL PTY. LTD. (2YQM7F2CL6)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ORDITAL PTY. LTD. (2YQM7F2CL6)";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1203,7 +1203,7 @@
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.beta.Ordital;
 				PRODUCT_NAME = ORDITAL;
-				PROVISIONING_PROFILE = "57a99c92-cabc-4d22-8d81-c1df88ff7231";
+				PROVISIONING_PROFILE = "e4a96560-adfd-4d41-8983-6558da7b81c8";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
