@@ -2414,7 +2414,7 @@
             </objects>
             <point key="canvasLocation" x="1360" y="-40"/>
         </scene>
-        <!--Pending Images-->
+        <!--Photos On Device-->
         <scene sceneID="cgO-lf-TSf">
             <objects>
                 <viewController id="6hq-SJ-z1q" customClass="PreviewPendingAuditsViewController" sceneMemberID="viewController">
@@ -2488,7 +2488,7 @@
                                             <action selector="backButtonTapped:" destination="6hq-SJ-z1q" eventType="touchUpInside" id="UX5-hz-emA"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pending Images" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76v-Sy-sY8">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photos On Device" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76v-Sy-sY8">
                                         <rect key="frame" x="80" y="36" width="158" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="158" id="RNE-0U-8ln"/>
@@ -2536,7 +2536,7 @@
                             <constraint firstAttribute="trailing" secondItem="sln-nE-UqY" secondAttribute="trailing" id="y7I-Oi-cYg"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Pending Images" id="Itq-nh-C4z"/>
+                    <navigationItem key="navigationItem" title="Photos On Device" id="Itq-nh-C4z"/>
                     <connections>
                         <outlet property="auditCollectionView" destination="oXy-oJ-Ngc" id="Nd5-hU-DbL"/>
                         <segue destination="0O7-7a-CKX" kind="push" identifier="showAuditDetailSegue" id="Vcf-8L-uwi"/>
@@ -4619,9 +4619,9 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="jkj-na-uQ1"/>
         <segue reference="Rjb-iL-kff"/>
-        <segue reference="Vcf-8L-uwi"/>
+        <segue reference="NwR-xT-eUS"/>
         <segue reference="w9O-ts-vfG"/>
+        <segue reference="Vcf-8L-uwi"/>
     </inferredMetricsTieBreakers>
 </document>

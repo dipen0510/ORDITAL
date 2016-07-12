@@ -190,4 +190,6 @@ FOUNDATION_EXPORT NSString* const kEnvironmentURL;
 - (NSMutableArray *) getCompletedAuditData;
 -(BOOL)isInternetConnectionAvailableForAudits;
 
+- (void) purgeAllAssetAndAuditData;
+
 @end

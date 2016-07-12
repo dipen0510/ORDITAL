@@ -47,7 +47,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1487"
             endingLineNumber = "1487"
-            landmarkName = "-deleteAllAssetsAndAudits"
+            landmarkName = "-deleteAuthToken"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -63,7 +63,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "2340"
             endingLineNumber = "2340"
-            landmarkName = "-savePlantSectionDetailsWithName:"
+            landmarkName = "-deleteTypeDetails"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -79,7 +79,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "2502"
             endingLineNumber = "2502"
-            landmarkName = "-deleteSystemDetails"
+            landmarkName = "-getSelectedSystemDetails"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -159,7 +159,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1525"
             endingLineNumber = "1525"
-            landmarkName = "-saveDownloadData:"
+            landmarkName = "-deleteAllAssetsAndAudits"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -271,7 +271,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "650"
             endingLineNumber = "650"
-            landmarkName = "-addAuditButtonTapped:"
+            landmarkName = "-scrollViewWillBeginDragging:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -431,7 +431,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "3244"
             endingLineNumber = "3244"
-            landmarkName = "-saveSourceDocsDetailsWithName:"
+            landmarkName = "-deleteCriticalityDetails"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -543,7 +543,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1385"
             endingLineNumber = "1385"
-            landmarkName = "-getBucket"
+            landmarkName = "-getIdentity"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -559,7 +559,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "330"
             endingLineNumber = "330"
-            landmarkName = "-saveAuditImage:withName:"
+            landmarkName = "-isInternetConnectionAvailableForAudits"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -575,7 +575,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "323"
             endingLineNumber = "323"
-            landmarkName = "-saveAuditImage:withName:"
+            landmarkName = "-isInternetConnectionAvailableForAudits"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -799,7 +799,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1314"
             endingLineNumber = "1314"
-            landmarkName = "-getInstanceURL"
+            landmarkName = "-getAuthToken"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -863,7 +863,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "813"
             endingLineNumber = "813"
-            landmarkName = "-leftButtonTapped:"
+            landmarkName = "-rightButtonTapped:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -879,7 +879,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "889"
             endingLineNumber = "889"
-            landmarkName = "-animateAfterDelayForLeft"
+            landmarkName = "-animateAfterDelayForRight"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -982,23 +982,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ordital/AssetsListViewController.m"
-            timestampString = "470781792.989192"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "445"
-            endingLineNumber = "445"
-            landmarkName = "-tableView:didSelectRowAtIndexPath:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/AssetsListViewController.m"
@@ -1018,11 +1002,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/AssetsListViewController.m"
-            timestampString = "470781792.989192"
+            timestampString = "490045630.862129"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "567"
-            endingLineNumber = "567"
+            startingLineNumber = "572"
+            endingLineNumber = "572"
             landmarkName = "-tableView:didSelectRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1103,7 +1087,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "607"
             endingLineNumber = "607"
-            landmarkName = "-touchesBegan:withEvent:"
+            landmarkName = "-textFieldDidEndEditing:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1151,8 +1135,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "3627"
             endingLineNumber = "3627"
-            landmarkName = "-getOfflineFilterQueryString:"
-            landmarkType = "5">
+            landmarkName = "@implementation DataManager"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1183,8 +1167,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "3363"
             endingLineNumber = "3363"
-            landmarkName = "@implementation DataManager"
-            landmarkType = "3">
+            landmarkName = "-getAssetDataCount"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1327,7 +1311,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1364"
             endingLineNumber = "1364"
-            landmarkName = "-getIdentity"
+            landmarkName = "-getInstanceURL"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1359,7 +1343,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1012"
             endingLineNumber = "1012"
-            landmarkName = "-pickerView:numberOfRowsInComponent:"
+            landmarkName = "-pickerView:viewForRow:forComponent:reusingView:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1386,11 +1370,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/AssetsListViewController.m"
-            timestampString = "470781792.989192"
+            timestampString = "490045630.862129"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "544"
-            endingLineNumber = "544"
+            startingLineNumber = "549"
+            endingLineNumber = "549"
             landmarkName = "-tableView:didSelectRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1487,7 +1471,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "4296"
             endingLineNumber = "4296"
-            landmarkName = "-getAssetCodingOptions"
+            landmarkName = "-saveAssetCodingOptionsForCondition:andOperatorType:andOperatorClass:andOperatorSubclass:andCategory:andType:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1839,7 +1823,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "4460"
             endingLineNumber = "4460"
-            landmarkName = "-getAllAssetsForOfflineTextinStandaloneMode:"
+            landmarkName = "-deleteSelectedConnectionDetails"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1951,7 +1935,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1062"
             endingLineNumber = "1062"
-            landmarkName = "-pickerView:didSelectRow:inComponent:"
+            landmarkName = "-pickerView:titleForRow:forComponent:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1983,7 +1967,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1075"
             endingLineNumber = "1075"
-            landmarkName = "-conditionPickerViewDoneButtonTapped:"
+            landmarkName = "-pickerView:didSelectRow:inComponent:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2031,7 +2015,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1049"
             endingLineNumber = "1049"
-            landmarkName = "-pickerView:didSelectRow:inComponent:"
+            landmarkName = "-pickerView:titleForRow:forComponent:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2079,8 +2063,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "703"
             endingLineNumber = "703"
-            landmarkName = "@implementation AssetCodingValueViewController"
-            landmarkType = "3">
+            landmarkName = "-updateAssetData"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2127,7 +2111,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "169"
             endingLineNumber = "169"
-            landmarkName = "-setupValuesForClassIDifAssetUpdated"
+            landmarkName = "-setupInitialView"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2239,7 +2223,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "157"
             endingLineNumber = "157"
-            landmarkName = "-setupValuesForClassIDifAssetUpdated"
+            landmarkName = "-setupInitialView"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2310,7 +2294,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/CreateAssetViewController.m"
@@ -2319,7 +2303,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1019"
             endingLineNumber = "1019"
-            landmarkName = "-saveAssetButtonTapped:"
+            landmarkName = "-checkIfConneectionValid"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2346,11 +2330,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/AssetsListViewController.m"
-            timestampString = "470781792.989192"
+            timestampString = "490045630.862129"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "888"
-            endingLineNumber = "888"
+            startingLineNumber = "894"
+            endingLineNumber = "894"
             landmarkName = "-refreshTableWithIacValue:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2406,7 +2390,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/MainViewController.m"
@@ -2422,7 +2406,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/AssetsListViewController.m"
@@ -2538,11 +2522,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/AssetsListViewController.m"
-            timestampString = "470781792.989192"
+            timestampString = "490045630.862129"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "829"
-            endingLineNumber = "829"
+            startingLineNumber = "835"
+            endingLineNumber = "835"
             landmarkName = "-refreshTableWithTodayAssets"
             landmarkType = "5">
          </BreakpointContent>
@@ -2554,11 +2538,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/AssetsListViewController.m"
-            timestampString = "470781792.989192"
+            timestampString = "490045630.862129"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "780"
-            endingLineNumber = "780"
+            startingLineNumber = "786"
+            endingLineNumber = "786"
             landmarkName = "-refreshTableWithTodayAssets"
             landmarkType = "5">
          </BreakpointContent>
@@ -2582,15 +2566,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/AssetsListViewController.m"
-            timestampString = "470781792.989192"
+            timestampString = "490045630.862129"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "669"
-            endingLineNumber = "669"
+            startingLineNumber = "675"
+            endingLineNumber = "675"
             landmarkName = "-segmentControlValueChanged:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2662,7 +2646,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/MainViewController.m"
@@ -2703,7 +2687,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "805"
             endingLineNumber = "805"
-            landmarkName = "-syncButtonTapped:"
+            landmarkName = "-startBulkUploadAPI"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2735,7 +2719,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "773"
             endingLineNumber = "773"
-            landmarkName = "-syncButtonTapped:"
+            landmarkName = "-startBulkUploadAPI"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

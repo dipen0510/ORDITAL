@@ -36,6 +36,7 @@
 
 @property NSString* currentAssetId;
 @property (nonatomic, strong) AssetData* assetObj;
+@property BOOL isDoneTodayPreview;
 @property (weak, nonatomic) IBOutlet UITableView *tblView;
 
 - (IBAction)addAuditsButtonTapped:(id)sender;

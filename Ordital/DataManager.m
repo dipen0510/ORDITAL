@@ -5184,4 +5184,82 @@ static DataManager *singletonObject = nil;
     
 }
 
+
+- (void) purgeAllAssetAndAuditData {
+    
+    [self deleteAllPurgedAuditImages];
+    const char *dbpath = [databasePath UTF8String];
+    sqlite3_stmt    *statement;
+    sqlite3 *assetDB;
+    
+    if (sqlite3_open(dbpath, &assetDB) == SQLITE_OK)
+    {
+        NSString *querySQL = [NSString stringWithFormat:@"DELETE FROM ASSETS WHERE uploaded = 1"];
+        
+        const char *query_stmt = [querySQL UTF8String];
+        
+        if (sqlite3_prepare_v2(assetDB,
+                               query_stmt, -1, &statement, NULL) == SQLITE_OK)
+        {
+            sqlite3_step(statement);
+            sqlite3_finalize(statement);
+            NSLog(@"ALL ASSETS deleted");
+        }
+        
+        querySQL = [NSString stringWithFormat:@"DELETE FROM AUDITS WHERE uploaded = 1"];
+        
+        query_stmt = [querySQL UTF8String];
+        
+        if (sqlite3_prepare_v2(assetDB,
+                               query_stmt, -1, &statement, NULL) == SQLITE_OK)
+        {
+            sqlite3_step(statement);
+            sqlite3_finalize(statement);
+            NSLog(@"ALL AUDITS deleted");
+        }
+        
+        sqlite3_close(assetDB);
+    }
+    
+}
+
+- (void)deleteAllPurgedAuditImages {
+    NSMutableArray* imgPathArr = [self getAllPurgedAuditImagePath];
+    for (int i =0; i<[imgPathArr count]; i++) {
+        NSString* path = [auditImagePath stringByAppendingPathComponent:[[[imgPathArr objectAtIndex:i] componentsSeparatedByString:@"/"] lastObject]];
+        [[NSFileManager defaultManager] removeItemAtPath:path error:nil];
+        NSLog(@"%@ audit image deleted",[[[imgPathArr objectAtIndex:i] componentsSeparatedByString:@"/"] lastObject]);
+        
+        [[DataManager sharedManager] setLogsString:[[[DataManager sharedManager] logsString] stringByAppendingString:[NSString stringWithFormat:@"\n%@ audit image deleted",[[[imgPathArr objectAtIndex:i] componentsSeparatedByString:@"/"] lastObject]]]];
+    }
+}
+
+- (NSMutableArray *) getAllPurgedAuditImagePath
+{
+    NSMutableArray* arr  = [[NSMutableArray alloc] init];
+    
+    const char *dbpath = [databasePath UTF8String];
+    sqlite3_stmt    *statement;
+    sqlite3 *assetDB;
+    
+    if (sqlite3_open(dbpath, &assetDB) == SQLITE_OK)
+    {
+        NSString *querySQL = [NSString stringWithFormat:@"SELECT imgURL FROM AUDITS WHERE uploaded = 1"];
+        
+        const char *query_stmt = [querySQL UTF8String];
+        
+        if (sqlite3_prepare_v2(assetDB,
+                               query_stmt, -1, &statement, NULL) == SQLITE_OK)
+        {
+            while (sqlite3_step(statement) == SQLITE_ROW)
+            {
+                [arr addObject:[[NSString alloc] initWithUTF8String: (const char *) sqlite3_column_text(statement, 0)]];
+                NSLog(@"Audit Image found");
+            }
+            sqlite3_finalize(statement);
+        }
+        sqlite3_close(assetDB);
+    }
+    return arr;
+}
 @end

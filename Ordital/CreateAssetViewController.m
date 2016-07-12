@@ -17,6 +17,7 @@
 #import "SVProgressHUD.h"
 #import "AssetCodingValueViewController.h"
 #import "AssetsListViewController.h"
+#import "AFViewController.h"
 
 @interface CreateAssetViewController ()
 
@@ -27,7 +28,7 @@
     CGPoint viewCenter;
 }
 
-@synthesize assetNameTxtField,parentTxtField,plantNameTxtField,descriptionTxtField,tagTxtField,isAssetToBeUpdated,assetToUpdate,isAuditToBePreviewed,typeTxtField,currentAssetViewType,currentScrollAssetIndex,scrollContentArr,currentInternetStatus,isNewChildAsset,parentLabel;
+@synthesize assetNameTxtField,parentTxtField,plantNameTxtField,descriptionTxtField,tagTxtField,isAssetToBeUpdated,assetToUpdate,isAuditToBePreviewed,typeTxtField,currentAssetViewType,currentScrollAssetIndex,scrollContentArr,currentInternetStatus,isNewChildAsset,parentLabel,isDoneTodayPreview;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -529,9 +530,10 @@
     if ([[segue identifier] isEqualToString:@"previewAuditSegue"]) {
         [[DataManager sharedManager] saveOnlyAssetData:assetObj];
         
-        PreviewAuditViewController* controller = [segue destinationViewController];
+        AFViewController* controller = [segue destinationViewController];
         controller.currentAssetId = assetObj.assetId;
         controller.assetObj = assetObj;
+        controller.isDoneTodayPreview = isDoneTodayPreview;
         
     }
     else if ([[segue identifier] isEqualToString:@"addAuditSegue"]){
@@ -677,7 +679,7 @@
     if ([self checkIfConneectionValid]) {
         
         if (assetObj.plantId && !([assetObj.plantId isEqualToString:@""])) {
-            if (isAuditToBePreviewed) {
+            if (isAuditToBePreviewed || isDoneTodayPreview) {
                 [self performSegueWithIdentifier:@"previewAuditSegue" sender:nil];
             }
             else {
@@ -692,7 +694,7 @@
     }
     else {
         
-        if (isAuditToBePreviewed) {
+        if (isAuditToBePreviewed || isDoneTodayPreview) {
             [self performSegueWithIdentifier:@"previewAuditSegue" sender:nil];
         }
         else {

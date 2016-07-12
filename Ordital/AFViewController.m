@@ -22,7 +22,7 @@
 
 @implementation AFViewController
 
-@synthesize currentAssetId,assetObj;
+@synthesize currentAssetId,assetObj,isDoneTodayPreview;
 
 -(void)loadView
 {
@@ -223,6 +223,12 @@
     [cell.deleteButton addTarget:self action:@selector(showName:) forControlEvents:UIControlEventTouchUpInside];
     
     cell.deleteButton.tag = (indexPath.row+1)+([(AFIndexedCollectionView *)collectionView indexPath].section*100);
+    
+    
+    if (isDoneTodayPreview) {
+        cell.deleteButton.hidden = YES;
+    }
+    
     
     if ([[tmpDict valueForKey:@"uploaded"] intValue]) {
         cell.uploadStatusImgView.hidden = NO;

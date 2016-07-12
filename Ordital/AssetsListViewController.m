@@ -528,6 +528,11 @@
         [controller setCurrentAssetViewType:1];
         [controller setCurrentScrollAssetIndex:selectedIndex];
         [controller setCurrentInternetStatus:internetStatus];
+        
+        if (segmentSelectedIndex == 1) {
+            [controller setIsDoneTodayPreview:YES];
+        }
+        
         [self.navigationController pushViewController:controller animated:YES];
     }
     
@@ -594,6 +599,7 @@
         [controller setCurrentAssetViewType:1];
         [controller setCurrentScrollAssetIndex:selectedIndex];
         [controller setCurrentInternetStatus:internetStatus];
+        [controller setIsDoneTodayPreview:YES];
         [self.navigationController pushViewController:controller animated:YES];
         
     }

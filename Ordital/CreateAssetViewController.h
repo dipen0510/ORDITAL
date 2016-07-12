@@ -85,4 +85,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *assetNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *tagLabel;
 
+@property BOOL isDoneTodayPreview;
+
 @end

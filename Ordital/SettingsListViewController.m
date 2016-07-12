@@ -39,7 +39,7 @@
     sectionContentArr = [[NSMutableArray alloc] initWithObjects:@"DATA SETTING",@"ACTIONS",@"MORE INFORMATION", nil];
 
     contentArr1 = [[NSMutableArray alloc] initWithObjects:@"Initial Configuration",@"Filters",@"Asset Coding", nil];
-    contentArr2 = [[NSMutableArray alloc] initWithObjects:@"Clear Cache",@"Network Settings",@"Login",@"Download Assets",@"Export Photos",@"Export Database", nil];
+    contentArr2 = [[NSMutableArray alloc] initWithObjects:@"Clear Cache",@"Network Settings",@"Login",@"Download Assets",@"Export Photos",@"Purge Device", nil];
     contentArr3 = [[NSMutableArray alloc] initWithObjects:@"Privacy Policy",@"Terms Of Use",@"Help",@"About Us",@"View Logs", nil];
     
     [[DataManager sharedManager] setLogsString:[[[DataManager sharedManager] logsString] stringByAppendingString:[NSString stringWithFormat:@"\nCurrent Screen - %@",[self.navigationController.viewControllers lastObject]]]];
@@ -232,7 +232,7 @@
         
     }
     if (indexPath.section==1 && indexPath.row==5 && [self checkIfConneectionValid]) {
-        [self startUplaodingDBToAWS];
+        [self startPurgingDeviceData];
     }
     if (indexPath.section==2 && indexPath.row==0)
     {
@@ -549,6 +549,29 @@
 
 - (void)increaseProgressCompleted:(NSMutableDictionary*) dict {
     [SVProgressHUD showProgress:((float)(currentSavingIndex)/(float)imgArr.count) status:[NSString stringWithFormat:@"Saving Images in photo library."] maskType:SVProgressHUDMaskTypeGradient];
+}
+
+
+
+#pragma mark - Purge Device Data
+
+- (void) startPurgingDeviceData {
+    
+    if ([[[DataManager sharedManager] getAllAssetsToBeSynced] count] > 0) {
+        
+        [self startUplaodingDBToAWS];
+        [[DataManager sharedManager] purgeAllAssetAndAuditData];
+        
+    }
+    else {
+        
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Unable to Purge" message:@"Assets pending to be synced. Clear the sync list to proceed." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+        
+    }
+    
+    
+    
 }
 
 

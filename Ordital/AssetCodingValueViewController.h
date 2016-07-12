@@ -66,6 +66,7 @@
 @property BOOL isAuditToBePreviewed;
 @property (strong, nonatomic) AssetData* assetToUpdate;
 @property BOOL unableToLocate;
+@property BOOL isDoneTodayPreview;
 
 - (IBAction)backButtonTapped:(id)sender;
 @property (strong, nonatomic) IBOutlet UIImageView *internerStatusImgView;

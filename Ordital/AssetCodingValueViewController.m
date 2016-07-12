@@ -11,6 +11,7 @@
 #import "PreviewAuditViewController.h"
 #import "AddAuditViewController.h"
 #import "SVProgressHUD.h"
+#import "AFViewController.h"
 
 @interface AssetCodingValueViewController ()
 
@@ -18,7 +19,7 @@
 
 @implementation AssetCodingValueViewController
 
-@synthesize isAssetToBeUpdated,isAuditToBePreviewed,conditionTxtField,operatorClassTxtField,operatorSubclassTxtField,operatorTypeTxtField,assetToUpdate,unableToLocate,categoryTxtField,typeTxtField;
+@synthesize isAssetToBeUpdated,isAuditToBePreviewed,conditionTxtField,operatorClassTxtField,operatorSubclassTxtField,operatorTypeTxtField,assetToUpdate,unableToLocate,categoryTxtField,typeTxtField,isDoneTodayPreview;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -734,9 +735,10 @@
     if ([[segue identifier] isEqualToString:@"previewAuditSegue"]) {
         [[DataManager sharedManager] saveOnlyAssetData:assetToUpdate];
         
-        PreviewAuditViewController* controller = [segue destinationViewController];
+        AFViewController* controller = [segue destinationViewController];
         controller.currentAssetId = assetToUpdate.assetId;
         controller.assetObj = assetToUpdate;
+        controller.isDoneTodayPreview = isDoneTodayPreview;
         
     }
     else if ([[segue identifier] isEqualToString:@"addAuditSegue"]){
@@ -945,7 +947,7 @@
     if ([self checkIfConneectionValid]) {
         
         if (assetToUpdate.plantId && !([assetToUpdate.plantId isEqualToString:@""])) {
-            if (isAuditToBePreviewed) {
+            if (isAuditToBePreviewed || isDoneTodayPreview) {
                 [self performSegueWithIdentifier:@"previewAuditSegue" sender:nil];
             }
             else {
@@ -960,7 +962,7 @@
     }
     else {
         
-        if (isAuditToBePreviewed) {
+        if (isAuditToBePreviewed || isDoneTodayPreview) {
             [self performSegueWithIdentifier:@"previewAuditSegue" sender:nil];
         }
         else {
