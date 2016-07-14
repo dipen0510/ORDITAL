@@ -20,6 +20,29 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    if ([audit isKindOfClass:[NSDictionary class]]) {
+        
+        AuditData* tmpAudit = [[AuditData alloc] init];
+        
+        tmpAudit.altitude = [[audit valueForKey:@"altitude"] doubleValue];
+        tmpAudit.assetId = [audit valueForKey:@"assetId"];
+        
+        tmpAudit.assetName = [audit valueForKey:@"assetName"];
+        tmpAudit.auditId = [audit valueForKey:@"auditId"];
+        tmpAudit.auditType = [audit valueForKey:@"auditType"];
+        tmpAudit.dateTime = [audit valueForKey:@"dateTime"];
+        tmpAudit.imgURL = [audit valueForKey:@"imgURL"];
+        tmpAudit.latitude = [[audit valueForKey:@"latitude"] doubleValue];
+        tmpAudit.longitude = [[audit valueForKey:@"longitude"] doubleValue];
+        tmpAudit.isUploaded = [[audit valueForKey:@"uploaded"] boolValue];
+        
+        audit = [[AuditData alloc] init];
+        audit = tmpAudit;
+        
+    }
+    
+    
+    
     [self setupInitialUI];
     
 }

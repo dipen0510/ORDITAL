@@ -63,7 +63,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1634"
             endingLineNumber = "1634"
-            landmarkName = "-getAllAuditsToBeSyncedForAssetId:"
+            landmarkName = "-getAllAssetsToBeSynced"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -381,7 +381,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "336"
             endingLineNumber = "336"
-            landmarkName = "-deleteAllSavedAuditImages"
+            landmarkName = "-isInternetConnectionAvailableForAudits"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -429,7 +429,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "343"
             endingLineNumber = "343"
-            landmarkName = "-deleteAllSavedAuditImages"
+            landmarkName = "-saveAuditImage:withName:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -463,38 +463,6 @@
             endingLineNumber = "858"
             landmarkName = "-leftButtonTapped:"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[CreateAssetViewController leftButtonTapped:]"
-                  moduleName = "ORDITAL"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dipensekhsaria/Desktop/Projects/ORDITAL/Ordital/CreateAssetViewController.m"
-                  timestampString = "488283537.538005"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "858"
-                  endingLineNumber = "858"
-                  offsetFromSymbolStart = "796">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__46-[CreateAssetViewController leftButtonTapped:]_block_invoke"
-                  moduleName = "ORDITAL"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dipensekhsaria/Desktop/Projects/ORDITAL/Ordital/CreateAssetViewController.m"
-                  timestampString = "488283537.538137"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "859"
-                  endingLineNumber = "859"
-                  offsetFromSymbolStart = "20">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -509,7 +477,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "328"
             endingLineNumber = "328"
-            landmarkName = "-saveAuditImage:withName:"
+            landmarkName = "-isInternetConnectionAvailableForAudits"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -589,7 +557,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "345"
             endingLineNumber = "345"
-            landmarkName = "-deleteAllAuditImagesWithAssetId:"
+            landmarkName = "-saveAuditImage:withName:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -621,7 +589,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "3178"
             endingLineNumber = "3178"
-            landmarkName = "-getSelectedCriticalityDetails"
+            landmarkName = "-saveCriticalityDetailsWithName:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1069,7 +1037,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "3871"
             endingLineNumber = "3871"
-            landmarkName = "-saveTodayAssets:"
+            landmarkName = "-deleteConditionsDetails"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1181,7 +1149,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "2842"
             endingLineNumber = "2842"
-            landmarkName = "-getAllAssetsForOfflineTextWithAuditCompleted:"
+            landmarkName = "-getAllDownloadedAssetsWithAuditCompleted"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1373,7 +1341,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "2580"
             endingLineNumber = "2580"
-            landmarkName = "-getAllParentForAssetId:"
+            landmarkName = "-getAllChildrenForAssetId:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1501,7 +1469,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1425"
             endingLineNumber = "1425"
-            landmarkName = "-getUsername"
+            landmarkName = "-getBucket"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1549,7 +1517,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "4373"
             endingLineNumber = "4373"
-            landmarkName = "-saveSeletedConnectionDetailsWithName:"
+            landmarkName = "-deleteAssetCodingData"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1672,7 +1640,7 @@
                   moduleName = "ORDITAL"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/dipensekhsaria/Desktop/Projects/ORDITAL/Ordital/MainViewController.m"
-                  timestampString = "488283537.544109"
+                  timestampString = "490187246.726498"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "598"
@@ -1687,7 +1655,7 @@
                   moduleName = "ORDITAL"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/dipensekhsaria/Desktop/Projects/ORDITAL/Ordital/MainViewController.m"
-                  timestampString = "488283537.544223"
+                  timestampString = "490187246.72663"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "598"
@@ -1720,7 +1688,7 @@
                   moduleName = "ORDITAL"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/dipensekhsaria/Desktop/Projects/ORDITAL/Ordital/MainViewController.m"
-                  timestampString = "488283537.54491"
+                  timestampString = "490187246.727313"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "664"
@@ -1735,7 +1703,7 @@
                   moduleName = "ORDITAL"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/dipensekhsaria/Desktop/Projects/ORDITAL/Ordital/MainViewController.m"
-                  timestampString = "488283537.545048"
+                  timestampString = "490187246.727431"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "664"
@@ -1768,7 +1736,7 @@
                   moduleName = "ORDITAL"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/dipensekhsaria/Desktop/Projects/ORDITAL/Ordital/MainViewController.m"
-                  timestampString = "488283537.545756"
+                  timestampString = "490187246.72815"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "672"
@@ -1783,7 +1751,7 @@
                   moduleName = "ORDITAL"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/dipensekhsaria/Desktop/Projects/ORDITAL/Ordital/MainViewController.m"
-                  timestampString = "488283537.545912"
+                  timestampString = "490187246.728278"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "672"
@@ -1798,7 +1766,7 @@
                   moduleName = "ORDITAL"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/dipensekhsaria/Desktop/Projects/ORDITAL/Ordital/MainViewController.m"
-                  timestampString = "488283537.546048"
+                  timestampString = "490187246.728387"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "672"
@@ -1916,7 +1884,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "4736"
             endingLineNumber = "4736"
-            landmarkName = "-deletePunchListDetails"
+            landmarkName = "-getPunchListDetails"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2092,7 +2060,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1493"
             endingLineNumber = "1493"
-            landmarkName = "-deleteAllAssetsAndAudits"
+            landmarkName = "-deleteAuthToken"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2131,7 +2099,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/EditAssetViewController.m"
@@ -2188,7 +2156,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "4931"
             endingLineNumber = "4931"
-            landmarkName = "-saveAuditTypeForId:andName:andOrder:"
+            landmarkName = "-deleteAssetCountDetails"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2259,7 +2227,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/EditAssetViewController.m"
@@ -2275,7 +2243,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/EditAssetViewController.m"
@@ -2460,7 +2428,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "388"
             endingLineNumber = "388"
-            landmarkName = "-setupDatabase"
+            landmarkName = "-loadAuditImagewithName:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

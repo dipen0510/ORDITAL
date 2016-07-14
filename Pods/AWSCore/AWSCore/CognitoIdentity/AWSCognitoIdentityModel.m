@@ -38,7 +38,6 @@ NSString *const AWSCognitoIdentityErrorDomain = @"com.amazonaws.AWSCognitoIdenti
              @"developerProviderName" : @"DeveloperProviderName",
              @"identityPoolName" : @"IdentityPoolName",
              @"openIdConnectProviderARNs" : @"OpenIdConnectProviderARNs",
-             @"samlProviderARNs" : @"SamlProviderARNs",
              @"supportedLoginProviders" : @"SupportedLoginProviders",
              };
 }
@@ -128,7 +127,6 @@ NSString *const AWSCognitoIdentityErrorDomain = @"com.amazonaws.AWSCognitoIdenti
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return @{
-             @"customRoleArn" : @"CustomRoleArn",
              @"identityId" : @"IdentityId",
              @"logins" : @"Logins",
              };
@@ -279,7 +277,6 @@ NSString *const AWSCognitoIdentityErrorDomain = @"com.amazonaws.AWSCognitoIdenti
              @"identityPoolId" : @"IdentityPoolId",
              @"identityPoolName" : @"IdentityPoolName",
              @"openIdConnectProviderARNs" : @"OpenIdConnectProviderARNs",
-             @"samlProviderARNs" : @"SamlProviderARNs",
              @"supportedLoginProviders" : @"SupportedLoginProviders",
              };
 }
@@ -465,7 +462,6 @@ NSString *const AWSCognitoIdentityErrorDomain = @"com.amazonaws.AWSCognitoIdenti
                 return @"AccessDenied";
             case AWSCognitoIdentityErrorCodeInternalServerError:
                 return @"InternalServerError";
-            case AWSCognitoIdentityErrorCodeUnknown:
             default:
                 return nil;
         }

@@ -557,7 +557,7 @@
 
 - (void) startPurgingDeviceData {
     
-    if ([[[DataManager sharedManager] getAllAssetsToBeSynced] count] > 0) {
+    if ([[[DataManager sharedManager] getAllAssetsToBeSynced] count] == 0) {
         
         [self startUplaodingDBToAWS];
         [[DataManager sharedManager] purgeAllAssetAndAuditData];
