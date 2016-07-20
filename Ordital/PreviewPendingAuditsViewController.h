@@ -8,14 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PreviewPendingAuditsViewController : UIViewController<UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UIAlertViewDelegate> {
+@interface PreviewPendingAuditsViewController : UIViewController<UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UIAlertViewDelegate,NSURLSessionDelegate> {
     NSMutableArray* auditContentArr;
     NSMutableArray* auditImageArr;
     NSInteger selectedIndex;
+    NSMutableArray* auditArr;
+    int uploadCounter;
 }
 
 
+@property (weak, nonatomic) IBOutlet UIButton *resyncButton;
 @property (strong, nonatomic) IBOutlet UICollectionView *auditCollectionView;
+
 - (IBAction)backButtonTapped:(id)sender;
 - (IBAction)purgeButtonTapped:(id)sender;
 

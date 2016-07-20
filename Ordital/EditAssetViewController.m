@@ -690,7 +690,7 @@ clickedButtonAtIndex:(NSInteger)buttonIndex{
     for (int i = 0; i<operatorClassArr.count; i++) {
         
         NSDictionary* dict = [operatorClassArr objectAtIndex:i];
-        [[DataManager sharedManager] saveOperatorClassWithValue:[dict valueForKey:@"Name"] andDescription:[dict valueForKey:@"catgory"] andID:[dict valueForKey:@"id"] andClass:[dict valueForKey:@"class"]];
+        [[DataManager sharedManager] saveOperatorClassWithValue:[dict valueForKey:@"Name"] andDescription:[dict valueForKey:@"catgory"] andID:[dict valueForKey:@"id"] andClass:[dict valueForKey:@"class"] andDesignation:[dict valueForKey:@"designation"]];
         
     }
     
@@ -701,7 +701,7 @@ clickedButtonAtIndex:(NSInteger)buttonIndex{
     for (int i = 0; i<operatorSubclassArr.count; i++) {
         
         NSDictionary* dict = [operatorSubclassArr objectAtIndex:i];
-        [[DataManager sharedManager] saveOperatorSubclassWithValue:[dict valueForKey:@"Name"] andDescription:[dict valueForKey:@"class"] andId:[dict valueForKey:@"id"]];
+        [[DataManager sharedManager] saveOperatorSubclassWithValue:[dict valueForKey:@"Name"] andDescription:[dict valueForKey:@"class"] andId:[dict valueForKey:@"id"] andDesignation:[dict valueForKey:@"designation"]];
         
     }
     
@@ -712,7 +712,7 @@ clickedButtonAtIndex:(NSInteger)buttonIndex{
     for (int i = 0; i<categoryArr.count; i++) {
         
         NSDictionary* dict = [categoryArr objectAtIndex:i];
-        [[DataManager sharedManager] saveCategoryWithValue:[dict valueForKey:@"Name"] andId:[dict valueForKey:@"id"] andCategory:[dict valueForKey:@"catgory"]];
+        [[DataManager sharedManager] saveCategoryWithValue:[dict valueForKey:@"Name"] andId:[dict valueForKey:@"id"] andCategory:[dict valueForKey:@"catgory"] andDesignation:[dict valueForKey:@"designation"]];
         
     }
     

@@ -132,10 +132,10 @@ FOUNDATION_EXPORT NSString* const kEnvironmentURL;
 - (void) saveTodayAssets:(NSMutableArray *)downloadDict;
 - (NSMutableArray *) getOfflineTodayDetails;
 - (void) deleteTodayDetails;
-- (void) saveOperatorClassWithValue:(NSString *)val andDescription:(NSString *)desc andID:(NSString *)ident andClass:(NSString *)class1;
+- (void) saveOperatorClassWithValue:(NSString *)val andDescription:(NSString *)desc andID:(NSString *)ident andClass:(NSString *)class1 andDesignation:(NSString *)designation;
 - (NSMutableArray *) getOperatorClassDetails;
 - (void) deleteOperatorClassDetails;
-- (void) saveOperatorSubclassWithValue:(NSString *)val andDescription:(NSString *)desc andId:(NSString *)ident;
+- (void) saveOperatorSubclassWithValue:(NSString *)val andDescription:(NSString *)desc andId:(NSString *)ident andDesignation:(NSString *)designation;
 - (NSMutableArray *) getOperatorSubclassDetails;
 - (void) deleteOperatorSubclassDetails;
 - (void) saveAssetCodingOptionsForCondition:(BOOL)con andOperatorType:(BOOL)opType andOperatorClass:(BOOL)opClass andOperatorSubclass:(BOOL)opSub andCategory:(BOOL)category andType:(BOOL)type;
@@ -159,7 +159,7 @@ FOUNDATION_EXPORT NSString* const kEnvironmentURL;
 - (BOOL) getPunchListDetails;
 - (void) deletePunchListDetails;
 
-- (void) saveCategoryWithValue:(NSString *)val andId:(NSString *)ident andCategory:(NSString *)category;
+- (void) saveCategoryWithValue:(NSString *)val andId:(NSString *)ident andCategory:(NSString *)category andDesignation:(NSString *)designation;;
 - (NSMutableArray *) getCategoryDetails;
 - (void) deleteCategoryDetails;
 

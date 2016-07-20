@@ -1106,7 +1106,7 @@
                                     <action selector="saveButtonTapped:" destination="i3W-Oe-WiJ" eventType="touchUpInside" id="D9D-F4-pw3"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Force Offline Mode" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EcE-k5-47I">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Offline Database" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EcE-k5-47I">
                                 <rect key="frame" x="16" y="156" width="161" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="EFj-XN-VNZ"/>
@@ -2499,13 +2499,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zYj-fZ-LQb">
-                                        <rect key="frame" x="263" y="36" width="49" height="22"/>
+                                        <rect key="frame" x="252" y="36" width="60" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="GFz-wL-65L"/>
-                                            <constraint firstAttribute="width" constant="49" id="sMq-Yv-lLt"/>
+                                            <constraint firstAttribute="width" constant="60" id="sMq-Yv-lLt"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <state key="normal" title="Purge">
+                                        <state key="normal" title="Re-sync">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -2539,6 +2539,7 @@
                     <navigationItem key="navigationItem" title="Photos On Device" id="Itq-nh-C4z"/>
                     <connections>
                         <outlet property="auditCollectionView" destination="oXy-oJ-Ngc" id="Nd5-hU-DbL"/>
+                        <outlet property="resyncButton" destination="zYj-fZ-LQb" id="dkq-9t-ifD"/>
                         <segue destination="0O7-7a-CKX" kind="push" identifier="showAuditDetailSegue" id="Vcf-8L-uwi"/>
                     </connections>
                 </viewController>
@@ -4280,7 +4281,7 @@
                         <viewControllerLayoutGuide type="bottom" id="knj-Bm-Xxf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ax8-Xi-lFr">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="550"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w0g-s4-2Xk">
@@ -4445,7 +4446,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sna-k2-Ws2">
-                                <rect key="frame" x="7" y="505" width="306" height="45"/>
+                                <rect key="frame" x="7" y="435" width="306" height="45"/>
                                 <color key="backgroundColor" red="0.96470588235294119" green="0.34509803921568627" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="qWO-7Q-4Mg"/>
@@ -4622,6 +4623,6 @@
         <segue reference="Rjb-iL-kff"/>
         <segue reference="NwR-xT-eUS"/>
         <segue reference="w9O-ts-vfG"/>
-        <segue reference="eII-6q-PRz"/>
+        <segue reference="Vcf-8L-uwi"/>
     </inferredMetricsTieBreakers>
 </document>

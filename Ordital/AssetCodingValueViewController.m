@@ -457,9 +457,9 @@
             NSMutableArray* tmpArr = [[NSMutableArray alloc] init];
             tmpArr = [categoryArr valueForKey:@"value"];
             
-            if ([tmpArr containsObject:categoryTxtField.text]) {
+            if ([tmpArr containsObject:[[categoryTxtField.text componentsSeparatedByString:@","] objectAtIndex:0]]) {
                 
-                categoryTxtField.text = [NSString stringWithFormat:@"%@",[[categoryArr objectAtIndex:[tmpArr indexOfObject:categoryTxtField.text]] valueForKey:@"value"]];
+                categoryTxtField.text = [NSString stringWithFormat:@"%@,%@",[[categoryArr objectAtIndex:[tmpArr indexOfObject:categoryTxtField.text]] valueForKey:@"value"],[[categoryArr objectAtIndex:[tmpArr indexOfObject:categoryTxtField.text]] valueForKey:@"designation"]];
                 
             }
             
@@ -581,9 +581,9 @@
             NSMutableArray* tmpArr = [[NSMutableArray alloc] init];
             tmpArr = [operatorClassSlaveArr valueForKey:@"value"];
             
-            if ([tmpArr containsObject:operatorClassTxtField.text]) {
+            if ([tmpArr containsObject:[[operatorClassTxtField.text componentsSeparatedByString:@","] objectAtIndex:0]]) {
                 
-                operatorClassTxtField.text = [NSString stringWithFormat:@"%@, %@",[[operatorClassSlaveArr objectAtIndex:[tmpArr indexOfObject:operatorClassTxtField.text]] valueForKey:@"value"],[[operatorClassSlaveArr objectAtIndex:[tmpArr indexOfObject:operatorClassTxtField.text]] valueForKey:@"description"]];
+                operatorClassTxtField.text = [NSString stringWithFormat:@"%@, %@,%@",[[operatorClassSlaveArr objectAtIndex:[tmpArr indexOfObject:operatorClassTxtField.text]] valueForKey:@"value"],[[operatorClassSlaveArr objectAtIndex:[tmpArr indexOfObject:operatorClassTxtField.text]] valueForKey:@"description"],[[operatorClassSlaveArr objectAtIndex:[tmpArr indexOfObject:operatorClassTxtField.text]] valueForKey:@"designation"]];
                 
             }
             
@@ -659,9 +659,9 @@
             NSMutableArray* tmpArr = [[NSMutableArray alloc] init];
             tmpArr = [operatorSubclassSlaveArr valueForKey:@"value"];
             
-            if ([tmpArr containsObject:operatorSubclassTxtField.text]) {
+            if ([tmpArr containsObject:[[operatorSubclassTxtField.text componentsSeparatedByString:@","] objectAtIndex:0]]) {
                 
-                operatorSubclassTxtField.text = [NSString stringWithFormat:@"%@, %@",[[operatorSubclassSlaveArr objectAtIndex:[tmpArr indexOfObject:operatorSubclassTxtField.text]] valueForKey:@"value"],[[operatorSubclassSlaveArr objectAtIndex:[tmpArr indexOfObject:operatorSubclassTxtField.text]] valueForKey:@"description"]];
+                operatorSubclassTxtField.text = [NSString stringWithFormat:@"%@, %@,%@",[[operatorSubclassSlaveArr objectAtIndex:[tmpArr indexOfObject:operatorSubclassTxtField.text]] valueForKey:@"value"],[[operatorSubclassSlaveArr objectAtIndex:[tmpArr indexOfObject:operatorSubclassTxtField.text]] valueForKey:@"description"],[[operatorSubclassSlaveArr objectAtIndex:[tmpArr indexOfObject:operatorSubclassTxtField.text]] valueForKey:@"designation"]];
                 
             }
             
@@ -696,7 +696,7 @@
         assetToUpdate.operatorType = [[operatorTypeTxtField.text componentsSeparatedByString:@","] firstObject];
     }
     if (operatorClassTxtField.tag==0) {
-        assetToUpdate.operatorClass = operatorClassTxtField.text;
+        assetToUpdate.operatorClass = [[operatorClassTxtField.text componentsSeparatedByString:@","] firstObject];
     }
     else {
         assetToUpdate.operatorClass = [[operatorClassTxtField.text componentsSeparatedByString:@","] firstObject];
@@ -705,17 +705,17 @@
         
     }
     if (operatorSubclassTxtField.tag==0) {
-        assetToUpdate.operatorSubclass = operatorSubclassTxtField.text;
+        assetToUpdate.operatorSubclass = [[operatorSubclassTxtField.text componentsSeparatedByString:@","] firstObject];
     }
     else {
         assetToUpdate.operatorSubclass = [[operatorSubclassTxtField.text componentsSeparatedByString:@","] firstObject];
         //assetToUpdate.operatorSubclassId = [[operatorSubclassSlaveArr objectAtIndex:[[operatorSubclassSlaveArr valueForKey:@"value"] indexOfObject:operatorSubclassTxtField.text]] valueForKey:@"id"];
     }
     if (categoryTxtField.tag==0) {
-        assetToUpdate.category = categoryTxtField.text;
+        assetToUpdate.category = [[categoryTxtField.text componentsSeparatedByString:@","] objectAtIndex:0];
     }
     else {
-        assetToUpdate.category = categoryTxtField.text;
+        assetToUpdate.category = [[categoryTxtField.text componentsSeparatedByString:@","] objectAtIndex:0];
         //assetToUpdate.categoryId = [[categoryArr objectAtIndex:[[categoryArr valueForKey:@"value"] indexOfObject:categoryTxtField.text]] valueForKey:@"id"];
     }
     
@@ -1136,7 +1136,7 @@
     
     showKeyboardAnimation = true;
     
-    categoryTxtField.text = [selectedPickerContent5 valueForKey:@"value"];
+    categoryTxtField.text = [NSString stringWithFormat:@"%@,%@",[selectedPickerContent5 valueForKey:@"value"],[selectedPickerContent5 valueForKey:@"designation"]];
     //categoryTxtField.text = @"";
     
     selectedOperatorClassId = [selectedPickerContent5 valueForKey:@"id"];
@@ -1151,7 +1151,7 @@
     
     showKeyboardAnimation = true;
     
-    operatorClassTxtField.text = [selectedPickerContent3 valueForKey:@"value"];
+    operatorClassTxtField.text = [NSString stringWithFormat:@"%@,%@",[selectedPickerContent3 valueForKey:@"value"],[selectedPickerContent3 valueForKey:@"designation"]];
     operatorSubclassTxtField.text = @"";
     
     selectedOperatorClassId = [selectedPickerContent3 valueForKey:@"id"];
@@ -1168,8 +1168,7 @@
     
     showKeyboardAnimation = true;
     
-    operatorSubclassTxtField.text = [selectedPickerContent4 valueForKey:@"value"];
-    
+    operatorSubclassTxtField.text = [NSString stringWithFormat:@"%@,%@",[selectedPickerContent4 valueForKey:@"value"],[selectedPickerContent4 valueForKey:@"designation"]];
     selectedOperatorClassId = [selectedPickerContent4 valueForKey:@"id"];
     [operatorSubclassTxtField resignFirstResponder];
     

@@ -63,11 +63,11 @@ const char *create_conditions_table =
 const char *create_operatorType_table =
 "CREATE TABLE IF NOT EXISTS OPERATORTYPE (value TEXT PRIMARY KEY, description TEXT)";
 const char *create_operatorClass_table =
-"CREATE TABLE IF NOT EXISTS OPERATORCLASS (value TEXT, parentValue TEXT, class TEXT, id TEXT PRIMARY KEY)";
+"CREATE TABLE IF NOT EXISTS OPERATORCLASS (value TEXT, parentValue TEXT, class TEXT, id TEXT PRIMARY KEY, designation TEXT)";
 const char *create_operatorSubclass_table =
-"CREATE TABLE IF NOT EXISTS OPERATORSUBCLASS (value TEXT, parentValue TEXT, id TEXT PRIMARY KEY)";
+"CREATE TABLE IF NOT EXISTS OPERATORSUBCLASS (value TEXT, parentValue TEXT, id TEXT PRIMARY KEY, designation TEXT)";
 const char *create_category_table =
-"CREATE TABLE IF NOT EXISTS CATEGORY (value TEXT, category TEXT, id TEXT PRIMARY KEY)";
+"CREATE TABLE IF NOT EXISTS CATEGORY (value TEXT, category TEXT, id TEXT PRIMARY KEY, designation TEXT)";
 const char *create_today_table =
 "CREATE TABLE IF NOT EXISTS TODAY (assetId TEXT PRIMARY KEY, assetName TEXT, plantName TEXT, description TEXT, tag TEXT, plantId TEXT, parentId TEXT, parentName TEXT, make TEXT, type TEXT, unableToLocate TINYINT, condition TEXT, iPhoneAssetId TEXT, operatorType TEXT, operatorClass TEXT, operatorClassId TEXT, category TEXT, categoryId TEXT, operatorSubclass TEXT, operatorSubclassId TEXT)";
 const char *create_assetCoding_table =
@@ -3987,7 +3987,7 @@ static DataManager *singletonObject = nil;
 }
 
 
-- (void) saveOperatorClassWithValue:(NSString *)val andDescription:(NSString *)desc andID:(NSString *)ident andClass:(NSString *)class1
+- (void) saveOperatorClassWithValue:(NSString *)val andDescription:(NSString *)desc andID:(NSString *)ident andClass:(NSString *)class1 andDesignation:(NSString *)designation
 {
     //[self deleteConditionsDetails];
     sqlite3_stmt    *statement;
@@ -3998,7 +3998,7 @@ static DataManager *singletonObject = nil;
     {
         
         NSString *insertSQL = [NSString stringWithFormat:
-                               @"INSERT INTO OPERATORCLASS VALUES (\"%@\", \"%@\", \"%@\", \"%@\")",val,desc,class1,ident];
+                               @"INSERT INTO OPERATORCLASS VALUES (\"%@\", \"%@\", \"%@\", \"%@\", \"%@\")",val,desc,class1,ident,designation];
         
         const char *insert_stmt = [insertSQL UTF8String];
         sqlite3_prepare_v2(assetDB, insert_stmt,
@@ -4049,6 +4049,9 @@ static DataManager *singletonObject = nil;
                 [result setObject:[[NSString alloc]
                                    initWithUTF8String:
                                    (const char *) sqlite3_column_text(statement, 3)] forKey:@"id"] ;
+                [result setObject:[[NSString alloc]
+                                  initWithUTF8String:
+                                  (const char *) sqlite3_column_text(statement, 4)] forKey:@"designation"] ;
                 
                 [arr addObject:result];
                 
@@ -4086,7 +4089,7 @@ static DataManager *singletonObject = nil;
 
 
 
-- (void) saveCategoryWithValue:(NSString *)val andId:(NSString *)ident andCategory:(NSString *)category
+- (void) saveCategoryWithValue:(NSString *)val andId:(NSString *)ident andCategory:(NSString *)category andDesignation:(NSString *)designation
 {
     //[self deleteConditionsDetails];
     sqlite3_stmt    *statement;
@@ -4097,7 +4100,7 @@ static DataManager *singletonObject = nil;
     {
         
         NSString *insertSQL = [NSString stringWithFormat:
-                               @"INSERT INTO CATEGORY VALUES (\"%@\",\"%@\",\"%@\")",val,category,ident];
+                               @"INSERT INTO CATEGORY VALUES (\"%@\",\"%@\",\"%@\",\"%@\")",val,category,ident,designation];
         
         const char *insert_stmt = [insertSQL UTF8String];
         sqlite3_prepare_v2(assetDB, insert_stmt,
@@ -4145,6 +4148,9 @@ static DataManager *singletonObject = nil;
                 [result setObject:[[NSString alloc]
                                    initWithUTF8String:
                                    (const char *) sqlite3_column_text(statement, 2)] forKey:@"id"] ;
+                [result setObject:[[NSString alloc]
+                                  initWithUTF8String:
+                                  (const char *) sqlite3_column_text(statement, 3)] forKey:@"designation"] ;
                 
                 
                 [arr addObject:result];
@@ -4182,7 +4188,7 @@ static DataManager *singletonObject = nil;
 }
 
 
-- (void) saveOperatorSubclassWithValue:(NSString *)val andDescription:(NSString *)desc andId:(NSString *)ident
+- (void) saveOperatorSubclassWithValue:(NSString *)val andDescription:(NSString *)desc andId:(NSString *)ident andDesignation:(NSString *)designation
 {
     //[self deleteConditionsDetails];
     sqlite3_stmt    *statement;
@@ -4193,7 +4199,7 @@ static DataManager *singletonObject = nil;
     {
         
         NSString *insertSQL = [NSString stringWithFormat:
-                               @"INSERT INTO OPERATORSUBCLASS VALUES (\"%@\", \"%@\", \"%@\")",val,desc,ident];
+                               @"INSERT INTO OPERATORSUBCLASS VALUES (\"%@\", \"%@\", \"%@\", \"%@\")",val,desc,ident,designation];
         
         const char *insert_stmt = [insertSQL UTF8String];
         sqlite3_prepare_v2(assetDB, insert_stmt,
@@ -4241,6 +4247,9 @@ static DataManager *singletonObject = nil;
                 [result setObject:[[NSString alloc]
                                    initWithUTF8String:
                                    (const char *) sqlite3_column_text(statement, 2)] forKey:@"id"] ;
+                [result setObject:[[NSString alloc]
+                                   initWithUTF8String:
+                                   (const char *) sqlite3_column_text(statement, 3)] forKey:@"designation"] ;
                 
                 [arr addObject:result];
                 
