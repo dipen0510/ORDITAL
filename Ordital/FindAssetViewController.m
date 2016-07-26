@@ -272,6 +272,7 @@
         [controller setCurrentAssetViewType:1];
         [controller setCurrentScrollAssetIndex:selectedIndex];
         [controller setCurrentInternetStatus:internetStatus];
+        [controller setIsDoneTodayPreview:YES];
         
         asset.parentId = [[searchContentArr objectAtIndex:selectedIndex] valueForKey:@"PARENT_ASSET__c"];
         
