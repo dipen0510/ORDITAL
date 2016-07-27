@@ -46,16 +46,16 @@
     [auditCollectionView reloadData];
     
     
-    if ([[DataManager sharedManager] isAuditUploadInProgress]) {
-       
-        self.resyncButton.hidden = YES;
-        
-    }
-    else {
-        
-        self.resyncButton.hidden = NO;
-        
-    }
+//    if ([[DataManager sharedManager] isAuditUploadInProgress]) {
+//       
+//        self.resyncButton.hidden = YES;
+//        
+//    }
+//    else {
+//        
+//        self.resyncButton.hidden = NO;
+//        
+//    }
     
 }
 
