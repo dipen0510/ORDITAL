@@ -2207,7 +2207,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "4451"
             endingLineNumber = "4451"
-            landmarkName = "-deleteSelectedConnectionDetails"
+            landmarkName = "-getSelectedConnectionDetails"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

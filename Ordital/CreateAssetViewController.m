@@ -528,7 +528,7 @@
     assetObj.unableToLocate = [self.unableToLocateSwitch isOn];
     
     if ([[segue identifier] isEqualToString:@"previewAuditSegue"]) {
-        [[DataManager sharedManager] saveOnlyAssetData:assetObj];
+        //[[DataManager sharedManager] saveOnlyAssetData:assetObj];
         
         AFViewController* controller = [segue destinationViewController];
         controller.currentAssetId = assetObj.assetId;
