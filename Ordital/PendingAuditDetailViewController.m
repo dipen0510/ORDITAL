@@ -201,11 +201,11 @@
         self.auditUploadStatusImgView.hidden = NO;
         self.serverBucketLabel.hidden = NO;
         self.serverFileNameLabel.hidden = NO;
-        self.serverFileSizeLabel.hidden = NO;
+        //self.serverFileSizeLabel.hidden = NO;
         self.serverCreatedLabel.hidden = NO;
         self.serverBucketLabel.text = [NSString stringWithFormat:@"Bucket - %@",[[DataManager sharedManager] getBucket]];
         self.serverFileNameLabel.text = [NSString stringWithFormat:@"File Name - %@",key];
-        self.serverFileSizeLabel.text = [NSString stringWithFormat:@"File Size - %lu bytes",(unsigned long)obj.size];
+        //self.serverFileSizeLabel.text = [NSString stringWithFormat:@"File Size - %lu bytes",(unsigned long)obj.size];
         self.serverCreatedLabel.text = [NSString stringWithFormat:@"Created - %@",[obj lastModified]];
         
     }

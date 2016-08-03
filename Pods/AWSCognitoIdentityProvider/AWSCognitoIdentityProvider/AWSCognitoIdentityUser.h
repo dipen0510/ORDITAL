@@ -50,10 +50,6 @@ typedef NS_ENUM(NSInteger, AWSCognitoIdentityUserStatus) {
 @class AWSCognitoIdentityUserVerifyAttributeResponse;
 @class AWSCognitoIdentityUserGetAttributeVerificationCodeResponse;
 @class AWSCognitoIdentityUserSetUserSettingsResponse;
-@class AWSCognitoIdentityUserGlobalSignOutResponse;
-@class AWSCognitoIdentityUserListDevicesResponse;
-@class AWSCognitoIdentityUserUpdateDeviceStatusResponse;
-
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -76,20 +72,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly, getter=isSignedIn) BOOL signedIn;
 
 /**
- Get the device id
- */
-@property (nonatomic, readonly) NSString * deviceId;
-
-/**
  Confirm a users' sign up with the confirmation code
  */
 - (AWSTask<AWSCognitoIdentityUserConfirmSignUpResponse *> *)confirmSignUp:(NSString *)confirmationCode;
-
-
-/**
- Confirm a users' sign up with the confirmation code.  If forceAliasCreation is set, if another user is aliased to the same email/phone this code was sent to, reassign alias to this user.
- */
--(AWSTask<AWSCognitoIdentityUserConfirmSignUpResponse *> *) confirmSignUp:(NSString *) confirmationCode forceAliasCreation:(BOOL)forceAliasCreation;
 
 /**
  Resend the confirmation code sent during sign up
@@ -97,29 +82,22 @@ NS_ASSUME_NONNULL_BEGIN
 - (AWSTask<AWSCognitoIdentityUserResendConfirmationCodeResponse *> *)resendConfirmationCode;
 
 /**
- Get a session with id, access and refresh tokens.
+ Get a session with default scopes
  */
 - (AWSTask<AWSCognitoIdentityUserSession *> *)getSession;
 
 /**
- Get a session with custom scopes.
+ Get a session with custom scopes.  For future use, not supported by service yet.
  */
-- (AWSTask<AWSCognitoIdentityUserSession *> *)getSession:(nullable NSSet<NSString *> *)scopes DEPRECATED_MSG_ATTRIBUTE("Supplying scopes has no impact client side, they are set at the app client level in the user pool.  Use getSession instead.");
+- (AWSTask<AWSCognitoIdentityUserSession *> *)getSession:(nullable NSSet<NSString *> *)scopes;
 
 /**
  Get a session with the following username and password
  */
 - (AWSTask<AWSCognitoIdentityUserSession *> *)getSession:(NSString *)username
                                                 password:(NSString *)password
-                                          validationData:(nullable NSArray<AWSCognitoIdentityUserAttributeType *> *)validationData;
-
-/**
- Get a session with the following username and password with custom scopes
- */
-- (AWSTask<AWSCognitoIdentityUserSession *> *)getSession:(NSString *)username
-                                                password:(NSString *)password
                                           validationData:(nullable NSArray<AWSCognitoIdentityUserAttributeType *> *)validationData
-                                                  scopes:(nullable NSSet<NSString *> *)scopes DEPRECATED_MSG_ATTRIBUTE("Supplying scopes has no impact client side, they are set at the app client level in the user pool. Use getSession:password:validationData instead .");
+                                                  scopes:(nullable NSSet<NSString *> *)scopes;
 
 /**
  Get details about this user, including user attributes
@@ -181,26 +159,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)signOut;
 
 /**
- Invalidate any active sessions with the service.  Last known user remains.
- */
-- (AWSTask<AWSCognitoIdentityUserGlobalSignOutResponse *> *) globalSignOut;
-
-/**
  Remove all sessions from the keychain for this user and clear last known user.
  */
 - (void)signOutAndClearLastKnownUser;
-
-
-/**
- List devices for this user
- */
-- (AWSTask<AWSCognitoIdentityUserListDevicesResponse *> *) listDevices: (int) limit paginationToken:(NSString * _Nullable) paginationToken;
-
-/**
- Update device status for the provided device.
- */
-- (AWSTask<AWSCognitoIdentityUserUpdateDeviceStatusResponse *> *) updateDeviceStatus: (NSString *) deviceId remembered:(BOOL) remembered;
-
 
 @end
 
@@ -288,18 +249,6 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @interface AWSCognitoIdentityUserSetUserSettingsResponse : AWSCognitoIdentityProviderSetUserSettingsResponse
-
-@end
-
-@interface AWSCognitoIdentityUserGlobalSignOutResponse : AWSCognitoIdentityProviderGlobalSignOutResponse
-
-@end
-
-@interface AWSCognitoIdentityUserListDevicesResponse : AWSCognitoIdentityProviderListDevicesResponse
-
-@end
-
-@interface AWSCognitoIdentityUserUpdateDeviceStatusResponse : AWSCognitoIdentityProviderUpdateDeviceStatusResponse
 
 @end
 
