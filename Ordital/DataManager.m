@@ -3672,7 +3672,7 @@ static DataManager *singletonObject = nil;
     if (sqlite3_open(dbpath, &assetDB) == SQLITE_OK)
     {
         NSString* date = [self GetCurrentDate];
-        NSString *querySQL = [NSString stringWithFormat:@"SELECT * FROM ASSETS WHERE uploaded = 0 AND createdDate LIKE '%@-%@-%@%%'",[[date componentsSeparatedByString:@"-"] objectAtIndex:0],[[date componentsSeparatedByString:@"-"] objectAtIndex:1],[[date componentsSeparatedByString:@"-"] objectAtIndex:2]];
+        NSString *querySQL = [NSString stringWithFormat:@"SELECT * FROM ASSETS WHERE uploaded = 0 AND createdDate LIKE '%@-%@-%@%%' ORDER BY createdDate desc",[[date componentsSeparatedByString:@"-"] objectAtIndex:0],[[date componentsSeparatedByString:@"-"] objectAtIndex:1],[[date componentsSeparatedByString:@"-"] objectAtIndex:2]];
         
         const char *query_stmt = [querySQL UTF8String];
         
