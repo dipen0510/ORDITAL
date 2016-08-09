@@ -36,4 +36,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *syncCountLbl;
 - (IBAction)backButtonTapped:(id)sender;
 
+@property (strong, nonatomic) NSMutableDictionary* responsesData;
+
 @end

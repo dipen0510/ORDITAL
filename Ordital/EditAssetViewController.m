@@ -48,6 +48,8 @@
     [self.syncCountLbl setText:[NSString stringWithFormat:@"%ld",(unsigned long)[nameContentArr count]]];
     self.assetTblView.tableFooterView = [UIView new];
     
+    self.responsesData = [[NSMutableDictionary alloc] init];
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -736,6 +738,8 @@ clickedButtonAtIndex:(NSInteger)buttonIndex{
 
 - (IBAction)syncButtonTapped:(id)sender {
     
+    self.responsesData = [[NSMutableDictionary alloc] init];
+    
     if ([[DataManager sharedManager] isInternetConnectionAvailable] && [[DataManager sharedManager] isLoggedIn]) {
         
         
@@ -869,6 +873,17 @@ clickedButtonAtIndex:(NSInteger)buttonIndex{
     [self performSelectorOnMainThread:@selector(handleIfFailed) withObject:nil waitUntilDone:YES];
     
 }
+
+- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data {
+    NSMutableData *responseData = self.responsesData[@(dataTask.taskIdentifier)];
+    if (!responseData) {
+        responseData = [NSMutableData dataWithData:data];
+        self.responsesData[@(dataTask.taskIdentifier)] = responseData;
+    } else {
+        [responseData appendData:data];
+    }
+}
+
 -(void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error{
     if (error != nil) {
         NSLog(@"Upload completed with error: %@", [error localizedDescription]);
@@ -906,6 +921,29 @@ clickedButtonAtIndex:(NSInteger)buttonIndex{
         [dict setObject:[NSNumber numberWithInt:uploadCounter] forKey:@"current"];
         [dict setObject:[NSNumber numberWithLong:assetContentArr.count] forKey:@"total"];
         [self performSelectorOnMainThread:@selector(increaseProgressCompleted:) withObject:dict waitUntilDone:YES];
+        
+        
+        NSMutableData *responseData = self.responsesData[@(task.taskIdentifier)];
+        
+        if (responseData) {
+            // my response is JSON; I don't know what yours is, though this handles both
+            
+            NSDictionary *response = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:nil];
+            if (response) {
+                
+                NSLog(@"response = %@", response);
+                
+                [[DataManager sharedManager] updateAssetIdForOldAssetId:fdi.fileTitle withNewAssetId:[response valueForKey:@"assetId"]];
+                
+                
+            } else {
+                NSLog(@"responseData = %@", [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding]);
+            }
+            
+            [self.responsesData removeObjectForKey:@(task.taskIdentifier)];
+        } else {
+            NSLog(@"responseData is nil");
+        }
         
         
         if (uploadCounter == assetContentArr.count) {

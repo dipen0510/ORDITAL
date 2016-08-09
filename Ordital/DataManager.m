@@ -5271,4 +5271,67 @@ static DataManager *singletonObject = nil;
     }
     return arr;
 }
+
+
+#pragma mark - Update Asset Id on Sync
+
+- (void) updateAssetIdForOldAssetId:(NSString *)oldAssetId withNewAssetId:(NSString *)newAssetId {
+    
+    const char *dbpath = [databasePath UTF8String];
+    sqlite3_stmt    *statement;
+    sqlite3 *assetDB;
+    
+    if (sqlite3_open(dbpath, &assetDB) == SQLITE_OK)
+    {
+        NSString *querySQL = [NSString stringWithFormat:@"UPDATE ASSETS SET assetId = '%@' WHERE assetId = '%@'",newAssetId,oldAssetId];
+        const char *query_stmt = [querySQL UTF8String];
+        
+        if (sqlite3_prepare_v2(assetDB,
+                               query_stmt, -1, &statement, NULL) == SQLITE_OK)
+        {
+            sqlite3_step(statement);
+            sqlite3_finalize(statement);
+            NSLog(@"AssetID in ASSETS UPDATED");
+        }
+        
+        
+        querySQL = [NSString stringWithFormat:@"UPDATE AUDITS SET assetId = '%@' WHERE assetId = '%@'",newAssetId,oldAssetId];
+        query_stmt = [querySQL UTF8String];
+        
+        if (sqlite3_prepare_v2(assetDB,
+                               query_stmt, -1, &statement, NULL) == SQLITE_OK)
+        {
+            sqlite3_step(statement);
+            sqlite3_finalize(statement);
+            NSLog(@"AssetID in AUDITS UPDATED");
+        }
+        
+        querySQL = [NSString stringWithFormat:@"UPDATE NOTETYPE SET assetId = '%@' WHERE assetId = '%@'",newAssetId,oldAssetId];
+        query_stmt = [querySQL UTF8String];
+        
+        if (sqlite3_prepare_v2(assetDB,
+                               query_stmt, -1, &statement, NULL) == SQLITE_OK)
+        {
+            sqlite3_step(statement);
+            sqlite3_finalize(statement);
+            NSLog(@"AssetID in NOTETYPE UPDATED");
+        }
+        
+        querySQL = [NSString stringWithFormat:@"UPDATE TODAY SET assetId = '%@' WHERE assetId = '%@'",newAssetId,oldAssetId];
+        query_stmt = [querySQL UTF8String];
+        
+        if (sqlite3_prepare_v2(assetDB,
+                               query_stmt, -1, &statement, NULL) == SQLITE_OK)
+        {
+            sqlite3_step(statement);
+            sqlite3_finalize(statement);
+            NSLog(@"AssetID in TODAY UPDATED");
+        }
+        
+        
+        sqlite3_close(assetDB);
+    }
+    
+}
+
 @end

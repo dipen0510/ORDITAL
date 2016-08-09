@@ -192,4 +192,6 @@ FOUNDATION_EXPORT NSString* const kEnvironmentURL;
 
 - (void) purgeAllAssetAndAuditData;
 
+- (void) updateAssetIdForOldAssetId:(NSString *)oldAssetId withNewAssetId:(NSString *)newAssetId;
+
 @end
