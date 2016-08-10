@@ -3917,7 +3917,7 @@ static DataManager *singletonObject = nil;
     
     if (sqlite3_open(dbpath, &assetDB) == SQLITE_OK)
     {
-        NSString *querySQL = [NSString stringWithFormat:@"SELECT * FROM TODAY"];
+        NSString *querySQL = [NSString stringWithFormat:@"SELECT * FROM TODAY WHERE assetId NOT IN (SELECT assetId from ASSETS)"];
         
         const char *query_stmt = [querySQL UTF8String];
         

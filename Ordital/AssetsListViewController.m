@@ -244,24 +244,43 @@
         
     }
     
-    for (int i = 0; i<[searchContentArr count]; i++) {
-        NSDictionary* currentAsset = [[NSDictionary alloc] init];
-        currentAsset = [searchContentArr objectAtIndex:i];
-        [nameContentArr addObject:[currentAsset valueForKey:@"Name"]];
-        
-        NSString* desc = [currentAsset valueForKey:@"SHORT_DESCRIPTION__c"];
-        if (desc && ![desc isKindOfClass:[NSNull class]]) {
-            [descriptionContentArr addObject:desc];
-        }
-        else {
-            [descriptionContentArr addObject:@""];
-        }
-        
-    }
-    
     //Adding pending today assets to list in online mode
     
     NSMutableArray* assetArr = [[DataManager sharedManager] getAllTodayAssets];
+    NSMutableArray* searchContentCopyArr = [[NSMutableArray alloc] initWithArray:searchContentArr];
+    
+    for (int i = 0; i<[searchContentCopyArr count]; i++) {
+        NSDictionary* currentAsset = [[NSDictionary alloc] init];
+        currentAsset = [searchContentCopyArr objectAtIndex:i];
+        
+        int flag = 0;
+        
+        for (int j = 0; j<assetArr.count; j++) {
+            
+            if ([[[assetArr objectAtIndex:j] valueForKey:@"Id"] isEqualToString:[currentAsset valueForKey:@"Id"]]) {
+                flag = 1;
+                [searchContentArr removeObjectAtIndex:i];
+            }
+            
+        }
+        
+        if (!flag) {
+            [nameContentArr addObject:[currentAsset valueForKey:@"Name"]];
+            
+            NSString* desc = [currentAsset valueForKey:@"SHORT_DESCRIPTION__c"];
+            if (desc && ![desc isKindOfClass:[NSNull class]]) {
+                [descriptionContentArr addObject:desc];
+            }
+            else {
+                [descriptionContentArr addObject:@""];
+            }
+        }
+        
+        
+        
+    }
+    
+    
     for (int i = 0; i<[assetArr count]; i++) {
         NSDictionary* currentAsset = [[NSDictionary alloc] init];
         currentAsset = [assetArr objectAtIndex:i];
