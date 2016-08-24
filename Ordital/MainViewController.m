@@ -566,29 +566,37 @@
                             NSMutableDictionary* responseData = [NSJSONSerialization JSONObjectWithData:returnData options:NSJSONReadingMutableContainers error:&error];
                             
                             status = [responseData valueForKey:@"status"];
-                            if (!error && !status) {
+                            
+                            NSLog(@"Status %@",[responseData valueForKey:@"status"]);
+                            NSLog(@"Msg %@",[responseData valueForKey:@"msg"]);
+                            
+                            if (!error && [status intValue] == 0) {
                                 
                                 doneCount = [NSString stringWithFormat:@"%ld",[[[responseData valueForKey:@"RecordCount"] valueForKey:@"Done"] longValue]];
                                 todayCount = [NSString stringWithFormat:@"%ld",[[[responseData valueForKey:@"RecordCount"] valueForKey:@"Today"] longValue]];
                                 todoCount = [NSString stringWithFormat:@"%ld",[[[responseData valueForKey:@"RecordCount"] valueForKey:@"Todo"] longValue]];
                                 
-                                [responseData removeObjectForKey:@"token"];
-                                [responseData removeObjectForKey:@"instance_url"];
-                                [responseData removeObjectForKey:@"RecordCount"];
-                                /*if ([[[DataManager sharedManager] getSelectedIACDetails] isEqualToString:@"True"]) {
-                                 [self filterAssetsToBeSyncedFromSearch:responseData];
-                                 }*/
-                                
-                                [self filterAssetsToBeSyncedFromSearch:responseData];
-                                
-                                if ([[DataManager sharedManager] getPunchListDetails]) {
-                                   responseData = [self filterAssetsToBeSyncedFromSearchForPunchList:responseData];
+                                if ([todoCount intValue] > 0) {
+                                    [responseData removeObjectForKey:@"token"];
+                                    [responseData removeObjectForKey:@"instance_url"];
+                                    [responseData removeObjectForKey:@"RecordCount"];
+                                    /*if ([[[DataManager sharedManager] getSelectedIACDetails] isEqualToString:@"True"]) {
+                                     [self filterAssetsToBeSyncedFromSearch:responseData];
+                                     }*/
+                                    
+                                    [self filterAssetsToBeSyncedFromSearch:responseData];
+                                    
+                                    if ([[DataManager sharedManager] getPunchListDetails]) {
+                                        responseData = [self filterAssetsToBeSyncedFromSearchForPunchList:responseData];
+                                    }
+                                    
+                                    [assetListContentArr addObject:responseData];
                                 }
                                 
-                                [assetListContentArr addObject:responseData];
+                                
                             }
                             else {
-                                if (status) {
+                                if ([status intValue] == 1) {
                                     errMsg = [responseData valueForKey:@"msg"];
                                 }
                             }
@@ -602,7 +610,7 @@
                         dispatch_async(dispatch_get_main_queue(), ^{
                             [SVProgressHUD dismiss];
                             //[[self navigationController] popToRootViewControllerAnimated:YES];
-                            if (!status) {
+                            if ([status intValue] == 0) {
                                 isinternetForAssetList = YES;
                                 
                             }
