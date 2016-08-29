@@ -612,7 +612,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/AssetsListViewController.m"
@@ -948,7 +948,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/AssetsListViewController.m"
@@ -1620,7 +1620,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/MainViewController.m"
@@ -1633,34 +1633,34 @@
             landmarkType = "5">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "__44-[MainViewController listAssetButtonTapped:]_block_invoke"
                   moduleName = "ORDITAL"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/dipensekhsaria/Desktop/Projects/ORDITAL/Ordital/MainViewController.m"
-                  timestampString = "493726095.388225"
+                  timestampString = "494147416.720769"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "606"
                   endingLineNumber = "606"
-                  offsetFromSymbolStart = "4590">
+                  offsetFromSymbolStart = "4460">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "__44-[MainViewController listAssetButtonTapped:]_block_invoke"
                   moduleName = "ORDITAL"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/dipensekhsaria/Desktop/Projects/ORDITAL/Ordital/MainViewController.m"
-                  timestampString = "493726095.388371"
+                  timestampString = "494147416.72091"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "606"
                   endingLineNumber = "606"
-                  offsetFromSymbolStart = "4598">
+                  offsetFromSymbolStart = "4472">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1688,12 +1688,12 @@
                   moduleName = "ORDITAL"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/dipensekhsaria/Desktop/Projects/ORDITAL/Ordital/MainViewController.m"
-                  timestampString = "493726095.389197"
+                  timestampString = "494147832.383605"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "672"
                   endingLineNumber = "672"
-                  offsetFromSymbolStart = "1174">
+                  offsetFromSymbolStart = "1424">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -1703,12 +1703,12 @@
                   moduleName = "ORDITAL"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/dipensekhsaria/Desktop/Projects/ORDITAL/Ordital/MainViewController.m"
-                  timestampString = "493726095.389352"
+                  timestampString = "494147832.383744"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "672"
                   endingLineNumber = "672"
-                  offsetFromSymbolStart = "12">
+                  offsetFromSymbolStart = "32">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1736,12 +1736,12 @@
                   moduleName = "ORDITAL"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/dipensekhsaria/Desktop/Projects/ORDITAL/Ordital/MainViewController.m"
-                  timestampString = "493726095.390304"
+                  timestampString = "494147832.384663"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "680"
                   endingLineNumber = "680"
-                  offsetFromSymbolStart = "95">
+                  offsetFromSymbolStart = "128">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -1751,12 +1751,12 @@
                   moduleName = "ORDITAL"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/dipensekhsaria/Desktop/Projects/ORDITAL/Ordital/MainViewController.m"
-                  timestampString = "493726095.390453"
+                  timestampString = "494147832.384782"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "680"
                   endingLineNumber = "680"
-                  offsetFromSymbolStart = "51">
+                  offsetFromSymbolStart = "64">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -1766,12 +1766,12 @@
                   moduleName = "ORDITAL"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/dipensekhsaria/Desktop/Projects/ORDITAL/Ordital/MainViewController.m"
-                  timestampString = "493726095.390619"
+                  timestampString = "494147832.384889"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "680"
                   endingLineNumber = "680"
-                  offsetFromSymbolStart = "29">
+                  offsetFromSymbolStart = "36">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1923,7 +1923,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/AssetsListViewController.m"
@@ -2019,7 +2019,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/AssetsListViewController.m"

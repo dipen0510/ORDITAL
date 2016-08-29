@@ -349,7 +349,7 @@ clickedButtonAtIndex:(NSInteger)buttonIndex{
         auditController.currentAssetId = assetObj.assetId;
         auditController.currentAssetName = assetObj.assetName;
         auditController.assetObj = assetObj;
-        auditController.isAssetToBeUpdated = false;
+        auditController.isAssetToBeUpdated = true;
         
         auditController.tmpAuditDataArr = auditContentSortedArr;
         auditController.isMoreAuditAdded = true;
