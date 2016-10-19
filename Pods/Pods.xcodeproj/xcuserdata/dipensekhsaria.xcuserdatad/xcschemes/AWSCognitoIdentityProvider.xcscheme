@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '185AA12500087CFABFBD6FAF'
+               BlueprintIdentifier = 'AD3EC404E1C7A6D4D899C659'
                BlueprintName = 'AWSCognitoIdentityProvider'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libAWSCognitoIdentityProvider.a'>

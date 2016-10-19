@@ -500,6 +500,10 @@
             [self replaceOldKeysWithNewKeys:searchContentArr];
             
             asset.parentId = [[searchContentArr valueForKey:[NSString stringWithFormat:@"%d",selectedIndex]] valueForKey:@"PARENT_ASSET__c"];
+            
+            asset.latitude = [[searchContentArr valueForKey:[NSString stringWithFormat:@"%d",selectedIndex]] valueForKey:@"Latitude"];
+            asset.longitude = [[searchContentArr valueForKey:[NSString stringWithFormat:@"%d",selectedIndex]] valueForKey:@"Longitude"];
+            
         }
         else {
             asset.assetId = [[searchContentArr objectAtIndex:selectedIndex] valueForKey:@"Id"];
@@ -524,6 +528,10 @@
             [self replaceOldKeysWithNewKeysOnlyDesc:searchContentArr];
             
             asset.parentId = [[searchContentArr objectAtIndex:selectedIndex] valueForKey:@"PARENT_ASSET__c"];
+            
+            asset.latitude = [[searchContentArr objectAtIndex:selectedIndex] valueForKey:@"Latitude"];
+            asset.longitude = [[searchContentArr objectAtIndex:selectedIndex] valueForKey:@"Longitude"];
+            
         }
         
         
@@ -588,6 +596,9 @@
         asset.operatorSubclassId = [[searchContentArr objectAtIndex:selectedIndex] valueForKey:@"SubClass__id"];
         asset.category = [[searchContentArr objectAtIndex:selectedIndex] valueForKey:@"Category__name"];
         asset.categoryId = [[searchContentArr objectAtIndex:selectedIndex] valueForKey:@"Category__id"];
+        
+        asset.latitude = [[searchContentArr objectAtIndex:selectedIndex] valueForKey:@"Latitude"];
+        asset.longitude = [[searchContentArr objectAtIndex:selectedIndex] valueForKey:@"Longitude"];
         
         [self replaceOldKeysWithNewKeysOnlyDesc:searchContentArr];
             

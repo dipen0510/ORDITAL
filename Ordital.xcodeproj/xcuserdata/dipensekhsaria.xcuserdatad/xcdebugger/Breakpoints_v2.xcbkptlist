@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/FindAssetViewController.m"
-            timestampString = "465388797.952863"
+            timestampString = "498572809.810187"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "258"
-            endingLineNumber = "258"
+            startingLineNumber = "261"
+            endingLineNumber = "261"
             landmarkName = "-tableView:didSelectRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -200,11 +200,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/FindAssetViewController.m"
-            timestampString = "465388797.952863"
+            timestampString = "498572809.810187"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "311"
-            endingLineNumber = "311"
+            startingLineNumber = "314"
+            endingLineNumber = "314"
             landmarkName = "-searchBarSearchButtonClicked:"
             landmarkType = "5">
          </BreakpointContent>
@@ -216,11 +216,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/FindAssetViewController.m"
-            timestampString = "467287444.124171"
+            timestampString = "498572809.810187"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "420"
-            endingLineNumber = "420"
+            startingLineNumber = "423"
+            endingLineNumber = "423"
             landmarkName = "-searchOnlineWithText:"
             landmarkType = "5">
          </BreakpointContent>
@@ -232,11 +232,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/FindAssetViewController.m"
-            timestampString = "465388797.952863"
+            timestampString = "498572809.810187"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "282"
-            endingLineNumber = "282"
+            startingLineNumber = "285"
+            endingLineNumber = "285"
             landmarkName = "-tableView:didSelectRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -248,11 +248,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/FindAssetViewController.m"
-            timestampString = "467287444.124171"
+            timestampString = "498572809.810187"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "390"
-            endingLineNumber = "390"
+            startingLineNumber = "393"
+            endingLineNumber = "393"
             landmarkName = "-searchOnlineWithText:"
             landmarkType = "5">
          </BreakpointContent>
@@ -264,13 +264,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/FindAssetViewController.m"
-            timestampString = "467287444.124171"
+            timestampString = "498572809.810187"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "376"
-            endingLineNumber = "376"
-            landmarkName = "@implementation FindAssetViewController"
-            landmarkType = "3">
+            startingLineNumber = "379"
+            endingLineNumber = "379"
+            landmarkName = "-filterAssetsToBeSyncedFromSearchForPunchList"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -280,11 +280,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/CreateAssetViewController.m"
-            timestampString = "465213161.62721"
+            timestampString = "498572809.810187"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "215"
-            endingLineNumber = "215"
+            startingLineNumber = "216"
+            endingLineNumber = "216"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -296,11 +296,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/CreateAssetViewController.m"
-            timestampString = "465213161.62721"
+            timestampString = "498572809.810187"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "247"
-            endingLineNumber = "247"
+            startingLineNumber = "248"
+            endingLineNumber = "248"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -328,11 +328,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/CreateAssetViewController.m"
-            timestampString = "479984844.540017"
+            timestampString = "498572809.810187"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "720"
-            endingLineNumber = "720"
+            startingLineNumber = "727"
+            endingLineNumber = "727"
             landmarkName = "@implementation CreateAssetViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -360,7 +360,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/CreateAssetViewController.m"
-            timestampString = "465213161.62721"
+            timestampString = "498572809.810187"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "123"
@@ -456,11 +456,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/CreateAssetViewController.m"
-            timestampString = "479984844.540017"
+            timestampString = "498572809.810187"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "858"
-            endingLineNumber = "858"
+            startingLineNumber = "865"
+            endingLineNumber = "865"
             landmarkName = "-leftButtonTapped:"
             landmarkType = "5">
          </BreakpointContent>
@@ -488,11 +488,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/CreateAssetViewController.m"
-            timestampString = "479984844.540017"
+            timestampString = "498572809.810187"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "410"
-            endingLineNumber = "410"
+            startingLineNumber = "411"
+            endingLineNumber = "411"
             landmarkName = "-viewChilds:"
             landmarkType = "5">
          </BreakpointContent>
@@ -520,11 +520,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/DataManager.m"
-            timestampString = "486384818.850747"
+            timestampString = "498572809.810187"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2392"
-            endingLineNumber = "2392"
+            startingLineNumber = "2394"
+            endingLineNumber = "2394"
             landmarkName = "-getSelectedPlantSectionDetails"
             landmarkType = "5">
          </BreakpointContent>
@@ -584,11 +584,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/DataManager.m"
-            timestampString = "486384818.850747"
+            timestampString = "498572809.810187"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "3178"
-            endingLineNumber = "3178"
+            startingLineNumber = "3190"
+            endingLineNumber = "3190"
             landmarkName = "-saveCriticalityDetailsWithName:"
             landmarkType = "5">
          </BreakpointContent>
@@ -596,7 +596,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/AssetsListViewController.m"
@@ -692,15 +692,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/AssetsListViewController.m"
-            timestampString = "467285946.889736"
+            timestampString = "498572809.810187"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "529"
-            endingLineNumber = "529"
+            startingLineNumber = "537"
+            endingLineNumber = "537"
             landmarkName = "-tableView:didSelectRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -728,11 +728,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/CreateAssetViewController.m"
-            timestampString = "479984844.540017"
+            timestampString = "498572809.810187"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "526"
-            endingLineNumber = "526"
+            startingLineNumber = "527"
+            endingLineNumber = "527"
             landmarkName = "-prepareForSegue:sender:"
             landmarkType = "5">
          </BreakpointContent>
@@ -744,11 +744,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/CreateAssetViewController.m"
-            timestampString = "479984844.540017"
+            timestampString = "498572809.810187"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "506"
-            endingLineNumber = "506"
+            startingLineNumber = "507"
+            endingLineNumber = "507"
             landmarkName = "-generateChildAssetName"
             landmarkType = "5">
          </BreakpointContent>
@@ -872,11 +872,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/CreateAssetViewController.m"
-            timestampString = "479984844.540017"
+            timestampString = "498572809.810187"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "416"
-            endingLineNumber = "416"
+            startingLineNumber = "417"
+            endingLineNumber = "417"
             landmarkName = "-viewChilds:"
             landmarkType = "5">
          </BreakpointContent>
@@ -888,11 +888,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/CreateAssetViewController.m"
-            timestampString = "479984844.540017"
+            timestampString = "498572809.810187"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "557"
-            endingLineNumber = "557"
+            startingLineNumber = "558"
+            endingLineNumber = "558"
             landmarkName = "-prepareForSegue:sender:"
             landmarkType = "5">
          </BreakpointContent>
@@ -920,11 +920,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/AssetsListViewController.m"
-            timestampString = "467285946.889736"
+            timestampString = "498572809.810187"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "626"
-            endingLineNumber = "626"
+            startingLineNumber = "637"
+            endingLineNumber = "637"
             landmarkName = "-tableView:didSelectRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -952,11 +952,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/AssetsListViewController.m"
-            timestampString = "467285946.889736"
+            timestampString = "498572809.810187"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "689"
-            endingLineNumber = "689"
+            startingLineNumber = "700"
+            endingLineNumber = "700"
             landmarkName = "-segmentControlValueChanged:"
             landmarkType = "5">
          </BreakpointContent>
@@ -968,11 +968,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/CreateAssetViewController.m"
-            timestampString = "479984844.540017"
+            timestampString = "498572809.810187"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "882"
-            endingLineNumber = "882"
+            startingLineNumber = "889"
+            endingLineNumber = "889"
             landmarkName = "-animateAfterDelayForRight"
             landmarkType = "5">
          </BreakpointContent>
@@ -984,11 +984,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/DataManager.m"
-            timestampString = "486384818.850747"
+            timestampString = "498572809.810187"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "3572"
-            endingLineNumber = "3572"
+            startingLineNumber = "3584"
+            endingLineNumber = "3584"
             landmarkName = "-getSyncRecordsDetails"
             landmarkType = "5">
          </BreakpointContent>
@@ -1032,11 +1032,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/DataManager.m"
-            timestampString = "486387601.206378"
+            timestampString = "498572809.810187"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "3871"
-            endingLineNumber = "3871"
+            startingLineNumber = "3883"
+            endingLineNumber = "3883"
             landmarkName = "-deleteConditionsDetails"
             landmarkType = "5">
          </BreakpointContent>
@@ -1048,11 +1048,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/CreateAssetViewController.m"
-            timestampString = "479984844.540017"
+            timestampString = "498572809.810187"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "440"
-            endingLineNumber = "440"
+            startingLineNumber = "441"
+            endingLineNumber = "441"
             landmarkName = "-viewChilds:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1144,11 +1144,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/DataManager.m"
-            timestampString = "486384818.850747"
+            timestampString = "498572809.810187"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2842"
-            endingLineNumber = "2842"
+            startingLineNumber = "2852"
+            endingLineNumber = "2852"
             landmarkName = "-getAllDownloadedAssetsWithAuditCompleted"
             landmarkType = "5">
          </BreakpointContent>
@@ -1160,11 +1160,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/DataManager.m"
-            timestampString = "486384818.850747"
+            timestampString = "498572809.810187"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2869"
-            endingLineNumber = "2869"
+            startingLineNumber = "2879"
+            endingLineNumber = "2879"
             landmarkName = "-getAllAssetsForOfflineTextWithAuditCompleted:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1336,11 +1336,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/DataManager.m"
-            timestampString = "486384818.850747"
+            timestampString = "498572809.810187"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2580"
-            endingLineNumber = "2580"
+            startingLineNumber = "2584"
+            endingLineNumber = "2584"
             landmarkName = "-getAllChildrenForAssetId:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1512,11 +1512,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/DataManager.m"
-            timestampString = "490617767.673766"
+            timestampString = "498572809.810187"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "4382"
-            endingLineNumber = "4382"
+            startingLineNumber = "4396"
+            endingLineNumber = "4396"
             landmarkName = "-deleteAssetCodingData"
             landmarkType = "5">
          </BreakpointContent>
@@ -1544,11 +1544,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/FindAssetViewController.m"
-            timestampString = "465388797.952863"
+            timestampString = "498572809.810187"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "325"
-            endingLineNumber = "325"
+            startingLineNumber = "328"
+            endingLineNumber = "328"
             landmarkName = "-searchBarSearchButtonClicked:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1560,11 +1560,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/FindAssetViewController.m"
-            timestampString = "467287444.124171"
+            timestampString = "498572809.810187"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "357"
-            endingLineNumber = "357"
+            startingLineNumber = "360"
+            endingLineNumber = "360"
             landmarkName = "-filterAssetsToBeSyncedFromSearch"
             landmarkType = "5">
          </BreakpointContent>
@@ -1608,11 +1608,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/AssetsListViewController.m"
-            timestampString = "467285946.889736"
+            timestampString = "498572809.810187"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "882"
-            endingLineNumber = "882"
+            startingLineNumber = "893"
+            endingLineNumber = "893"
             landmarkName = "-refreshTableWithTodayAssets"
             landmarkType = "5">
          </BreakpointContent>
@@ -1688,12 +1688,12 @@
                   moduleName = "ORDITAL"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/dipensekhsaria/Desktop/Projects/ORDITAL/Ordital/MainViewController.m"
-                  timestampString = "494147832.383605"
+                  timestampString = "498573124.868118"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "672"
                   endingLineNumber = "672"
-                  offsetFromSymbolStart = "1424">
+                  offsetFromSymbolStart = "1174">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -1703,12 +1703,12 @@
                   moduleName = "ORDITAL"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/dipensekhsaria/Desktop/Projects/ORDITAL/Ordital/MainViewController.m"
-                  timestampString = "494147832.383744"
+                  timestampString = "498573124.86827"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "672"
                   endingLineNumber = "672"
-                  offsetFromSymbolStart = "32">
+                  offsetFromSymbolStart = "12">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1736,12 +1736,12 @@
                   moduleName = "ORDITAL"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/dipensekhsaria/Desktop/Projects/ORDITAL/Ordital/MainViewController.m"
-                  timestampString = "494147832.384663"
+                  timestampString = "498573124.869206"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "680"
                   endingLineNumber = "680"
-                  offsetFromSymbolStart = "128">
+                  offsetFromSymbolStart = "95">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -1751,12 +1751,12 @@
                   moduleName = "ORDITAL"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/dipensekhsaria/Desktop/Projects/ORDITAL/Ordital/MainViewController.m"
-                  timestampString = "494147832.384782"
+                  timestampString = "498573124.86936"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "680"
                   endingLineNumber = "680"
-                  offsetFromSymbolStart = "64">
+                  offsetFromSymbolStart = "51">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -1766,12 +1766,12 @@
                   moduleName = "ORDITAL"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/dipensekhsaria/Desktop/Projects/ORDITAL/Ordital/MainViewController.m"
-                  timestampString = "494147832.384889"
+                  timestampString = "498573124.869502"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "680"
                   endingLineNumber = "680"
-                  offsetFromSymbolStart = "36">
+                  offsetFromSymbolStart = "29">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1831,11 +1831,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/AssetsListViewController.m"
-            timestampString = "467285946.889736"
+            timestampString = "498572809.810187"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "821"
-            endingLineNumber = "821"
+            startingLineNumber = "832"
+            endingLineNumber = "832"
             landmarkName = "-refreshTableWithTodayAssets"
             landmarkType = "5">
          </BreakpointContent>
@@ -1847,11 +1847,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/AssetsListViewController.m"
-            timestampString = "467285946.889736"
+            timestampString = "498572809.810187"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "856"
-            endingLineNumber = "856"
+            startingLineNumber = "867"
+            endingLineNumber = "867"
             landmarkName = "-refreshTableWithTodayAssets"
             landmarkType = "5">
          </BreakpointContent>
@@ -1863,11 +1863,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/DataManager.m"
-            timestampString = "490617767.673766"
+            timestampString = "498572809.810187"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "4745"
-            endingLineNumber = "4745"
+            startingLineNumber = "4759"
+            endingLineNumber = "4759"
             landmarkName = "-getPunchListDetails"
             landmarkType = "5">
          </BreakpointContent>
@@ -1879,11 +1879,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/CreateAssetViewController.m"
-            timestampString = "479984844.540017"
+            timestampString = "498572809.810187"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1073"
-            endingLineNumber = "1073"
+            startingLineNumber = "1080"
+            endingLineNumber = "1080"
             landmarkName = "-saveAssetButtonTapped:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1895,11 +1895,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/CreateAssetViewController.m"
-            timestampString = "479984844.540017"
+            timestampString = "498572809.810187"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1042"
-            endingLineNumber = "1042"
+            startingLineNumber = "1049"
+            endingLineNumber = "1049"
             landmarkName = "-saveAssetButtonTapped:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1943,11 +1943,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/AssetsListViewController.m"
-            timestampString = "467286164.301824"
+            timestampString = "498572809.810187"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "841"
-            endingLineNumber = "841"
+            startingLineNumber = "852"
+            endingLineNumber = "852"
             landmarkName = "-refreshTableWithTodayAssets"
             landmarkType = "5">
          </BreakpointContent>
@@ -1959,11 +1959,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/FindAssetViewController.m"
-            timestampString = "467287016.490634"
+            timestampString = "498572809.810187"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "330"
-            endingLineNumber = "330"
+            startingLineNumber = "333"
+            endingLineNumber = "333"
             landmarkName = "-getCountForOffline:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1975,11 +1975,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/FindAssetViewController.m"
-            timestampString = "467287233.222099"
+            timestampString = "498572809.810187"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "469"
-            endingLineNumber = "469"
+            startingLineNumber = "472"
+            endingLineNumber = "472"
             landmarkName = "-searchOfflineWithText:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2055,11 +2055,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/DataManager.m"
-            timestampString = "486384818.850747"
+            timestampString = "498572809.810187"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2752"
-            endingLineNumber = "2752"
+            startingLineNumber = "2758"
+            endingLineNumber = "2758"
             landmarkName = "-getAllDownloadedAssetsWithAuditUncompleted"
             landmarkType = "5">
          </BreakpointContent>
@@ -2135,11 +2135,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/DataManager.m"
-            timestampString = "490617767.673766"
+            timestampString = "498572809.810187"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "4940"
-            endingLineNumber = "4940"
+            startingLineNumber = "4954"
+            endingLineNumber = "4954"
             landmarkName = "-deleteAssetCountDetails"
             landmarkType = "5">
          </BreakpointContent>
@@ -2439,11 +2439,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ordital/DataManager.m"
-            timestampString = "486384818.850747"
+            timestampString = "498572809.810187"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "3381"
-            endingLineNumber = "3381"
+            startingLineNumber = "3393"
+            endingLineNumber = "3393"
             landmarkName = "@implementation DataManager"
             landmarkType = "3">
          </BreakpointContent>

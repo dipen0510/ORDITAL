@@ -18,6 +18,7 @@
 #import "AssetCodingValueViewController.h"
 #import "AssetsListViewController.h"
 #import "AFViewController.h"
+#import "LocationMapViewController.h"
 
 @interface CreateAssetViewController ()
 
@@ -56,9 +57,7 @@
     UIView *paddingView1 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 5, 20)];
     parentTxtField.leftView = paddingView1;
     parentTxtField.leftViewMode = UITextFieldViewModeAlways;
-    UIView *paddingView2 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 5, 20)];
-    descriptionTxtField.leftView = paddingView2;
-    descriptionTxtField.leftViewMode = UITextFieldViewModeAlways;
+    
     UIView *paddingView3 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 5, 20)];
     tagTxtField.leftView = paddingView3;
     tagTxtField.leftViewMode = UITextFieldViewModeAlways;
@@ -101,6 +100,8 @@
         [self.circleImgView setHidden:NO];
         [self.editAssetCountLbl setHidden:NO];
         
+        _homeButton.hidden = NO;
+        _mapButton.hidden = NO;
         NSMutableArray* tmpArr = [[NSMutableArray alloc] init];
         tmpArr = [[DataManager sharedManager] getAuditDataForAssetId:assetObj.assetId];
         
@@ -110,6 +111,7 @@
         if (isAuditToBePreviewed) {
             [self.unableToLocateSwitch setHidden:YES];
             [self.unableToLocateLabel setHidden:YES];
+            _mapButton.hidden = YES;
            // [self.saveButton setHidden:YES];
             
         }
@@ -177,6 +179,8 @@
         
         [parentTxtField setHidden:YES];
         [parentLabel setHidden:YES];
+        _homeButton.hidden = YES;
+        _mapButton.hidden = YES;
         
         self.assetCodingTopConstraint.constant = -93.0;
         self.assetCodingRightArrowTopCOnstrain.constant = -100.0;
@@ -559,6 +563,12 @@
         codingController.isAssetToBeUpdated = isAssetToBeUpdated;
         codingController.isAuditToBePreviewed = isAuditToBePreviewed;
         codingController.unableToLocate = [self.unableToLocateSwitch isOn];
+        
+    }
+    else if ([[segue identifier] isEqualToString:@"showMapSegue"]) {
+        
+        LocationMapViewController* codingController = [segue destinationViewController];
+        codingController.assetToUpdate = assetObj;
         
     }
     NSLog(@"Segue enter");
@@ -1438,4 +1448,10 @@
     
 }
 
+- (IBAction)homeButtonTapped:(id)sender {
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
+- (IBAction)mapButtonTapped:(id)sender {
+}
 @end

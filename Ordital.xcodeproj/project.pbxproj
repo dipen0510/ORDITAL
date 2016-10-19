@@ -125,6 +125,10 @@
 		D46E4DAC1D1A9294003FBFD4 /* libAWSSimpleDB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D46E4D9A1D1A9294003FBFD4 /* libAWSSimpleDB.a */; };
 		D46E4DAD1D1A9294003FBFD4 /* libAWSSNS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D46E4D9B1D1A9294003FBFD4 /* libAWSSNS.a */; };
 		D46E4DAE1D1A9294003FBFD4 /* libAWSSQS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D46E4D9C1D1A9294003FBFD4 /* libAWSSQS.a */; };
+		D474C6AE1DB78870005C6C98 /* homeIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = D474C6AD1DB78870005C6C98 /* homeIcon.png */; };
+		D474C6B01DB79486005C6C98 /* maps-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D474C6AF1DB79486005C6C98 /* maps-icon.png */; };
+		D474C6B61DB79C01005C6C98 /* LocationMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D474C6B51DB79C01005C6C98 /* LocationMapViewController.m */; };
+		D474C6B81DB79C81005C6C98 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D474C6B71DB79C81005C6C98 /* MapKit.framework */; };
 		D47BDA6F1B845F4000745D0E /* add-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D47BDA691B845F4000745D0E /* add-icon@2x.png */; };
 		D47BDA701B845F4000745D0E /* add-photo-btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D47BDA6A1B845F4000745D0E /* add-photo-btn@2x.png */; };
 		D47BDA711B845F4000745D0E /* down-aroow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D47BDA6B1B845F4000745D0E /* down-aroow@2x.png */; };
@@ -330,6 +334,11 @@
 		D46E4D9A1D1A9294003FBFD4 /* libAWSSimpleDB.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAWSSimpleDB.a; path = "../../../Library/Developer/Xcode/DerivedData/Ordital-gcwbkwusahhfeyhaweqxejinwwmr/Build/Products/Debug-iphoneos/libAWSSimpleDB.a"; sourceTree = "<group>"; };
 		D46E4D9B1D1A9294003FBFD4 /* libAWSSNS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAWSSNS.a; path = "../../../Library/Developer/Xcode/DerivedData/Ordital-gcwbkwusahhfeyhaweqxejinwwmr/Build/Products/Debug-iphoneos/libAWSSNS.a"; sourceTree = "<group>"; };
 		D46E4D9C1D1A9294003FBFD4 /* libAWSSQS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAWSSQS.a; path = "../../../Library/Developer/Xcode/DerivedData/Ordital-gcwbkwusahhfeyhaweqxejinwwmr/Build/Products/Debug-iphoneos/libAWSSQS.a"; sourceTree = "<group>"; };
+		D474C6AD1DB78870005C6C98 /* homeIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homeIcon.png; sourceTree = "<group>"; };
+		D474C6AF1DB79486005C6C98 /* maps-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "maps-icon.png"; sourceTree = "<group>"; };
+		D474C6B41DB79C01005C6C98 /* LocationMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationMapViewController.h; sourceTree = "<group>"; };
+		D474C6B51DB79C01005C6C98 /* LocationMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationMapViewController.m; sourceTree = "<group>"; };
+		D474C6B71DB79C81005C6C98 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D47BDA691B845F4000745D0E /* add-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add-icon@2x.png"; sourceTree = "<group>"; };
 		D47BDA6A1B845F4000745D0E /* add-photo-btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add-photo-btn@2x.png"; sourceTree = "<group>"; };
 		D47BDA6B1B845F4000745D0E /* down-aroow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "down-aroow@2x.png"; sourceTree = "<group>"; };
@@ -383,6 +392,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D474C6B81DB79C81005C6C98 /* MapKit.framework in Frameworks */,
 				D46E4D9D1D1A9294003FBFD4 /* libAWSAutoScaling.a in Frameworks */,
 				D46E4D9E1D1A9294003FBFD4 /* libAWSCloudWatch.a in Frameworks */,
 				D46E4D9F1D1A9294003FBFD4 /* libAWSCognito.a in Frameworks */,
@@ -439,6 +449,8 @@
 		183C651919D86F2300EE57EA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D474C6AF1DB79486005C6C98 /* maps-icon.png */,
+				D474C6AD1DB78870005C6C98 /* homeIcon.png */,
 				D4D8BFCD1CFDA340004090BF /* greenTick.png */,
 				18CB747B1BE1831700EEEDB2 /* Ordital-hi-res - Transparent-2.png */,
 				18CB74791BE180F500EEEDB2 /* appstore-small.png */,
@@ -558,6 +570,7 @@
 		D439DAEC19CDB331009486C3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D474C6B71DB79C81005C6C98 /* MapKit.framework */,
 				D46E4D8B1D1A9293003FBFD4 /* libAWSAutoScaling.a */,
 				D46E4D8C1D1A9293003FBFD4 /* libAWSCloudWatch.a */,
 				D46E4D8D1D1A9293003FBFD4 /* libAWSCognito.a */,
@@ -719,6 +732,8 @@
 				D4D8BFD01CFDB0A1004090BF /* PendingAuditFullScreenViewController.m */,
 				1891E5BB1D19CE9700A673C1 /* PendingAuditDetailViewController.h */,
 				1891E5BC1D19CE9700A673C1 /* PendingAuditDetailViewController.m */,
+				D474C6B41DB79C01005C6C98 /* LocationMapViewController.h */,
+				D474C6B51DB79C01005C6C98 /* LocationMapViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -858,6 +873,7 @@
 				D47BDA721B845F4000745D0E /* save-btn@2x.png in Resources */,
 				18CB747C1BE1831700EEEDB2 /* Ordital-hi-res - Transparent-2.png in Resources */,
 				18845DEA1B7F6A01001C5683 /* upload-icon@2x.png in Resources */,
+				D474C6AE1DB78870005C6C98 /* homeIcon.png in Resources */,
 				183C652519D86F2300EE57EA /* AppIcon60px@2x.png in Resources */,
 				D439DB0619CDB331009486C3 /* Images.xcassets in Resources */,
 				187A8C4C1BAE784B00BC88D3 /* ClearCacheTableViewCell.xib in Resources */,
@@ -877,6 +893,7 @@
 				186539701B9BAAF8005D8052 /* to-do-icon-selected@2x.png in Resources */,
 				187A8C541BAE8E0E00BC88D3 /* circle@2x.png in Resources */,
 				18E4E6721B80D2D600646985 /* selected-bar@2x.png in Resources */,
+				D474C6B01DB79486005C6C98 /* maps-icon.png in Resources */,
 				187A8C461BAE77CB00BC88D3 /* checkbox-normal@2x.png in Resources */,
 				186539661B9BA687005D8052 /* search-text-field@2x.png in Resources */,
 				D4D8BFCE1CFDA340004090BF /* greenTick.png in Resources */,
@@ -989,6 +1006,7 @@
 				D47CDF1719D2E7620066B126 /* FindAssetViewController.m in Sources */,
 				1844415C1A59931A005A37CD /* TermsOfUseViewController.m in Sources */,
 				184441591A599141005A37CD /* PrivacyPolicyViewController.m in Sources */,
+				D474C6B61DB79C01005C6C98 /* LocationMapViewController.m in Sources */,
 				1852F7C31A40114A006715D2 /* LogsViewController.m in Sources */,
 				D4E8F1D319D1BCE700CB5AD6 /* DownloadAssetViewController.m in Sources */,
 				D4AC700419CE3DE400358981 /* AuditData.m in Sources */,

@@ -249,6 +249,9 @@
         asset.category = [[searchContentArr objectAtIndex:selectedIndex] valueForKey:@"Category__name"];
         asset.categoryId = [[searchContentArr objectAtIndex:selectedIndex] valueForKey:@"Category__id"];
         
+        asset.latitude = [[searchContentArr objectAtIndex:selectedIndex] valueForKey:@"Latitude"];
+        asset.longitude = [[searchContentArr objectAtIndex:selectedIndex] valueForKey:@"Longitude"];
+        
         if (isSearchOnSet && internetStatus) {
             asset.tag = [[searchContentArr objectAtIndex:selectedIndex] valueForKey:@"TAG__c"];
             [self replaceOldKeysWithNewKeys:searchContentArr];

@@ -28,7 +28,7 @@
 }
 @property (weak, nonatomic) IBOutlet UITextField *assetNameTxtField;
 @property (weak, nonatomic) IBOutlet UITextField *plantNameTxtField;
-@property (weak, nonatomic) IBOutlet UITextField *descriptionTxtField;
+@property (weak, nonatomic) IBOutlet UITextView *descriptionTxtField;
 @property (weak, nonatomic) IBOutlet UITextField *tagTxtField;
 @property (weak, nonatomic) IBOutlet UITextField *parentTxtField;
 @property BOOL isAssetToBeUpdated;
@@ -84,7 +84,11 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *assetNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *tagLabel;
+@property (weak, nonatomic) IBOutlet UIButton *homeButton;
+@property (weak, nonatomic) IBOutlet UIButton *mapButton;
 
 @property BOOL isDoneTodayPreview;
+- (IBAction)homeButtonTapped:(id)sender;
+- (IBAction)mapButtonTapped:(id)sender;
 
 @end

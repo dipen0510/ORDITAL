@@ -29,5 +29,7 @@
 @property NSString* operatorSubclassId;
 @property NSString* category;
 @property NSString* categoryId;
+@property NSString* latitude;
+@property NSString* longitude;
 
 @end

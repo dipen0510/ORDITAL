@@ -33,7 +33,7 @@ const char *create_asset_table =
 const char *create_audit_table =
 "CREATE TABLE IF NOT EXISTS AUDITS (auditId TEXT PRIMARY KEY, assetId TEXT, assetName TEXT, auditType TEXT, imgURL TEXT, dateTime TEXT, latitude REAL, longitude REAL, altitude REAL, uploaded TINYINT)";
 const char *create_download_table =
-"CREATE TABLE IF NOT EXISTS DOWNLOADS (assetId TEXT PRIMARY KEY, assetName TEXT, plantName TEXT, description TEXT, tag TEXT, plantId TEXT, parentId TEXT, parentName TEXT, isAuditCompleted TEXT, make TEXT, type TEXT, unableToLocate TINYINT, plantSection TEXT, system TEXT, operatorType TEXT, criticality TEXT, sourceDocs TEXT, condition TEXT, operatorClass TEXT, operatorClassId TEXT, category TEXT, categoryId TEXT, operatorSubclass TEXT, operatorSubclassId TEXT, punchList TEXT, locationList TEXT, sequence TEXT)";
+"CREATE TABLE IF NOT EXISTS DOWNLOADS (assetId TEXT PRIMARY KEY, assetName TEXT, plantName TEXT, description TEXT, tag TEXT, plantId TEXT, parentId TEXT, parentName TEXT, isAuditCompleted TEXT, make TEXT, type TEXT, unableToLocate TINYINT, plantSection TEXT, system TEXT, operatorType TEXT, criticality TEXT, sourceDocs TEXT, condition TEXT, operatorClass TEXT, operatorClassId TEXT, category TEXT, categoryId TEXT, operatorSubclass TEXT, operatorSubclassId TEXT, punchList TEXT, locationList TEXT, sequence TEXT, latitude TEXT, longitude TEXT)";
 const char *create_environment_table =
 "CREATE TABLE IF NOT EXISTS SELECTEDENVIRONMENT (name TEXT PRIMARY KEY)";
 const char *create_notetype_table =
@@ -69,7 +69,7 @@ const char *create_operatorSubclass_table =
 const char *create_category_table =
 "CREATE TABLE IF NOT EXISTS CATEGORY (value TEXT, category TEXT, id TEXT PRIMARY KEY, designation TEXT)";
 const char *create_today_table =
-"CREATE TABLE IF NOT EXISTS TODAY (assetId TEXT PRIMARY KEY, assetName TEXT, plantName TEXT, description TEXT, tag TEXT, plantId TEXT, parentId TEXT, parentName TEXT, make TEXT, type TEXT, unableToLocate TINYINT, condition TEXT, iPhoneAssetId TEXT, operatorType TEXT, operatorClass TEXT, operatorClassId TEXT, category TEXT, categoryId TEXT, operatorSubclass TEXT, operatorSubclassId TEXT)";
+"CREATE TABLE IF NOT EXISTS TODAY (assetId TEXT PRIMARY KEY, assetName TEXT, plantName TEXT, description TEXT, tag TEXT, plantId TEXT, parentId TEXT, parentName TEXT, make TEXT, type TEXT, unableToLocate TINYINT, condition TEXT, iPhoneAssetId TEXT, operatorType TEXT, operatorClass TEXT, operatorClassId TEXT, category TEXT, categoryId TEXT, operatorSubclass TEXT, operatorSubclassId TEXT, latitude TEXT, longitude TEXT)";
 const char *create_assetCoding_table =
 "CREATE TABLE IF NOT EXISTS ASSETCODING (condition TINYINT, operatorType TINYINT, operatorClass TINYINT, operatorSubclass TINYINT, category TINYINT, type TINYINT)";
 
@@ -1546,8 +1546,8 @@ static DataManager *singletonObject = nil;
         for (int i = 0; i<[downloadDict count] ; i++) {
             NSDictionary* currentAsset = [downloadDict valueForKey:[NSString stringWithFormat:@"%d",i]];
             NSString *insertSQL = [NSString stringWithFormat:
-                                   @"INSERT INTO DOWNLOADS VALUES (\"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%d\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\")",
-                                   [currentAsset valueForKey:@"ASSETS_id"], [currentAsset valueForKey:@"Name"],[currentAsset valueForKey:@"Plant__name"],[[currentAsset valueForKey:@"SHORT_DESCRIPTION__c"] stringByReplacingOccurrencesOfString:@"\"" withString:@""],[currentAsset valueForKey:@"TAG__c"],[currentAsset valueForKey:@"Plant__id"],[currentAsset valueForKey:@"PARENT_ASSET__c"], [currentAsset valueForKey:@"PARENT_ASSET__Name"],[currentAsset valueForKey:@"AUDIT_COMPLETED__c"],[currentAsset valueForKey:@"MAKE__c"],[currentAsset valueForKey:@"TYPE__c"],[[currentAsset valueForKey:@"UNABLE_TO_LOCATE__c"] boolValue],[currentAsset valueForKey:@"PLANT_SECTION__c"],[currentAsset valueForKey:@"SYSTEM__c"],[currentAsset valueForKey:@"OPERATOR_TYPE__c"],[currentAsset valueForKey:@"CRITICALITY__c"],[currentAsset valueForKey:@"SOURCE_DOCUMENTS__c"],[currentAsset valueForKey:@"CONDITION__c"],[currentAsset valueForKey:@"Class__name"],[currentAsset valueForKey:@"Class__id"],[currentAsset valueForKey:@"Category__name"],[currentAsset valueForKey:@"Category__id"],[currentAsset valueForKey:@"SubClass__name"],[currentAsset valueForKey:@"SubClass__id"],[currentAsset valueForKey:@"PUNCH_LIST__c"], [currentAsset valueForKey:@"LIST__c"], [currentAsset valueForKey:@"SEQUENCE__c"]];
+                                   @"INSERT INTO DOWNLOADS VALUES (\"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%d\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\")",
+                                   [currentAsset valueForKey:@"ASSETS_id"], [currentAsset valueForKey:@"Name"],[currentAsset valueForKey:@"Plant__name"],[[currentAsset valueForKey:@"SHORT_DESCRIPTION__c"] stringByReplacingOccurrencesOfString:@"\"" withString:@""],[currentAsset valueForKey:@"TAG__c"],[currentAsset valueForKey:@"Plant__id"],[currentAsset valueForKey:@"PARENT_ASSET__c"], [currentAsset valueForKey:@"PARENT_ASSET__Name"],[currentAsset valueForKey:@"AUDIT_COMPLETED__c"],[currentAsset valueForKey:@"MAKE__c"],[currentAsset valueForKey:@"TYPE__c"],[[currentAsset valueForKey:@"UNABLE_TO_LOCATE__c"] boolValue],[currentAsset valueForKey:@"PLANT_SECTION__c"],[currentAsset valueForKey:@"SYSTEM__c"],[currentAsset valueForKey:@"OPERATOR_TYPE__c"],[currentAsset valueForKey:@"CRITICALITY__c"],[currentAsset valueForKey:@"SOURCE_DOCUMENTS__c"],[currentAsset valueForKey:@"CONDITION__c"],[currentAsset valueForKey:@"Class__name"],[currentAsset valueForKey:@"Class__id"],[currentAsset valueForKey:@"Category__name"],[currentAsset valueForKey:@"Category__id"],[currentAsset valueForKey:@"SubClass__name"],[currentAsset valueForKey:@"SubClass__id"],[currentAsset valueForKey:@"PUNCH_LIST__c"], [currentAsset valueForKey:@"LIST__c"], [currentAsset valueForKey:@"SEQUENCE__c"], [currentAsset valueForKey:@"Latitude"], [currentAsset valueForKey:@"Longitude"]];
             
             const char *insert_stmt = [insertSQL UTF8String];
             sqlite3_prepare_v2(assetDB, insert_stmt,
@@ -1730,6 +1730,8 @@ static DataManager *singletonObject = nil;
                 [dict setObject:[[NSString alloc] initWithUTF8String: (const char *) sqlite3_column_text(statement, 22)] forKey:@"SubClass__name"];
                 [dict setObject:[[NSString alloc] initWithUTF8String: (const char *) sqlite3_column_text(statement, 23)] forKey:@"SubClass__id"];
                 [dict setObject:[[NSString alloc] initWithUTF8String: (const char *) sqlite3_column_text(statement, 24)] forKey:@"PUNCH_LIST__c"];
+                [dict setObject:[[NSString alloc] initWithUTF8String: (const char *) sqlite3_column_text(statement, 27)] forKey:@"Latitude"];
+                [dict setObject:[[NSString alloc] initWithUTF8String: (const char *) sqlite3_column_text(statement, 28)] forKey:@"Longitude"];
                 
                 
                 [arr addObject:dict];
@@ -2572,6 +2574,8 @@ static DataManager *singletonObject = nil;
                 [dict setObject:[[NSString alloc] initWithUTF8String: (const char *) sqlite3_column_text(statement, 22)] forKey:@"SubClass__name"];
                 [dict setObject:[[NSString alloc] initWithUTF8String: (const char *) sqlite3_column_text(statement, 23)] forKey:@"SubClass__id"];
                 [dict setObject:[[NSString alloc] initWithUTF8String: (const char *) sqlite3_column_text(statement, 24)] forKey:@"PUNCH_LIST__c"];
+                [dict setObject:[[NSString alloc] initWithUTF8String: (const char *) sqlite3_column_text(statement, 27)] forKey:@"Latitude"];
+                [dict setObject:[[NSString alloc] initWithUTF8String: (const char *) sqlite3_column_text(statement, 28)] forKey:@"Longitude"];
                 
                 [arr addObject:dict];
                 NSLog(@"Searched Children Asset found");
@@ -2627,6 +2631,8 @@ static DataManager *singletonObject = nil;
                 [dict setObject:[[NSString alloc] initWithUTF8String: (const char *) sqlite3_column_text(statement, 22)] forKey:@"SubClass__name"];
                 [dict setObject:[[NSString alloc] initWithUTF8String: (const char *) sqlite3_column_text(statement, 23)] forKey:@"SubClass__id"];
                 [dict setObject:[[NSString alloc] initWithUTF8String: (const char *) sqlite3_column_text(statement, 24)] forKey:@"PUNCH_LIST__c"];
+                [dict setObject:[[NSString alloc] initWithUTF8String: (const char *) sqlite3_column_text(statement, 27)] forKey:@"Latitude"];
+                [dict setObject:[[NSString alloc] initWithUTF8String: (const char *) sqlite3_column_text(statement, 28)] forKey:@"Longitude"];
                 
                 NSLog(@"Searched Children Asset found");
             }
@@ -2774,6 +2780,8 @@ static DataManager *singletonObject = nil;
                 [dict setObject:[[NSString alloc] initWithUTF8String: (const char *) sqlite3_column_text(statement, 22)] forKey:@"SubClass__name"];
                 [dict setObject:[[NSString alloc] initWithUTF8String: (const char *) sqlite3_column_text(statement, 23)] forKey:@"SubClass__id"];
                 [dict setObject:[[NSString alloc] initWithUTF8String: (const char *) sqlite3_column_text(statement, 24)] forKey:@"PUNCH_LIST__c"];
+                [dict setObject:[[NSString alloc] initWithUTF8String: (const char *) sqlite3_column_text(statement, 27)] forKey:@"Latitude"];
+                [dict setObject:[[NSString alloc] initWithUTF8String: (const char *) sqlite3_column_text(statement, 28)] forKey:@"Longitude"];
                 
                 [arr addObject:dict];
                 NSLog(@"Downloaded Asset found");
@@ -2836,6 +2844,8 @@ static DataManager *singletonObject = nil;
                 [dict setObject:[[NSString alloc] initWithUTF8String: (const char *) sqlite3_column_text(statement, 22)] forKey:@"SubClass__name"];
                 [dict setObject:[[NSString alloc] initWithUTF8String: (const char *) sqlite3_column_text(statement, 23)] forKey:@"SubClass__id"];
                 [dict setObject:[[NSString alloc] initWithUTF8String: (const char *) sqlite3_column_text(statement, 24)] forKey:@"PUNCH_LIST__c"];
+                [dict setObject:[[NSString alloc] initWithUTF8String: (const char *) sqlite3_column_text(statement, 27)] forKey:@"Latitude"];
+                [dict setObject:[[NSString alloc] initWithUTF8String: (const char *) sqlite3_column_text(statement, 28)] forKey:@"Longitude"];
                 
                 [arr addObject:dict];
                 NSLog(@"Downloaded Asset found");
@@ -2894,6 +2904,8 @@ static DataManager *singletonObject = nil;
                 [dict setObject:[[NSString alloc] initWithUTF8String: (const char *) sqlite3_column_text(statement, 22)] forKey:@"SubClass__name"];
                 [dict setObject:[[NSString alloc] initWithUTF8String: (const char *) sqlite3_column_text(statement, 23)] forKey:@"SubClass__id"];
                 [dict setObject:[[NSString alloc] initWithUTF8String: (const char *) sqlite3_column_text(statement, 24)] forKey:@"PUNCH_LIST__c"];
+                [dict setObject:[[NSString alloc] initWithUTF8String: (const char *) sqlite3_column_text(statement, 27)] forKey:@"Latitude"];
+                [dict setObject:[[NSString alloc] initWithUTF8String: (const char *) sqlite3_column_text(statement, 28)] forKey:@"Longitude"];
                 
                 [arr addObject:dict];
                 NSLog(@"Searched Asset found");
@@ -3887,8 +3899,8 @@ static DataManager *singletonObject = nil;
         for (int i = 0; i<[downloadDict count] ; i++) {
             NSDictionary* currentAsset = [downloadDict objectAtIndex:i];
             NSString *insertSQL = [NSString stringWithFormat:
-                                   @"INSERT INTO TODAY VALUES (\"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%d\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\")",
-                                   [currentAsset valueForKey:@"Id"], [currentAsset valueForKey:@"Name"],[currentAsset valueForKey:@"Plant__name"],[currentAsset valueForKey:@"SHORT_DESCRIPTION__c"],[currentAsset valueForKey:@"TAG__c"],[currentAsset valueForKey:@"Plant__id"],[currentAsset valueForKey:@"PARENT_ASSET__c"], [currentAsset valueForKey:@"PARENT_ASSET__Name"],[currentAsset valueForKey:@"MAKE__c"],[currentAsset valueForKey:@"TYPE__c"],[[currentAsset valueForKey:@"UNABLE_TO_LOCATE__c"] boolValue],[currentAsset valueForKey:@"CONDITION__c"],[currentAsset valueForKey:@"Iphone_Asset_Id__c"],[currentAsset valueForKey:@"OPERATOR_TYPE__c"],[currentAsset valueForKey:@"Class__name"],[currentAsset valueForKey:@"Class__id"],[currentAsset valueForKey:@"Category__name"],[currentAsset valueForKey:@"Category__id"],[currentAsset valueForKey:@"SubClass__name"],[currentAsset valueForKey:@"SubClass__id"]];
+                                   @"INSERT INTO TODAY VALUES (\"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%d\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\")",
+                                   [currentAsset valueForKey:@"Id"], [currentAsset valueForKey:@"Name"],[currentAsset valueForKey:@"Plant__name"],[currentAsset valueForKey:@"SHORT_DESCRIPTION__c"],[currentAsset valueForKey:@"TAG__c"],[currentAsset valueForKey:@"Plant__id"],[currentAsset valueForKey:@"PARENT_ASSET__c"], [currentAsset valueForKey:@"PARENT_ASSET__Name"],[currentAsset valueForKey:@"MAKE__c"],[currentAsset valueForKey:@"TYPE__c"],[[currentAsset valueForKey:@"UNABLE_TO_LOCATE__c"] boolValue],[currentAsset valueForKey:@"CONDITION__c"],[currentAsset valueForKey:@"Iphone_Asset_Id__c"],[currentAsset valueForKey:@"OPERATOR_TYPE__c"],[currentAsset valueForKey:@"Class__name"],[currentAsset valueForKey:@"Class__id"],[currentAsset valueForKey:@"Category__name"],[currentAsset valueForKey:@"Category__id"],[currentAsset valueForKey:@"SubClass__name"],[currentAsset valueForKey:@"SubClass__id"],[currentAsset valueForKey:@"Latitude"],[currentAsset valueForKey:@"Longitude"]];
             
             const char *insert_stmt = [insertSQL UTF8String];
             sqlite3_prepare_v2(assetDB, insert_stmt,
@@ -3949,6 +3961,8 @@ static DataManager *singletonObject = nil;
                 [dict setObject:[[NSString alloc] initWithUTF8String: (const char *) sqlite3_column_text(statement, 17)] forKey:@"Category__id"];
                 [dict setObject:[[NSString alloc] initWithUTF8String: (const char *) sqlite3_column_text(statement, 18)] forKey:@"SubClass__name"];
                 [dict setObject:[[NSString alloc] initWithUTF8String: (const char *) sqlite3_column_text(statement, 19)] forKey:@"SubClass__id"];
+                [dict setObject:[[NSString alloc] initWithUTF8String: (const char *) sqlite3_column_text(statement, 20)] forKey:@"Latitude"];
+                [dict setObject:[[NSString alloc] initWithUTF8String: (const char *) sqlite3_column_text(statement, 21)] forKey:@"Longitude"];
                 
                 
                 [arr addObject:dict];

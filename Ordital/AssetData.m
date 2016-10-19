@@ -29,5 +29,7 @@
 @synthesize operatorClassId;
 @synthesize categoryId;
 @synthesize operatorSubclassId;
+@synthesize latitude;
+@synthesize longitude;
 
 @end
