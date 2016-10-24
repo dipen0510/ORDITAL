@@ -12,6 +12,8 @@
 #import <AWSCore/AWSCore.h>
 #import <DropboxSDK/DropboxSDK.h>
 
+@import GoogleMaps;
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -45,6 +47,7 @@
                             root:kDBRootAppFolder]; // either kDBRootAppFolder or kDBRootDropbox
     [DBSession setSharedSession:dbSession];
     
+    [GMSServices provideAPIKey:@"AIzaSyCBpxfF0Z-u2pLz_Xjr_dKi-m80cF40_nE"];
     
     
     /*AWSCognitoCredentialsProvider *credentialsProvider = [[AWSCognitoCredentialsProvider alloc] initWithRegionType:AWSRegionUSEast1

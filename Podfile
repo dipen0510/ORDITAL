@@ -7,6 +7,7 @@ target 'Ordital' do
 
 pod 'AWSCore'
 pod 'AWSS3'
+pod 'GoogleMaps'
 
 end
 

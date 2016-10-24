@@ -7,6 +7,7 @@
 //
 
 #import "LocationMapViewController.h"
+#import <GoogleMaps/GoogleMaps.h>
 
 @interface LocationMapViewController ()
 
@@ -21,16 +22,30 @@
     // Do any additional setup after loading the view.
     
     if (assetToUpdate.latitude && assetToUpdate.longitude && ([assetToUpdate.latitude floatValue]<=90 && [assetToUpdate.latitude floatValue]>=-90) && ([assetToUpdate.longitude floatValue]<=180 && [assetToUpdate.longitude floatValue]>=-180)) {
-        CLLocationCoordinate2D coord = CLLocationCoordinate2DMake([assetToUpdate.latitude floatValue], [assetToUpdate.longitude floatValue]);
+//        CLLocationCoordinate2D coord = CLLocationCoordinate2DMake([assetToUpdate.latitude floatValue], [assetToUpdate.longitude floatValue]);
+//        
+//        MKCoordinateSpan span = MKCoordinateSpanMake(10.0, 10.0);
+//        MKCoordinateRegion region = {coord, span};
+//        
+//        MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
+//        [annotation setCoordinate:coord];
+//        
+//        [self.myMapView setRegion:region];
+//        [self.myMapView addAnnotation:annotation];
         
-        MKCoordinateSpan span = MKCoordinateSpanMake(10.0, 10.0);
-        MKCoordinateRegion region = {coord, span};
         
-        MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
-        [annotation setCoordinate:coord];
+        GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:[assetToUpdate.latitude floatValue]
+                                                                longitude:[assetToUpdate.longitude floatValue]
+                                                                     zoom:6];
+        GMSMapView *mapView = [GMSMapView mapWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height) camera:camera];
+        mapView.myLocationEnabled = YES;
+        [self.view addSubview:mapView];
         
-        [self.myMapView setRegion:region];
-        [self.myMapView addAnnotation:annotation];
+        // Creates a marker in the center of the map.
+        GMSMarker *marker = [[GMSMarker alloc] init];
+        marker.position = CLLocationCoordinate2DMake([assetToUpdate.latitude floatValue], [assetToUpdate.longitude floatValue]);
+        marker.map = mapView;
+        
     }
     
     

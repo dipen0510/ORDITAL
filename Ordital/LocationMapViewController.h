@@ -13,7 +13,6 @@
 
 @property (strong, nonatomic) AssetData* assetToUpdate;
 
-@property (weak, nonatomic) IBOutlet MKMapView *myMapView;
 - (IBAction)backButtonTapped:(id)sender;
 
 @end

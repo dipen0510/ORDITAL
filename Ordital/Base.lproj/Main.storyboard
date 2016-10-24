@@ -2917,16 +2917,16 @@
             </objects>
             <point key="canvasLocation" x="1810" y="-212"/>
         </scene>
-        <!--Location Map View Controller-->
+        <!--View Controller-->
         <scene sceneID="mtm-QR-Qk0">
             <objects>
-                <viewController id="6zP-9R-Tfq" customClass="LocationMapViewController" sceneMemberID="viewController">
+                <viewController id="6zP-9R-Tfq" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZbB-Br-hIX"/>
                         <viewControllerLayoutGuide type="bottom" id="3nD-er-7He"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="O47-2K-9ta">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="550"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OIa-aE-DgM">
@@ -2966,7 +2966,7 @@
                                 </constraints>
                             </view>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1ri-yh-HHa">
-                                <rect key="frame" x="0.0" y="64" width="320" height="486"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -2988,6 +2988,68 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vge-Fn-YQX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2260" y="-222"/>
+        </scene>
+        <!--Location Map View Controller-->
+        <scene sceneID="qYR-ML-DJF">
+            <objects>
+                <viewController id="h91-QD-gJa" customClass="LocationMapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PHE-Pe-eCz"/>
+                        <viewControllerLayoutGuide type="bottom" id="lqE-GJ-MSB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3JT-lF-TtF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="550"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mt7-cM-faT">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="03j-xN-xzK">
+                                        <rect key="frame" x="8" y="36" width="49" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="22" id="aaq-aq-P7L"/>
+                                            <constraint firstAttribute="width" constant="49" id="tUi-I1-gnK"/>
+                                        </constraints>
+                                        <state key="normal" image="back-btn.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="backButtonTapped:" destination="h91-QD-gJa" eventType="touchUpInside" id="Jrz-hd-7rx"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tpu-Rn-feb">
+                                        <rect key="frame" x="8" y="36" width="304" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="304" id="SOL-EU-5qp"/>
+                                            <constraint firstAttribute="height" constant="21" id="hZH-d1-Zkt"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.25098039220000001" green="0.2274509804" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="UQV-1W-Qm9"/>
+                                    <constraint firstItem="tpu-Rn-feb" firstAttribute="top" secondItem="mt7-cM-faT" secondAttribute="top" constant="36" id="aza-Na-RaT"/>
+                                    <constraint firstItem="03j-xN-xzK" firstAttribute="leading" secondItem="mt7-cM-faT" secondAttribute="leading" constant="8" id="kJl-kp-hvh"/>
+                                    <constraint firstAttribute="centerX" secondItem="tpu-Rn-feb" secondAttribute="centerX" id="nAr-RU-IOj"/>
+                                    <constraint firstItem="03j-xN-xzK" firstAttribute="top" secondItem="mt7-cM-faT" secondAttribute="top" constant="36" id="wYq-kC-i9K"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="mt7-cM-faT" secondAttribute="trailing" id="3pU-Ki-ATV"/>
+                            <constraint firstItem="mt7-cM-faT" firstAttribute="top" secondItem="3JT-lF-TtF" secondAttribute="top" id="Tpr-bg-x7I"/>
+                            <constraint firstItem="mt7-cM-faT" firstAttribute="leading" secondItem="3JT-lF-TtF" secondAttribute="leading" id="fWc-h0-r9r"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="oGI-cA-ouR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CwG-vm-nhB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2655" y="-257"/>
         </scene>
         <!--Create Asset-->
         <scene sceneID="IIc-OD-PKD">
@@ -3281,7 +3343,7 @@
                                                 <state key="normal" image="maps-icon.png"/>
                                                 <connections>
                                                     <action selector="mapButtonTapped:" destination="KFD-rP-4Sk" eventType="touchUpInside" id="kUq-eX-3PU"/>
-                                                    <segue destination="6zP-9R-Tfq" kind="push" identifier="showMapSegue" id="4xY-DR-IpM"/>
+                                                    <segue destination="h91-QD-gJa" kind="push" identifier="showMapSegue" id="3tt-LW-cWt"/>
                                                 </connections>
                                             </button>
                                         </subviews>
