@@ -571,6 +571,10 @@
         
         LocationMapViewController* codingController = [segue destinationViewController];
         codingController.assetToUpdate = assetObj;
+        if ([[UIApplication sharedApplication] canOpenURL:
+             [NSURL URLWithString:@"comgooglemaps://"]]) {
+            codingController.shouldOpenGMaps = YES;
+        }
         
     }
     NSLog(@"Segue enter");

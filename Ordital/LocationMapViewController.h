@@ -12,6 +12,7 @@
 @interface LocationMapViewController : UIViewController
 
 @property (strong, nonatomic) AssetData* assetToUpdate;
+@property BOOL shouldOpenGMaps;
 
 - (IBAction)backButtonTapped:(id)sender;
 

@@ -15,7 +15,7 @@
 
 @implementation LocationMapViewController
 
-@synthesize assetToUpdate;
+@synthesize assetToUpdate,shouldOpenGMaps;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,10 +34,15 @@
 //        [self.myMapView addAnnotation:annotation];
         
         
+        if (shouldOpenGMaps) {
+            [[UIApplication sharedApplication] openURL:
+             [NSURL URLWithString:[NSString stringWithFormat:@"comgooglemaps://?center=%f,%f&zoom=14&views=traffic",[assetToUpdate.latitude floatValue], [assetToUpdate.longitude floatValue]]]];
+        }
+        
         GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:[assetToUpdate.latitude floatValue]
                                                                 longitude:[assetToUpdate.longitude floatValue]
                                                                      zoom:6];
-        GMSMapView *mapView = [GMSMapView mapWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height) camera:camera];
+        GMSMapView *mapView = [GMSMapView mapWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height - 64) camera:camera];
         mapView.myLocationEnabled = YES;
         [self.view addSubview:mapView];
         
