@@ -262,10 +262,10 @@
             
         }
         else {
-            
-            self.tagNameLbl.text = [[auditTypeArr objectAtIndex:currentType] valueForKey:@"Name"];
-            currentType++;
+        
             self.nameplateNameLbl.text = [[auditTypeArr objectAtIndex:currentType] valueForKey:@"Name"];
+            currentType++;
+            self.tagNameLbl.text = [[auditTypeArr objectAtIndex:currentType] valueForKey:@"Name"];
             
             equipmentImgView.hidden = YES;
             tagImgView.hidden = NO;

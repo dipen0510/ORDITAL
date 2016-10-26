@@ -36,7 +36,7 @@
         
         if (shouldOpenGMaps) {
             [[UIApplication sharedApplication] openURL:
-             [NSURL URLWithString:[NSString stringWithFormat:@"comgooglemaps://?center=%f,%f&zoom=14&views=traffic",[assetToUpdate.latitude floatValue], [assetToUpdate.longitude floatValue]]]];
+             [NSURL URLWithString:[NSString stringWithFormat:@"comgooglemaps://?q=%f,%f&center=%f,%f&zoom=14&views=traffic",[assetToUpdate.latitude floatValue], [assetToUpdate.longitude floatValue],[assetToUpdate.latitude floatValue], [assetToUpdate.longitude floatValue]]]];
         }
         
         GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:[assetToUpdate.latitude floatValue]

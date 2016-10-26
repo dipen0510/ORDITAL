@@ -1142,6 +1142,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: ORDITAL PTY. LTD. (2YQM7F2CL6)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ORDITAL PTY. LTD. (2YQM7F2CL6)";
+				DEVELOPMENT_TEAM = 26JX845KJ2;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1161,7 +1162,7 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.beta.Ordital;
 				PRODUCT_NAME = ORDITAL;
-				PROVISIONING_PROFILE = "1ff36ba7-5f3e-4bee-b992-8a1b61dfc4f0";
+				PROVISIONING_PROFILE = "8519a4a1-a7bc-470c-a5b8-691420b7679b";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1174,6 +1175,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: ORDITAL PTY. LTD. (2YQM7F2CL6)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ORDITAL PTY. LTD. (2YQM7F2CL6)";
+				DEVELOPMENT_TEAM = 26JX845KJ2;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1193,7 +1195,7 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.beta.Ordital;
 				PRODUCT_NAME = ORDITAL;
-				PROVISIONING_PROFILE = "1ff36ba7-5f3e-4bee-b992-8a1b61dfc4f0";
+				PROVISIONING_PROFILE = "8519a4a1-a7bc-470c-a5b8-691420b7679b";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
