@@ -2811,7 +2811,7 @@ static DataManager *singletonObject = nil;
         NSString* filterString = [self getOfflineFilterQueryString:2];
         
         
-        NSString *querySQL = [NSString stringWithFormat:@"SELECT * FROM DOWNLOADS WHERE TRIM(locationList) > '' AND (isAuditCompleted = '1') %@ ORDER BY sequence, assetName COLLATE NOCASE", filterString];
+        NSString *querySQL = [NSString stringWithFormat:@"SELECT * FROM DOWNLOADS WHERE TRIM(locationList) > '' AND (isAuditCompleted = '1') AND assetId NOT IN (SELECT assetId from TODAY) %@ ORDER BY sequence, assetName COLLATE NOCASE", filterString];
         
         
         const char *query_stmt = [querySQL UTF8String];
