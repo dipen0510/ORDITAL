@@ -742,14 +742,13 @@ clickedButtonAtIndex:(NSInteger)buttonIndex{
     
     if ([[DataManager sharedManager] isInternetConnectionAvailable] && [[DataManager sharedManager] isLoggedIn]) {
         
-        
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hudTapped:) name:SVProgressHUDDidReceiveTouchEventNotification object:nil];
-        
-        [SVProgressHUD showProgress:0.0 status:[NSString stringWithFormat:@"DATABASE SYNCHRONIZATION OF %ld ASSETS IN PROGRESS. SEE SETTINGS FOR PROGRESS OF IMAGE SYNCHRONIZATION",(long)[[[DataManager sharedManager] getAssetData] count]] maskType:SVProgressHUDMaskTypeGradient];
-        
-        [self performSelectorInBackground:@selector(startBulkUploadAPI) withObject:nil];
-        
+        if ([self checkIfSessionIsValid]) {
+            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hudTapped:) name:SVProgressHUDDidReceiveTouchEventNotification object:nil];
             
+            [SVProgressHUD showProgress:0.0 status:[NSString stringWithFormat:@"DATABASE SYNCHRONIZATION OF %ld ASSETS IN PROGRESS. SEE SETTINGS FOR PROGRESS OF IMAGE SYNCHRONIZATION",(long)[[[DataManager sharedManager] getAssetData] count]] maskType:SVProgressHUDMaskTypeGradient];
+            
+            [self performSelectorInBackground:@selector(startBulkUploadAPI) withObject:nil];
+        }
             
     }
     else{
@@ -1035,6 +1034,73 @@ clickedButtonAtIndex:(NSInteger)buttonIndex{
         [self.navigationController popToRootViewControllerAnimated:YES];
     }
     [self.assetTblView reloadData];
+    
+}
+
+
+
+- (BOOL) checkIfSessionIsValid {
+    if ([[DataManager sharedManager] isInternetConnectionAvailable] && [[DataManager sharedManager] isLoggedIn]) {
+        
+        [SVProgressHUD showWithStatus:@"Verifying Session" maskType:SVProgressHUDMaskTypeGradient];
+        
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            
+            NSURL *theURL;
+            if ([[DataManager sharedManager] restEnv]) {
+                theURL =  [[NSURL alloc]initWithString:[NSString stringWithFormat:@"%@?action_type=getplants&instance_url=%@&access_token=%@&uid=%@",PRODUCTION_REST_URL,[[DataManager sharedManager] getInstanceURL],[[DataManager sharedManager] getAuthToken], [[DataManager sharedManager] getIdentity]]];
+            }
+            else {
+                theURL =  [[NSURL alloc]initWithString:[NSString stringWithFormat:@"%@?action_type=getplants&instance_url=%@&access_token=%@&uid=%@",SANDOBOX_REST_URL,[[DataManager sharedManager] getInstanceURL],[[DataManager sharedManager] getAuthToken], [[DataManager sharedManager] getIdentity]]];
+            }
+            NSMutableURLRequest *theRequest=[NSMutableURLRequest requestWithURL:theURL cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
+            [theRequest setValue:HEADER_REQUEST_VALUE forHTTPHeaderField:HEADER_REQUEST_KEY];
+            NSData *returnData = [NSURLConnection sendSynchronousRequest:theRequest returningResponse:nil error:nil];
+            NSError *error;
+            NSDictionary* responseData = [NSJSONSerialization JSONObjectWithData:returnData options:NSJSONReadingMutableContainers error:&error];
+            status = [responseData valueForKey:@"status"];
+            if (!error && !status) {
+//                [downloadedPlantContent addObject:[responseData valueForKey:@"plants"]];
+//                [self addAllAuditTypeToDB:(NSMutableArray *)[responseData valueForKey:@"photoType"]];
+//                [[DataManager sharedManager] saveDynamicLabelValues:[responseData valueForKey:@"key_lable"]];
+            }
+            else {
+                if (status) {
+                    errMsg = [responseData valueForKey:@"msg"];
+                }
+            }
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [SVProgressHUD dismiss];
+                if (!status) {
+//                    if ([[downloadedPlantContent objectAtIndex:0] valueForKey:@"Id"]) {
+//                        [self performSegueWithIdentifier:@"settingsPushSegue" sender:nil];
+//                    }
+                }
+                else {
+                    if (errMsg) {
+                        [SVProgressHUD showErrorWithStatus:[NSString stringWithFormat:@"%@",errMsg]];
+                    }
+                    else{
+                        [SVProgressHUD showErrorWithStatus:@"Verify your internet connection and try again later."];
+                    }
+                }
+                
+            });
+        });
+    }
+    else{
+        UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"No Login Credentials Found" message:@"Please login to app after turning on internet settings to view this section" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+        return false;
+    }
+    
+    
+    if (status) {
+        status = nil;
+        return false;
+    }
+    status = nil;
+    return true;
     
 }
 @end
