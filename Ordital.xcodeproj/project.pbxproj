@@ -1162,7 +1162,7 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.beta.Ordital;
 				PRODUCT_NAME = ORDITAL;
-				PROVISIONING_PROFILE = "e4a96560-adfd-4d41-8983-6558da7b81c8";
+				PROVISIONING_PROFILE = "908ee931-4229-4fc2-ada2-339d0ef0d4df";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1195,7 +1195,7 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.beta.Ordital;
 				PRODUCT_NAME = ORDITAL;
-				PROVISIONING_PROFILE = "e4a96560-adfd-4d41-8983-6558da7b81c8";
+				PROVISIONING_PROFILE = "908ee931-4229-4fc2-ada2-339d0ef0d4df";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

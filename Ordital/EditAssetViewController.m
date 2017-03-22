@@ -742,13 +742,7 @@ clickedButtonAtIndex:(NSInteger)buttonIndex{
     
     if ([[DataManager sharedManager] isInternetConnectionAvailable] && [[DataManager sharedManager] isLoggedIn]) {
         
-        if ([self checkIfSessionIsValid]) {
-            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hudTapped:) name:SVProgressHUDDidReceiveTouchEventNotification object:nil];
-            
-            [SVProgressHUD showProgress:0.0 status:[NSString stringWithFormat:@"DATABASE SYNCHRONIZATION OF %ld ASSETS IN PROGRESS. SEE SETTINGS FOR PROGRESS OF IMAGE SYNCHRONIZATION",(long)[[[DataManager sharedManager] getAssetData] count]] maskType:SVProgressHUDMaskTypeGradient];
-            
-            [self performSelectorInBackground:@selector(startBulkUploadAPI) withObject:nil];
-        }
+        [self checkIfSessionIsValidAndStartSyncing];
             
     }
     else{
@@ -1039,7 +1033,7 @@ clickedButtonAtIndex:(NSInteger)buttonIndex{
 
 
 
-- (BOOL) checkIfSessionIsValid {
+- (void) checkIfSessionIsValidAndStartSyncing {
     if ([[DataManager sharedManager] isInternetConnectionAvailable] && [[DataManager sharedManager] isLoggedIn]) {
         
         [SVProgressHUD showWithStatus:@"Verifying Session" maskType:SVProgressHUDMaskTypeGradient];
@@ -1072,9 +1066,13 @@ clickedButtonAtIndex:(NSInteger)buttonIndex{
             dispatch_async(dispatch_get_main_queue(), ^{
                 [SVProgressHUD dismiss];
                 if (!status) {
-//                    if ([[downloadedPlantContent objectAtIndex:0] valueForKey:@"Id"]) {
-//                        [self performSegueWithIdentifier:@"settingsPushSegue" sender:nil];
-//                    }
+                    
+                    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hudTapped:) name:SVProgressHUDDidReceiveTouchEventNotification object:nil];
+                    
+                    [SVProgressHUD showProgress:0.0 status:[NSString stringWithFormat:@"DATABASE SYNCHRONIZATION OF %ld ASSETS IN PROGRESS. SEE SETTINGS FOR PROGRESS OF IMAGE SYNCHRONIZATION",(long)[[[DataManager sharedManager] getAssetData] count]] maskType:SVProgressHUDMaskTypeGradient];
+                    
+                    [self performSelectorInBackground:@selector(startBulkUploadAPI) withObject:nil];
+                    
                 }
                 else {
                     if (errMsg) {
@@ -1083,24 +1081,15 @@ clickedButtonAtIndex:(NSInteger)buttonIndex{
                     else{
                         [SVProgressHUD showErrorWithStatus:@"Verify your internet connection and try again later."];
                     }
+                    
                 }
                 
             });
         });
     }
     else{
-        UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"No Login Credentials Found" message:@"Please login to app after turning on internet settings to view this section" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-        [alert show];
-        return false;
+        
     }
-    
-    
-    if (status) {
-        status = nil;
-        return false;
-    }
-    status = nil;
-    return true;
     
 }
 @end
