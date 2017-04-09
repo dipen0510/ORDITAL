@@ -105,7 +105,7 @@
     [SVProgressHUD showWithStatus:@"Saving Settings" maskType:SVProgressHUDMaskTypeGradient];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
-        [[DataManager sharedManager] deleteAllDownloadsData];
+//        [[DataManager sharedManager] deleteAllDownloadsData];
         [[DataManager sharedManager] saveSelectedSetDetailsWithName:[[downloadedSetContent objectAtIndex:indexPath.row] valueForKey:@"Name"] andSetId:[[downloadedSetContent objectAtIndex:indexPath.row] valueForKey:@"Id"]];
         
         dispatch_async(dispatch_get_main_queue(), ^{

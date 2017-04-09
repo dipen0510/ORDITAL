@@ -33,7 +33,7 @@
     [[DataManager sharedManager] setSelectedEnvironmentSettings:[[DataManager sharedManager] getSelectedEnvironmentDetails]];
     [[DataManager sharedManager] setSelectedTypeSettings:[[DataManager sharedManager] getSelectedTypeDetails]];
     [[DataManager sharedManager] setSelectedConnectionSettings:[[DataManager sharedManager] getSelectedConnectionDetails]];
-    [[DataManager sharedManager] setRestEnv:NO];
+    [[DataManager sharedManager] setRestEnv:YES];
     
     [[DataManager sharedManager] setPlantSectionFilter:[[DataManager sharedManager] getSelectedPlantSectionDetails]];
     [[DataManager sharedManager] setSystemFilter:[[DataManager sharedManager] getSelectedSystemDetails]];

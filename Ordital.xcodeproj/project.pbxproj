@@ -1160,9 +1160,9 @@
 					"$(PROJECT_DIR)/Ordital/aws-sdk-ios-master/AWSCoreTests/OCMock",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.beta.Ordital;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ordital.ordital;
 				PRODUCT_NAME = ORDITAL;
-				PROVISIONING_PROFILE = "908ee931-4229-4fc2-ada2-339d0ef0d4df";
+				PROVISIONING_PROFILE = "ca805207-1634-4214-917a-c6f225bcb32b";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1193,9 +1193,9 @@
 					"$(PROJECT_DIR)/Ordital/aws-sdk-ios-master/AWSCoreTests/OCMock",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.beta.Ordital;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ordital.ordital;
 				PRODUCT_NAME = ORDITAL;
-				PROVISIONING_PROFILE = "908ee931-4229-4fc2-ada2-339d0ef0d4df";
+				PROVISIONING_PROFILE = "ca805207-1634-4214-917a-c6f225bcb32b";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

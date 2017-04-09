@@ -13,7 +13,7 @@
 NSString* const SANDOBOX_LOGIN_URL = @"https://pics.ordital.com/Dev/API/oauth.php?community=";
 NSString* const SANDOBOX_REST_URL = @"https://pics.ordital.com/Dev/API/5.0.0/sfdc_upload.php";
 NSString* const PRODUCTION_LOGIN_URL = @"https://pics.ordital.com/Live/API/oauth.php?community=";
-NSString* const PRODUCTION_REST_URL = @"https://pics.ordital.com/Live/API/6.0.0/sfdc_upload.php";
+NSString* const PRODUCTION_REST_URL = @"https://pics.ordital.com/Live/API/7.0.0/sfdc_upload.php";
 
 NSString* const HEADER_REQUEST_VALUE = @"959e8a4343df32234qwe3erfkjuy35b98e079fc2540d7yuhggte543bdvsfrwwjskdga5d454e67e";
 NSString* const HEADER_REQUEST_KEY = @"validate-header";
