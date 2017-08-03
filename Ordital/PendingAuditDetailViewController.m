@@ -61,9 +61,11 @@
     
     if (audit.isUploaded) {
         self.auditUploadStatusImgView.hidden = NO;
+        _deletePhotoFromQueueButton.hidden = YES;
     }
     else {
         self.auditUploadStatusImgView.hidden = YES;
+        _deletePhotoFromQueueButton.hidden = NO;
     }
     
 }
@@ -113,6 +115,15 @@
     
     [SVProgressHUD showWithStatus:@"Uploading Audit" maskType:SVProgressHUDMaskTypeGradient];
     [self startAWSUpload];
+    
+}
+
+- (IBAction)deletePhotoFromQueueTapped:(id)sender {
+    
+    [[DataManager sharedManager] deleteAllAuditImagesWithAuditId:audit.auditId];
+    [[DataManager sharedManager] deleteAuditWithId:audit.auditId];
+    
+    [self backButtonTapped:nil];
     
 }
 
@@ -208,6 +219,8 @@
         //self.serverFileSizeLabel.text = [NSString stringWithFormat:@"File Size - %lu bytes",(unsigned long)obj.size];
         self.serverCreatedLabel.text = [NSString stringWithFormat:@"Created - %@",[obj lastModified]];
         
+        _deletePhotoFromQueueButton.hidden = YES;
+        
     }
     else {
         
@@ -216,6 +229,7 @@
         self.serverFileNameLabel.hidden = YES;
         self.serverFileSizeLabel.hidden = YES;
         self.serverCreatedLabel.hidden = YES;
+        _deletePhotoFromQueueButton.hidden = NO;
         
     }
     

@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *serverFileNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *serverFileSizeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *serverCreatedLabel;
+@property (weak, nonatomic) IBOutlet UIButton *deletePhotoFromQueueButton;
 
 @property (nonatomic, strong) AuditData* audit;
 
@@ -28,5 +29,6 @@
 - (IBAction)checkSyncButtonTapped:(id)sender;
 - (IBAction)backButtonTapped:(id)sender;
 - (IBAction)uplaodButtonTapped:(id)sender;
+- (IBAction)deletePhotoFromQueueTapped:(id)sender;
 
 @end

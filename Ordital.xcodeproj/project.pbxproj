@@ -1142,7 +1142,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: ORDITAL PTY. LTD. (2YQM7F2CL6)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ORDITAL PTY. LTD. (2YQM7F2CL6)";
-				DEVELOPMENT_TEAM = 26JX845KJ2;
+				DEVELOPMENT_TEAM = 2YQM7F2CL6;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1160,9 +1160,9 @@
 					"$(PROJECT_DIR)/Ordital/aws-sdk-ios-master/AWSCoreTests/OCMock",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ordital.ordital;
+				PRODUCT_BUNDLE_IDENTIFIER = com.beta.Ordital;
 				PRODUCT_NAME = ORDITAL;
-				PROVISIONING_PROFILE = "ca805207-1634-4214-917a-c6f225bcb32b";
+				PROVISIONING_PROFILE = "f4c0f374-f769-45df-ae15-98e5115c82b6";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1175,7 +1175,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: ORDITAL PTY. LTD. (2YQM7F2CL6)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ORDITAL PTY. LTD. (2YQM7F2CL6)";
-				DEVELOPMENT_TEAM = 26JX845KJ2;
+				DEVELOPMENT_TEAM = 2YQM7F2CL6;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1193,9 +1193,9 @@
 					"$(PROJECT_DIR)/Ordital/aws-sdk-ios-master/AWSCoreTests/OCMock",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ordital.ordital;
+				PRODUCT_BUNDLE_IDENTIFIER = com.beta.Ordital;
 				PRODUCT_NAME = ORDITAL;
-				PROVISIONING_PROFILE = "ca805207-1634-4214-917a-c6f225bcb32b";
+				PROVISIONING_PROFILE = "f4c0f374-f769-45df-ae15-98e5115c82b6";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
