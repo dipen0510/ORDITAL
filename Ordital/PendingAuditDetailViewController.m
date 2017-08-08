@@ -65,7 +65,7 @@
     }
     else {
         self.auditUploadStatusImgView.hidden = YES;
-        _deletePhotoFromQueueButton.hidden = NO;
+        _deletePhotoFromQueueButton.hidden = YES;
     }
     
 }
@@ -120,11 +120,21 @@
 
 - (IBAction)deletePhotoFromQueueTapped:(id)sender {
     
-    [[DataManager sharedManager] deleteAllAuditImagesWithAuditId:audit.auditId];
-    [[DataManager sharedManager] deleteAuditWithId:audit.auditId];
+    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Confirm Delete" message:@"Are you sure you want to delete this photo" delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
+    [alert show];
     
-    [self backButtonTapped:nil];
+}
+
+- (void)alertView:(UIAlertView *)alertView
+clickedButtonAtIndex:(NSInteger)buttonIndex{
     
+    if (buttonIndex == 1){
+        
+        [[DataManager sharedManager] deleteAllAuditImagesWithAuditId:audit.auditId];
+        //    [[DataManager sharedManager] deleteAuditWithId:audit.auditId];
+        
+        [self backButtonTapped:nil];
+    }
 }
 
 - (void) startAWSUpload {

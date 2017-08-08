@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PendingAuditDetailViewController : UIViewController {
+@interface PendingAuditDetailViewController : UIViewController<UIAlertViewDelegate> {
     NSMutableArray* fileArr;
 }
 
